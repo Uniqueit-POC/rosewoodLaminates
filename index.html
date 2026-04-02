@@ -19,62 +19,38 @@
 <body>
 
     <!-- header section -->
-    <header class="fixed top-0 w-full z-50 px-4 py-4 lg:px-10">
+    <header class="fixed top-0 w-full z-[200] px-4 py-4 lg:px-10">
         <nav
-            class="mx-auto bg-white/80 backdrop-blur-md rounded-xl flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
+            class="mx-auto max-w-full bg-white/80 backdrop-blur-xl rounded-2xl flex items-center justify-between px-6 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-white/30">
+
             <div class="flex items-center">
-                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-12">
             </div>
 
-            <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
+            <ul class="hidden md:flex items-center space-x-8 font-medium text-[15px] text-[#383838]">
                 <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
-                <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
-                <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
-                <li class="relative group">
-                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
-                        Collections
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <ul
-                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
-                        <li><a href="wooden.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
-                                Collections</a></li>
-                        <li><a href="pastel.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
-                                Collections</a></li>
-                        <li><a href="marble.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
-                                Collections</a></li>
-                        <li><a href="digital.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
-                                Collections</a></li>
-                    </ul>
-                </li>
-                <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
-                <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
+                <li><a href="about.html" class="hover:text-[#4AA13E] transition">About Us</a></li>
+                <li><a href="brands.html" class="hover:text-[#4AA13E] transition">Our Brands</a></li>
+                <li><a href="products.html" class="hover:text-[#4AA13E] transition">Collections</a></li>
+                <li><a href="blogs.html" class="hover:text-[#4AA13E] transition">Blogs</a></li>
+                <li><a href="contact.html" class="hover:text-[#4AA13E] transition">Contact Us</a></li>
             </ul>
 
+            <!-- CTA -->
             <a href="#"
-                class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
-                <span class="font-medium">Download Catalog</span>
+                class="hidden lg:flex items-center gap-2 text-white px-6 py-3 rounded-full font-semibold text-sm bg-gradient-to-r from-[#2E8B2E] to-[#5DC94E] shadow-[0_8px_25px_rgba(93,201,78,0.4)] hover:scale-105 transition">
+                Download Catalog
             </a>
 
             <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </nav>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[300] bg-white flex flex-col p-8 md:hidden">
         <div class="flex justify-between items-center mb-10">
             <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
             <button onclick="toggleMenu()" class="text-black">
@@ -84,19 +60,11 @@
                 </svg>
             </button>
         </div>
-        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+        <ul class="flex flex-col space-y-4 text-[#383838] text-base font-regular tracking-widest">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="brands.html">Our Brands</a></li>
-            <li class="flex flex-col">
-                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
-                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
-                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
-                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
-                    <a href="marble.html" class="text-xl">Marble Collections</a>
-                    <a href="digital.html" class="text-xl">Digital Collections</a>
-                </div>
-            </li>
+            <li><a href="products.html">Collections</a></li>
             <li><a href="blogs.html">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
@@ -109,77 +77,100 @@
     <!-- hero section -->
     <section class="relative min-h-screen w-full">
         <div class="slide active min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
-            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home.png');">
-            <div
-                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                • India's Premium Laminate Specialists</div>
-            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
-                Surfaces That <br><span class="text-[#56cf5a] italic">Tell a Story</span></h1>
-            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">7 iconic brands. 1200+
-                premium designs transforming Indian interiors.</p>
-            <div class="flex flex-col sm:flex-row gap-5 items-center">
-                <a href="#"
-                    class="flex items-center gap-[10px] text-white px-6 py-4 rounded-full font-bold bg-[#4CAF50] shadow-lg hover:bg-[#45a049] transition-all">
-                    Explore Collections
-                </a>
-                <a href="#"
-                    class="px-6 py-4 text-white rounded-full font-bold bg-white/10 border border-white/30 transition-all hover:bg-white/20">
-                    Request Free Sample
-                </a>
+            style="background-image: url('./assets/image/banner/home.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70 z-0"></div>
+            <div class="relative z-10 flex flex-col items-center">
+                <div
+                    class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                    • India's Premium Laminate Specialists</div>
+                <h1
+                    class="font-playfair font-semibold text-[48px] md:text-[94px] leading-none text-white drop-shadow-2xl">
+                    Surfaces That <br><span class="text-[#5DC94E]">Tell a Story</span></h1>
+                <p class="font-normal text-lg leading-tight text-white max-w-xl mx-auto py-6">7 iconic brands. 1200+
+                    premium designs transforming Indian interiors.</p>
+                <div class="flex flex-col sm:flex-row gap-5 items-center">
+                    <a href="#"
+                        class="flex items-center gap-[10px] text-white px-6 py-4 rounded-full font-bold bg-[#4CAF50] shadow-lg hover:bg-[#45a049] transition-all">
+                        Explore Collections
+                        <img src="./assets/image/icon/right-arrow.svg" alt="">
+                    </a>
+                    <a href="#"
+                        class="px-6 py-4 text-white rounded-full font-bold bg-white/10 border border-white/30 transition-all hover:bg-white/20">
+                        Request Free Sample
+                    </a>
+                </div>
             </div>
         </div>
 
         <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
-            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home1.png');">
-            <div
-                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                • Luxury Finish</div>
-            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
-                Elegance in <br><span class="text-[#56cf5a] italic">Every Detail</span></h1>
-            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Experience the finest
-                textures and high-gloss finishes for your dream home.</p>
-            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">View Luxury
-                Series</a>
+            style="background-image: url('./assets/image/banner/home1.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70 z-0"></div>
+            <div class="relative z-10 flex flex-col items-center">
+                <div
+                    class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                    • Luxury Finish</div>
+                <h1
+                    class="font-playfair font-semibold text-[48px] md:text-[94px] leading-none text-white drop-shadow-2xl">
+                    Elegance in <br><span class="text-[#5DC94E]">Every Detail</span></h1>
+                <p class="font-normal text-lg leading-tight text-white max-w-xl mx-auto py-6">Experience the finest
+                    textures and high-gloss finishes for your dream home.</p>
+                <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">View Luxury
+                    Series</a>
+            </div>
         </div>
 
         <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
-            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home2.png');">
-            <div
-                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                • Durable Quality</div>
-            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
-                Built for <br><span class="text-[#56cf5a] italic">Modern Living</span></h1>
-            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Heat and scratch-resistant
-                laminates designed for heavy-duty kitchen use.</p>
-            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">Learn More</a>
+            style="background-image: url('./assets/image/banner/home2.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70 z-0"></div>
+            <div class="relative z-10 flex flex-col items-center">
+                <div
+                    class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                    • Durable Quality</div>
+                <h1
+                    class="font-playfair font-semibold text-[48px] md:text-[94px] leading-none text-white drop-shadow-2xl">
+                    Built for <br><span class="text-[#5DC94E]">Modern Living</span></h1>
+                <p class="font-normal text-lg leading-tight text-white max-w-xl mx-auto py-6">Heat and scratch-resistant
+                    laminates designed for heavy-duty kitchen use.</p>
+                <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">Learn More</a>
+            </div>
         </div>
 
         <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
-            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home3.png');">
-            <div
-                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                • Nature Collection</div>
-            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
-                Authentic <br><span class="text-[#56cf5a] italic">Wood Textures</span></h1>
-            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Bringing the natural
-                warmth and beauty of real wood into your space.</p>
-            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">See Collection</a>
+            style="background-image: url('./assets/image/banner/home3.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70 z-0"></div>
+            <div class="relative z-10 flex flex-col items-center">
+                <div
+                    class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                    • Nature Collection</div>
+                <h1
+                    class="font-playfair font-semibold text-[48px] md:text-[94px] leading-none text-white drop-shadow-2xl">
+                    Authentic <br><span class="text-[#5DC94E]">Wood Textures</span></h1>
+                <p class="font-normal text-lg leading-tight text-white max-w-xl mx-auto py-6">Bringing the natural
+                    warmth and beauty of real wood into your space.</p>
+                <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">See
+                    Collection</a>
+            </div>
         </div>
 
         <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
-            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home4.png');">
-            <div
-                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-                • Innovation</div>
-            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
-                Inspired by <br><span class="text-[#56cf5a] italic">Your Vision</span></h1>
-            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Over 1200+ designs to
-                match every unique interior style and personality.</p>
-            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">Download Catalog</a>
+            style="background-image: url('./assets/image/banner/home4.png');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70 z-0"></div>
+            <div class="relative z-10 flex flex-col items-center">
+                <div
+                    class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                    • Innovation</div>
+                <h1
+                    class="font-playfair font-semibold text-[48px] md:text-[94px] leading-none text-white drop-shadow-2xl">
+                    Inspired by <br><span class="text-[#5DC94E]">Your Vision</span></h1>
+                <p class="font-normal text-lg leading-tight text-white max-w-xl mx-auto py-6">Over 1200+ designs to
+                    match every unique interior style and personality.</p>
+                <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">Download
+                    Catalog</a>
+            </div>
         </div>
 
         <div class="absolute bottom-12 left-0 right-0 flex justify-center items-center gap-3 z-20">
-            <div class="dot active w-2 h-2 rounded-full bg-white/20 transition-all duration-500 cursor-pointer"
+            <div class="dot active w-8 h-2 rounded-full bg-white transition-all duration-500 cursor-pointer"
                 onclick="currentSlide(0)"></div>
             <div class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-500 cursor-pointer"
                 onclick="currentSlide(1)"></div>
@@ -256,10 +247,10 @@
     <!-- start countre seciton -->
     <section class="bg-gray-50 py-12 px-4">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
 
                 <div
-                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm md:p-8 p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
                     <div class="mb-4">
                         <img src="./assets/image/icon/counter/1Icon.svg" alt="Laminate Designs">
                     </div>
@@ -268,7 +259,7 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm md:p-8 p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
                     <div class="mb-4">
                         <img src="./assets/image/icon/counter/2Icon.svg" alt="Premium Brands">
                     </div>
@@ -277,7 +268,7 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm md:p-8 p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
                     <div class="mb-4">
                         <img src="./assets/image/icon/counter/3Icon.svg" alt="Laminate Designs">
                     </div>
@@ -286,7 +277,7 @@
                 </div>
 
                 <div
-                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm md:p-8 p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
                     <div class="mb-4">
                         <img src="./assets/image/icon/counter/4Icon.svg" alt="Of Excellences">
                     </div>
@@ -309,13 +300,13 @@
                 Explore
             </span>
 
-            <h2 class="font-playfair mb-12 text-[#1A1A1A] font-medium text-[40px] leading-normal">
+            <h2 class="font-playfair mb-6 md:mb-12 text-[#1A1A1A] font-medium text-2xl md:text-[40px]  leading-normal">
                 Our Collections
             </h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 justify-items-center">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-10 justify-items-center">
 
-                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                <div class="group relative w-full max-w-[291px] aspect-[291/338] overflow-hidden rounded-[20px] md:rounded-[24px] cursor-pointer shadow-xl">
                     <img src="./assets/image/home/ourCollection/1image.png" alt="Wooden"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
 
@@ -341,7 +332,7 @@
                     </div>
                 </div>
 
-                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                <div class="group relative w-full max-w-[291px] aspect-[291/338] overflow-hidden rounded-[20px] md:rounded-[24px] cursor-pointer shadow-xl">
                     <img src="./assets/image/home/ourCollection/2image.png" alt="Marble"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
@@ -359,7 +350,7 @@
                     </div>
                 </div>
 
-                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                <div class="group relative w-full max-w-[291px] aspect-[291/338] overflow-hidden rounded-[20px] md:rounded-[24px] cursor-pointer shadow-xl">
                     <img src="./assets/image/home/ourCollection/3image.png" alt="Pastel"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
@@ -377,7 +368,7 @@
                     </div>
                 </div>
 
-                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                <div class="group relative w-full max-w-[291px] aspect-[291/338] overflow-hidden rounded-[20px] md:rounded-[24px] cursor-pointer shadow-xl">
                     <img src="./assets/image/home/ourCollection/4image.png" alt="Digital"
                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
@@ -507,7 +498,7 @@
                     </div>
                 </div>
 
-                <div class="w-full lg:w-1/2 relative mt-16 lg:mt-0 flex justify-center lg:justify-end">
+                <div class="w-full lg:w-1/2 relative  flex justify-center lg:justify-end">
                     <div class="relative w-[85%] sm:w-[70%]  rounded-xl overflow-hidden shadow-lg">
                         <img src="./assets/image/home/whyChoose/1image.png" class="w-full h-full object-cover"
                             alt="Interior Samples">
@@ -521,25 +512,25 @@
                 </div>
             </div>
 
-            <div class="mt-14 flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            <div class="mt-14 flex flex-wrap justify-center items-center gap-3 md:gap-10">
                 <div
-                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
-                    <img src="./assets/image/logo/whychoose/1image.svg" max-hontain" alt="QSA">
+                    class="bg-white px-2 md:px-8 py-3 md:py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    <img src="./assets/image/logo/whychoose/1image.svg" class="object-contain" alt="QSA">
                 </div>
                 <div
-                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    class="bg-white px-2 md:px-8 py-3 md:py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
                     <img src="./assets/image/logo/whychoose/2image.svg" class="object-contain" alt="CE">
                 </div>
                 <div
-                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    class="bg-white px-2 md:px-8 py-3 md:py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
                     <img src="./assets/image/logo/whychoose/3image.svg" class="object-contain" alt="ISI">
                 </div>
                 <div
-                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    class="bg-white px-2 md:px-8 py-3 md:py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
                     <img src="./assets/image/logo/whychoose/4image.svg" class="object-contain" alt="Quality">
                 </div>
                 <div
-                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    class="bg-white px-2 md:px-8 py-3 md:py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
                     <img src="./assets/image/logo/whychoose/5image.svg" class="object-contain" alt="Make In India">
                 </div>
             </div>
@@ -548,8 +539,8 @@
 
     <!-- start find your perfect shade -->
     <section class="w-full" style="background-image: url(./assets/image/bg/FindYourPerfect.png);">
-        <div class="max-w-7xl mx-auto py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="max-w-7xl mx-auto md:py-20 py-10 md:px-0 px-6">
+            <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
                 <!-- ── LEFT: Image ── -->
                 <div class="relative w-full">
@@ -595,23 +586,23 @@
                         Curate
                         Your Palette</p>
 
-                    <h2 class="font-playfair display text-[40px] font-medium leading-normal text-[#1A1A1A] mb-5">
+                    <h2 class="font-playfair display text-2xl md:text-[40px] font-medium leading-normal text-[#1A1A1A] mb-1 md:mb-5">
                         Find Your Perfect Shade
                     </h2>
 
-                    <p class="font-inter text-base leading-tight text-[#555555] mb-10 max-w-md">
+                    <p class="font-inter text-base leading-tight text-[#555555]  mb-4 md:mb-10 max-w-md">
                         Browse across all 7 brands by colour family. Pick a hue and explore the laminates that match
                         your
                         vision.
                     </p>
 
                     <!-- ── Fan Strip ── -->
-                    <div class="mb-12 overflow-x-auto" style="-webkit-overflow-scrolling:touch; scrollbar-width:none;">
+                    <div class="mb-6 md:mb-12 overflow-x-auto" style="-webkit-overflow-scrolling:touch; scrollbar-width:none;">
                         <div style="position:relative; height:160px;" id="fanWrap"></div>
                     </div>
 
                     <!-- Active Colour Detail -->
-                    <div class="flex items-center gap-4 mb-10">
+                    <div class="flex items-center gap-4 mb-6 md:mb-10">
                         <div id="detailSwatch"
                             class="w-14 h-14 rounded-[14px] flex-shrink-0 border-2 border-white transition-all duration-300"
                             style="background:#966F47; border: 1px solid #966F47/30; box-shadow:0px 8px 30px 0px #966F4780;">
@@ -643,7 +634,7 @@
     </section>
 
     <!-- Where Quality Takes Shape -->
-    <section class="py-10 md:py-16 px-10 md:px-12">
+    <section class="py-0 md:py-16 px-0 md:px-12">
         <div class="grid grid-cols-1 md:grid-cols-3 items-stretch gap-0 overflow-hidden rounded-xl">
 
             <div class="bg-[#f0f9f1] p-8 md:p-12 lg:p-16 flex flex-col items-center justify-center text-center">
@@ -654,8 +645,8 @@
                     Our Manufacturing
                 </span>
 
-                <h2 class="font-playfair display text-[40px] font-medium leading-tight text-[#1A1A1A] mb-5">
-                    Where Quality <br> Takes Shape
+                <h2 class="font-playfair display text-2xl md:text-[40px]  font-semiBold leading-tight text-[#1A1A1A] mb-5">
+                    Where Quality Takes Shape
                 </h2>
 
                 <p class="font-inter text-lg font-SemiBold leading-tight text-[#383838] mb-10 max-w-md">
@@ -685,21 +676,21 @@
     </section>
 
     <!-- start PORTFOLIO section -->
-    <section class="relative py-20 px-4 overflow-hidden"
+    <section class="relative py-10 md:py-20 px-4 overflow-hidden"
         style="background-image: url('./assets/image/bg/PORTFOLIO.png'); background-size: cover; background-position: center;">
 
         <div class="relative z-10 max-w-7xl mx-auto text-center">
             <span
                 class="font-inter text-[#5DC94E] font-medium text-sm tracking-widest uppercase mb-3 block">Portfolio</span>
 
-            <h2 class="font-playfair text-[40px] font-medium leading-tight text-white mb-10">Our 7 Premium
+            <h2 class="font-playfair text-2xl md:text-[40px]  font-medium leading-tight text-white mb-10">Our 7 Premium
                 Brands</h2>
 
-            <div class="flex flex-wrap justify-center gap-6 mb-6">
+            <div class="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-6 mb-3 md:mb-6 justify-items-center">
 
                 <div class="group transition-all duration-500 hover:-translate-y-3">
                     <div
-                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px] opacity-100">
+                        class="w-full max-w-[232px] aspect-[232/254] md:h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between py-4 md:py-[17px] px-4 md:px-[36px] opacity-100">
                         <div class="flex-1 flex items-center justify-center w-full">
                             <img src="./assets/image/home/PORTFOLIO/1Arica.png" alt="Arica"
                                 class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
@@ -710,7 +701,7 @@
 
                 <div class="group transition-all duration-500 hover:-translate-y-3">
                     <div
-                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        class="w-full max-w-[232px] aspect-[232/254] md:h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between py-4 md:py-[17px] px-4 md:px-[36px]">
                         <div class="flex-1 flex items-center justify-center w-full">
                             <img src="./assets/image/home/PORTFOLIO/2RanWood.png" alt="Ranwood"
                                 class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
@@ -721,7 +712,7 @@
 
                 <div class="group transition-all duration-500 hover:-translate-y-3">
                     <div
-                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        class="w-full max-w-[232px] aspect-[232/254] md:h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between py-4 md:py-[17px] px-4 md:px-[36px]">
                         <div class="flex-1 flex items-center justify-center w-full">
                             <img src="./assets/image/home/PORTFOLIO/3Atina.png" alt="Atina"
                                 class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
@@ -732,7 +723,7 @@
 
                 <div class="group transition-all duration-500 hover:-translate-y-3">
                     <div
-                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        class="w-full max-w-[232px] aspect-[232/254] md:h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between py-4 md:py-[17px] px-4 md:px-[36px]">
                         <div class="flex-1 flex items-center justify-center w-full">
                             <img src="./assets/image/home/PORTFOLIO/4RanWoodRega.png" alt="Ranwood Rega"
                                 class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
@@ -743,11 +734,11 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-6">
+            <div class="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:gap-6 justify-items-center">
 
                 <div class="group transition-all duration-500 hover:-translate-y-3">
                     <div
-                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        class="w-full max-w-[232px] aspect-[232/254] md:h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between py-4 md:py-[17px] px-4 md:px-[36px]">
                         <div class="flex-1 flex items-center justify-center w-full">
                             <img src="./assets/image/home/PORTFOLIO/5DazzleBerry.png" alt="Dazzleberry"
                                 class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
@@ -759,7 +750,7 @@
 
                 <div class="group transition-all duration-500 hover:-translate-y-3">
                     <div
-                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        class="w-full max-w-[232px] aspect-[232/254] md:h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between py-4 md:py-[17px] px-4 md:px-[36px]">
                         <div class="flex-1 flex items-center justify-center w-full">
                             <img src="./assets/image/home/PORTFOLIO/6RanBerry.png" alt="Ranberry"
                                 class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
@@ -768,9 +759,9 @@
                     </div>
                 </div>
 
-                <div class="group transition-all duration-500 hover:-translate-y-3">
+                <div class="group col-span-2 md:col-span-1">
                     <div
-                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        class="w-full max-w-[232px] aspect-[232/254] md:h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between py-4 md:py-[17px] px-4 md:px-[36px]">
                         <div class="flex-1 flex items-center justify-center w-full">
                             <img src="./assets/image/home/PORTFOLIO/7RangIn.png" alt="Rang-in"
                                 class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
@@ -797,14 +788,14 @@
     </section>
 
     <!-- start See Your Space Transformed section -->
-    <section class="max-w-6xl mx-auto text-center py-20">
+    <section class="max-w-6xl mx-auto text-center md:py-20 py-10">
         <span class="font-inter text-[#5DC94E] font-medium text-sm tracking-widest uppercase mb-2 block">Styled
             Spaces</span>
-        <h2 class="font-playfair text-[40px] font-medium leading-tight text-[#1A1A1A] mb-8">See Your Space
+        <h2 class="font-playfair text-2xl md:text-[40px]  font-medium leading-tight text-[#1A1A1A] mb-8">See Your Space
             Transformed</h2>
 
         <div id="comparison-container"
-            class="relative w-full overflow-hidden rounded-[2rem] shadow-2xl select-none aspect-video md:aspect-[2/1] bg-gray-200">
+            class="relative w-full overflow-hidden rounded-[2rem] shadow-2xl select-none aspect-[16/13] md:aspect-[2/1] bg-gray-200">
 
             <div class="absolute inset-0">
                 <img src="./assets/image/home/SeeYourSpaceTransformed.png" class="w-full h-full object-cover"
@@ -813,7 +804,7 @@
                     class="absolute bottom-6 right-6 bg-black/50 backdrop-blur-md text-white text-[10px] px-4 py-1.5 rounded-md uppercase tracking-widest">After</span>
             </div>
 
-            <div id="divisor" class="absolute top-0 left-0 h-full overflow-hidden border-r-2 border-[#5DC94E] z-10"
+            <div id="divisor" class="absolute top-0 m-0 md:m-0 left-0 h-full overflow-hidden border-r-2 border-[#5DC94E] z-10"
                 style="width: 50%;">
                 <img id="before-img" src="./assets/image/home/SeeYourSpaceTransformed.png"
                     class="max-w-none h-full object-cover brightness-50 contrast-125" alt="Before Transformation">
@@ -858,7 +849,7 @@
     get filteredLocations() {
         return this.locations.filter(i => i.city.toLowerCase().includes(this.search.toLowerCase()) || i.state.toLowerCase().includes(this.search.toLowerCase()))
     }
-}" style="background-image: url(./assets/image/bg/FindRosewoodLaminates.png); background-repeat: no-repeat; background-size: cover;">
+}" style="background-image: url(./assets/image/bg/FindRosewoodLaminates.png); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
         <div class="absolute inset-0 opacity-10 pointer-events-none"
             style="background-image: url('./assets/image/bg/map-dots.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
@@ -955,8 +946,8 @@
                 availability.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4">
-                 <a href="contact.html"
+            <div class="flex flex-row md:flex-col sm:flex-row gap-4">
+                <a href="contact.html"
                     class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
                     Enquire Now
                 </a>
@@ -1017,10 +1008,14 @@
                     <h4 class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
                         Collections</h4>
                     <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
-                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden Collections</a></li>
-                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel Collections</a></li>
-                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble Collections</a></li>
-                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital Collections</a></li>
+                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden
+                                Collections</a></li>
+                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel
+                                Collections</a></li>
+                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble
+                                Collections</a></li>
+                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital
+                                Collections</a></li>
                     </ul>
                 </div>
 

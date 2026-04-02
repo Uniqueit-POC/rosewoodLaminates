@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosewood Laminates - Premium Surfaces</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/dev-style.css">
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header class="fixed  w-full z-50">
+        <nav
+            class="mx-auto bg-white backdrop-blur-md  flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
+            <div class="flex items-center">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+            </div>
+
+            <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
+                <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
+                <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
+                        Collections
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                        <li><a href="wooden.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
+                                Collections</a></li>
+                        <li><a href="pastel.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
+                                Collections</a></li>
+                        <li><a href="marble.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
+                                Collections</a></li>
+                        <li><a href="digital.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
+                                Collections</a></li>
+                    </ul>
+                </li>
+                <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
+                <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
+            </ul>
+
+            <a href="#"
+                class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                <span class="font-medium">Download Catalog</span>
+            </a>
+
+            <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
+                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
+                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
+                    <a href="marble.html" class="text-xl">Marble Collections</a>
+                    <a href="digital.html" class="text-xl">Digital Collections</a>
+                </div>
+            </li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="mt-auto">
+            <a href="#" class="block text-center bg-[#4AA13E] text-white py-4 rounded-xl font-bold">Download Catalog</a>
+        </div>
+    </div>
+    <!-- header section -->
+
+    <!-- hero section -->
+    <section class="relative h-[46vh] w-full flex items-center justify-center overflow-hidden bg-[#1a1a1a] pt-20">
+
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/image/banner/Contact.png" alt="Hero Background" class="w-full h-full object-cover">
+        </div>
+
+        <div class="relative z-10 text-center px-4">
+            <span class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm mb-2 block font-inter">
+                OUR BLOGS
+            </span>
+            <h1 class="text-white text-5xl md:text-7xl font-playfair leading-tight font-playfair">
+                Spaces & Stories
+            </h1>
+        </div>
+    </section>
+
+    <!-- start blog list section -->
+    <section class="py-16 bg-[#F7F9F7]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="block uppercase font-medium text-sm tracking-widest leading-tight text-[#4AA13E]">Design Stories</span>
+                <h2 class="font-playfair mb-8    text-[#1A1A1A] font-medium text-4xl leading-normal">From Our Design Journal</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-[#E3E3E3] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./assets/image/blog/1.png" alt="Trends"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span
+                            class="absolute top-4 left-4 bg-[#5DC94EE5] text-white text-xs font-medium font-inter px-3 py-1 rounded-full shadow-lg">
+                            Trends
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-[#8E8E8E] text-xs font-regular font-inter mb-4">
+                            <span>March 15, 2026</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                5 min read
+                            </span>
+                        </div>
+                        <h3
+                            class="text-base font-playfair font-medium text-[#1C1C1C] mb-2 leading-snug group-hover:text-[#4AA13E] transition-colors">
+                            The 2025 Laminate Colour Trends You Can't Ignore
+                        </h3>
+                        <p class="text-[#717171] text-sm font-regular font-inter leading-relaxed mb-6 line-clamp-3">
+                            From warm terracottas to deep forest greens — how Indian interior designers are reimagining
+                            spaces this year.
+                        </p>
+                        <a href="blogDetails.html" class="inline-flex items-center gap-2 text-[#5DC94E] font-medium text-lg group/link">
+                            Read More
+                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-[#E3E3E3] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./assets/image/blog/2.png" alt="Guide"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span
+                            class="absolute top-4 left-4 bg-[#5DC94EE5] text-white text-xs font-medium font-inter px-3 py-1 rounded-full shadow-lg">
+                            Guide
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-[#8E8E8E] text-xs font-regular font-inter mb-4">
+                            <span>February 28, 2026</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                7 min read
+                            </span>
+                        </div>
+                        <h3
+                            class="text-base font-playfair font-medium text-[#1C1C1C] mb-2 leading-snug group-hover:text-[#4AA13E] transition-colors">
+                            Mirror vs. Suede: Which Finish Is Right For Your Space?
+                        </h3>
+                        <p class="text-[#717171] text-sm font-regular font-inter leading-relaxed mb-6 line-clamp-3">
+                            A practical guide to choosing between high-gloss mirror laminates and soft-touch suede
+                            finishes for different room types.
+                        </p>
+                        <a href="blogDetails.html" class="inline-flex items-center gap-2 text-[#5DC94E] font-medium text-lg group/link">
+                            Read More
+                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-[#E3E3E3] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./assets/image/blog/3.png" alt="Sustainability"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span
+                            class="absolute top-4 left-4 bg-[#5DC94EE5] text-white text-xs font-medium font-inter px-3 py-1 rounded-full shadow-lg">
+                            Sustainability
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-[#8E8E8E] text-xs font-regular font-inter mb-4">
+                            <span>February 10, 2026</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                4 min read
+                            </span>
+                        </div>
+                        <h3
+                            class="text-base font-playfair font-medium text-[#1C1C1C] mb-2 leading-snug group-hover:text-[#4AA13E] transition-colors">
+                            How Engineered Wood Laminates Are Redefining Sustainable Interiors
+                        </h3>
+                        <p class="text-[#717171] text-sm font-regular font-inter leading-relaxed mb-6 line-clamp-3">
+                            The eco-conscious interior movement is growing. Here's why engineered wood laminates are at
+                            the forefront.
+                        </p>
+                        <a href="blogDetails.html" class="inline-flex items-center gap-2 text-[#5DC94E] font-medium text-lg group/link">
+                            Read More
+                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                 <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-[#E3E3E3] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./assets/image/blog/1.png" alt="Trends"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span
+                            class="absolute top-4 left-4 bg-[#5DC94EE5] text-white text-xs font-medium font-inter px-3 py-1 rounded-full shadow-lg">
+                            Trends
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-[#8E8E8E] text-xs font-regular font-inter mb-4">
+                            <span>March 15, 2026</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                5 min read
+                            </span>
+                        </div>
+                        <h3
+                            class="text-base font-playfair font-medium text-[#1C1C1C] mb-2 leading-snug group-hover:text-[#4AA13E] transition-colors">
+                            The 2025 Laminate Colour Trends You Can't Ignore
+                        </h3>
+                        <p class="text-[#717171] text-sm font-regular font-inter leading-relaxed mb-6 line-clamp-3">
+                            From warm terracottas to deep forest greens — how Indian interior designers are reimagining
+                            spaces this year.
+                        </p>
+                        <a href="blogDetails.html" class="inline-flex items-center gap-2 text-[#5DC94E] font-medium text-lg group/link">
+                            Read More
+                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-[#E3E3E3] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./assets/image/blog/2.png" alt="Guide"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span
+                            class="absolute top-4 left-4 bg-[#5DC94EE5] text-white text-xs font-medium font-inter px-3 py-1 rounded-full shadow-lg">
+                            Guide
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-[#8E8E8E] text-xs font-regular font-inter mb-4">
+                            <span>February 28, 2026</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                7 min read
+                            </span>
+                        </div>
+                        <h3
+                            class="text-base font-playfair font-medium text-[#1C1C1C] mb-2 leading-snug group-hover:text-[#4AA13E] transition-colors">
+                            Mirror vs. Suede: Which Finish Is Right For Your Space?
+                        </h3>
+                        <p class="text-[#717171] text-sm font-regular font-inter leading-relaxed mb-6 line-clamp-3">
+                            A practical guide to choosing between high-gloss mirror laminates and soft-touch suede
+                            finishes for different room types.
+                        </p>
+                        <a href="blogDetails.html" class="inline-flex items-center gap-2 text-[#5DC94E] font-medium text-lg group/link">
+                            Read More
+                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-[#E3E3E3] shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="relative overflow-hidden">
+                        <img src="./assets/image/blog/3.png" alt="Sustainability"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span
+                            class="absolute top-4 left-4 bg-[#5DC94EE5] text-white text-xs font-medium font-inter px-3 py-1 rounded-full shadow-lg">
+                            Sustainability
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-[#8E8E8E] text-xs font-regular font-inter mb-4">
+                            <span>February 10, 2026</span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                                4 min read
+                            </span>
+                        </div>
+                        <h3
+                            class="text-base font-playfair font-medium text-[#1C1C1C] mb-2 leading-snug group-hover:text-[#4AA13E] transition-colors">
+                            How Engineered Wood Laminates Are Redefining Sustainable Interiors
+                        </h3>
+                        <p class="text-[#717171] text-sm font-regular font-inter leading-relaxed mb-6 line-clamp-3">
+                            The eco-conscious interior movement is growing. Here's why engineered wood laminates are at
+                            the forefront.
+                        </p>
+                        <a href="blogDetails.html" class="inline-flex items-center gap-2 text-[#5DC94E] font-medium text-lg group/link">
+                            Read More
+                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- start OUR BRANDS section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+        <div class="mb-10">
+            <span class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm block mb-2 font-inter">Our
+                Brands</span>
+            <h2 class="font-playfair mb-4 text-[#1A1A1A] font-medium text-4xl leading-none">The Rosewood
+                Family</h2>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 mb-16">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                    <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="RANBerry"
+                        class="h-10 mb-6 object-contain">
+                    <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">RANBerry</h4>
+                    <p class="text-[#555555 text-sm font-regular leading-relaxed">Vibrant, youthful designs for
+                        contemporary spaces</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                    <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood"
+                        class="h-10 mb-6 object-contain">
+                    <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Ranwood</h4>
+                    <p class="text-[#555555 text-sm font-regular leading-relaxed">Textile-inspired textures with warm,
+                        natural tones</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                    <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Rega"
+                        class="h-10 mb-6 object-contain">
+                    <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Rega</h4>
+                    <p class="text[#555555500 texsm font-regular] leading-relaxed">Refined elegance for high-end
+                        residential interiors</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                    <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica"
+                        class="h-10 mb-6 object-contain">
+                    <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Arica</h4>
+                    <p class="text-[#555555 text-sm font-regular leading-relaxed">Bold, architectural patterns for
+                        statement surfaces</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                    <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina"
+                        class="h-10 mb-6 object-contain">
+                    <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Atina</h4>
+                    <p class="text[#555555500 texsm font-regular] leading-relaxed">Classic woodgrains and timeless
+                        natural aesthetics</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                    <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzleberry"
+                        class="h-10 mb-6 object-contain">
+                    <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Dazzleberry Pastel</h4>
+                    <p class="text-gray[#555555-[13psm font-regular-relaxed">Soft, dreamy pastels for delicate, serene
+                        interiors</p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                    <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Crystal"
+                        class="h-10 mb-6 object-contain">
+                    <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Crystal</h4>
+                    <p class="text-gray[#555555-[13psm font-regular-relaxed">High-gloss mirror finishes for dazzling
+                        luxury</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="brands.html"
+            class="inline-flex items-center gap-3 bg-[#4AA13E] hover:bg-[#3d8b33] text-white px-10 py-4 rounded-full font-bold transition-all duration-300">
+            <span>View All Brands & Catalogues</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+        </a>
+    </section>
+
+    <!-- start Let’s Help You Choose Right section -->
+    <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
+
+        <div class="relative w-full md:w-[53%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
+            <img src="./assets/image/bg/cta.png" alt="Laminate Samples" class="w-full h-full object-cover">
+        </div>
+
+        <div class="w-full md:w-[45%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
+
+            <span class="font-inter text-[#5DC94E] font-medium text-xs tracking-widest uppercase mb-4 block">
+                Find Your Nearest Dealer
+            </span>
+
+            <h2 class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-6">
+                Let’s Help You Choose Right
+            </h2>
+
+            <p class="font-inter text-lg leading-tight text-[#C7C7C7] mb-10 max-w-xl">
+                Have questions or need help choosing the right laminate?
+                Connect with our team or locate an authorized Rosewood dealer near you for expert assistance and product
+                availability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                 <a href="contact.html"
+                    class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                    Enquire Now
+                </a>
+                <a href="about.html"
+                    class="bg-white hover:bg-gray-100 text-[#2E8B2E] px-8 py-3.5 rounded-full font-semibold text-center transition-all">
+                    Find a Dealer
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- start footer seciton  -->
+    <footer class="bg-white text-gray-700 pt-16 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+
+                <div class="space-y-4">
+                    <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="w-auto">
+                    <p class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs">
+                        India's premier decorative laminates group with 7 iconic brands. Crafting premium surfaces with
+                        IS 2046:1995 and ISO 9001:2008 certified quality.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            IS 2046:1995
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            ISO 9001:2008
+                        </span>
+                    </div>
+                </div>
+
+                <div class="lg:pl-8">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Quick Links</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="index.html" class="hover:text-green-600 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-green-600 transition-colors">About Us</a></li>
+                        <li><a href="brands.html" class="hover:text-green-600 transition-colors">Our Brands</a></li>
+                        <li><a href="products.html" class="hover:text-green-600 transition-colors">Products</a></li>
+                        <li><a href="blogs.html" class="hover:text-green-600 transition-colors">Our Blogs</a></li>
+                        <li><a href="contact.html" class="hover:text-green-600 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Collections</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden Collections</a></li>
+                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel Collections</a></li>
+                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble Collections</a></li>
+                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital Collections</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Contact Us</h4>
+                    <ul class="space-y-5 text-[14px]">
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/phone.svg" alt="phone">
+                            <a href="tel:+919876543210"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838]">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/email.svg" alt="email">
+                            <a href="mailto:info@rosewoodlaminates.com"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838] break-all">info@rosewoodlaminates.com</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <img src="./assets/image/icon/social/map.svg" alt="map">
+                            <p class="font-inter space-y-2 text-sm font-regular text-[#383838]">8-A, National
+                                Highway, Matel Road, Nr. Amardham Temple, Matel - 363622.</p>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-3 pt-4">
+                        <a href="https://www.instagram.com/rosewoodlaminates"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/rosewoodlaminates#"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/rosewoodlaminates/?originalSubdomain=in"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/linkedin.svg" alt="linkedin">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCOY24GRtotJY52tLawK-tRQ"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-[#00000029] text-center">
+                <p class="text-sm font-regular text-[#383838] tracking-wide">
+                    © 2026 Rosewood Laminates. All rights reserved. Crafted with precision for premium spaces.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dev-script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>

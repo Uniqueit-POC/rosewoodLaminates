@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosewood Laminates - Premium Surfaces</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/dev-style.css">
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header class="fixed  w-full z-50">
+        <nav
+            class="mx-auto bg-white backdrop-blur-md  flex items-center justify-between px-6 py-3 border-b border-[#00000012]">
+            <div class="flex items-center">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+            </div>
+
+            <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
+                <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
+                <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
+                        Collections
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                        <li><a href="wooden.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
+                                Collections</a></li>
+                        <li><a href="pastel.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
+                                Collections</a></li>
+                        <li><a href="marble.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
+                                Collections</a></li>
+                        <li><a href="digital.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
+                                Collections</a></li>
+                    </ul>
+                </li>
+                <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
+                <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
+            </ul>
+
+            <a href="#"
+                class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                <span class="font-medium">Download Catalog</span>
+            </a>
+
+            <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
+                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
+                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
+                    <a href="marble.html" class="text-xl">Marble Collections</a>
+                    <a href="digital.html" class="text-xl">Digital Collections</a>
+                </div>
+            </li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="mt-auto">
+            <a href="#" class="block text-center bg-[#4AA13E] text-white py-4 rounded-xl font-bold">Download Catalog</a>
+        </div>
+    </div>
+    <!-- header section -->
+
+    <nav class="w-full bg-white px-6 py-4 pt-24 md:pt-20 flex justify-between items-center border-b border-[#00000012]">
+        <div class="text-2xl font-playfair font-regular text-[#1C1C1C]">
+            Products / <span class="text-gray-800 font-medium">Product Detail</span>
+        </div>
+
+        <a href="products.html"
+            class="border border-[#5DC94E99] text-[#5DC94E] px-4 py-2 rounded-full text-xs flex items-center gap-1 hover:bg-[#EFFAED] transition-colors">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+                </path>
+            </svg>
+            Back
+        </a>
+    </nav>
+
+    <section class="max-w-7xl mx-auto p-12 bg-white min-h-screen">
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 items-start">
+
+            <div
+                class="bg-[#EBEBEB] rounded-lg lg:w-[500px] flex items-center justify-center p-12 overflow-hidden shadow-sm relative group">
+                <div class="relative w-full max-w-[308px] h-[512px]">
+                    <span
+                        class="absolute top-6 left-6 text-white text-base font-inter font-medium tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] z-10">
+                        300 X 190 MM
+                    </span>
+
+                    <img src="./assets/image/ProductDetails/1.png" alt="Antique Birch Sample"
+                        class="w-full object-cover rounded-sm shadow-xl border border-white/50 h-[512px]">
+                </div>
+            </div>
+
+            <div class="flex flex-col pt-0 lg:pt-3">
+                <h1
+                    class="font-inter font-semibold text-3xl leading-tight text-rosewood-text uppercase mb-6 tracking-wide">
+                    ANTIQUE BIRCH WOOD - 6099
+                </h1>
+
+                <div class="mb-10 overflow-hidden rounded-lg shadow-lg border border-rosewood-border/50">
+                    <img src="./assets/image/ProductDetails/Frame40330.png" alt="Room Installation Preview"
+                        class="w-full h-[280px] object-cover hover:scale-[1.03] transition-transform duration-700">
+                </div>
+
+                <div class="space-y-0 border-t border-rosewood-border mb-2">
+
+                    <div class="flex items-center py-4 border-b border-rosewood-border">
+                        <span
+                            class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Brand</span>
+                        <span class="font-inter text-sm font-regular text-[#1C1C1C]">Renberry</span>
+                    </div>
+
+                    <div class="flex items-center py-4 border-b border-rosewood-border">
+                        <span
+                            class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Finish</span>
+                        <span class="font-inter text-sm font-regular text-[#1C1C1C]">Mirror</span>
+                    </div>
+
+                    <div class="flex items-center py-4 border-b border-rosewood-border">
+                        <span
+                            class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Design
+                            Number</span>
+                        <span class="font-inter text-sm font-regular text-[#1C1C1C]">MR-6099</span>
+                    </div>
+
+                    <div class="flex items-center py-4 border-b border-rosewood-border">
+                        <span
+                            class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Size</span>
+                        <span class="font-inter text-sm font-regular text-[#1C1C1C]">1220 mm × 2440 mm (8' ×
+                            4')</span>
+                    </div>
+
+                    <div class="flex items-center py-4 border-b border-rosewood-border">
+                        <span
+                            class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Thickness</span>
+                        <span class="font-inter text-sm font-regular text-[#1C1C1C]">
+                            1 mm (Other thicknesses available on request)
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+
+                    <a href="#" target="_blank"
+                        class="flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.215 3.076.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                        Share
+                    </a>
+
+                    <button
+                        class="border-2 border-[#5DC94E] text-[#5DC94E] hover:bg-[#EFFAED] hover:text-[#5DC94E] px-9 py-4 rounded-full font-inter text-base font-bold transition-all duration-300">
+                        Send Enquiry
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Technical Specificatio slider  -->
+    <section class="bg-white pt-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h4 class="font-inter block mb-2 uppercase font-medium text-sm tracking-widest leading-tight text-[#4AA13E]">Quality Assurance</h4>
+                <h2 class="font-playfair mb-4 text-[#1A1A1A] font-medium text-3xl leading-normal">Technical Specification</h2>
+                <p class="font-inter text-[#555555] space-y-4 text-sm md:text-base leading-tight font-regular">All RANBerry laminates meet or exceed requirements as per IS 2046:1995
+                    · Type S, VGS</p>
+            </div>
+
+            <div class="ProductDetails-slider overflow-hidden relative pb-12">
+                <div class="ProductDetails-slider-wrapper flex transition-transform duration-300">
+
+                    <div class="ProductDetails-slider-slide flex-shrink-0 w-full h-auto px-2">
+                        <div class="bg-[#EFFAED] border border-[#5DC94E26] rounded-2xl p-6 h-full relative">
+                            <span
+                                class="absolute top-6 right-8 text-[#7DD471] font-semibold font-playfair text-2xl opacity-60">01.</span>
+                            <div class="mb-2">
+                                <img src="./assets/image/icon/ProductDetails/1.svg" alt="">
+                            </div>
+                            <h3 class="text-2xl text-[#132810] font-semiBold font-playfair mb-2">Thickness Precision</h3>
+                            <p class="text-[#555555] text-base font-regular font-inter">Manufactured to a precise 1mm (±0.1) thickness for consistent, reliable layering across every application.</p>
+                        </div>
+                    </div>
+                    <div class="ProductDetails-slider-slide flex-shrink-0 w-full h-auto px-2">
+                        <div class="bg-[#EFFAED] border border-[#5DC94E26] rounded-2xl p-6 h-full relative">
+                            <span
+                                class="absolute top-6 right-8 text-[#7DD471] font-semibold font-playfair text-2xl opacity-60">02.</span>
+                            <div class="mb-2">
+                                <img src="./assets/image/icon/ProductDetails/2.svg" alt="">
+                            </div>
+                            <h3 class="text-2xl text-[#132810] font-semiBold font-playfair mb-2">Surface Wear Resistance</h3>
+                            <p class="text-[#555555] text-base font-regular font-inter">Withstands a minimum of 350 revolutions — built to handle daily friction without showing a scratch.</p>
+                        </div>
+                    </div>
+                    <div class="ProductDetails-slider-slide flex-shrink-0 w-full h-auto px-2">
+                        <div class="bg-[#EFFAED] border border-[#5DC94E26] rounded-2xl p-6 h-full relative">
+                            <span
+                                class="absolute top-6 right-8 text-[#7DD471] font-semibold font-playfair text-2xl opacity-60">03.</span>
+                            <div class="mb-2">
+                                <img src="./assets/image/icon/ProductDetails/3.svg" alt="">
+                            </div>
+                            <h3 class="text-2xl text-[#132810] font-semiBold font-playfair mb-2">Boiling Water Resistance</h3>
+                            <p class="text-[#555555] text-base font-regular font-inter">Resists mass and thickness change when immersed in boiling water, maintaining structural integrity in high-moisture environments.</p>
+                        </div>
+                    </div>
+                    <div class="ProductDetails-slider-slide flex-shrink-0 w-full h-auto px-2">
+                        <div class="bg-[#EFFAED] border border-[#5DC94E26] rounded-2xl p-6 h-full relative">
+                            <span
+                                class="absolute top-6 right-8 text-[#7DD471] font-semibold font-playfair text-2xl opacity-60">04.</span>
+                            <div class="mb-2">
+                                <img src="./assets/image/icon/ProductDetails/4.svg" alt="">
+                            </div>
+                            <h3 class="text-2xl text-[#132810] font-semiBold font-playfair mb-2">Dry Heat Resistance</h3>
+                            <p class="text-[#555555] text-base font-regular font-inter">Handles dry heat up to 180°C without warping, discolouring, or degrading — safe around hot appliances and surfaces.</p>
+                        </div>
+                    </div>
+                    <div class="ProductDetails-slider-slide flex-shrink-0 w-full h-auto px-2">
+                        <div class="bg-[#EFFAED] border border-[#5DC94E26] rounded-2xl p-6 h-full relative">
+                            <span
+                                class="absolute top-6 right-8 text-[#7DD471] font-semibold font-playfair text-2xl opacity-60">05.</span>
+                            <div class="mb-2">
+                                <img src="./assets/image/icon/ProductDetails/5.svg" alt="">
+                            </div>
+                            <h3 class="text-2xl text-[#132810] font-semiBold font-playfair mb-2">High-Temperature Dimensions Stability</h3>
+                            <p class="text-[#555555] text-base font-regular font-inter">Maintains its shape and dimensions under elevated temperatures — no swelling, no shrinking, no surprises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- start OUR BRANDS section -->
+     <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+    <div class="mb-10">
+        <span class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm block mb-2 font-inter">Our Brands</span>
+        <h2 class="font-playfair mb-4 text-[#1A1A1A] font-medium text-4xl leading-none">The Rosewood Family</h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6 mb-16">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="RANBerry" class="h-10 mb-6 object-contain">
+                <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">RANBerry</h4>
+                <p class="text-[#555555 text-sm font-regular leading-relaxed">Vibrant, youthful designs for contemporary spaces</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood" class="h-10 mb-6 object-contain">
+                <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Ranwood</h4>
+                <p class="text-[#555555 text-sm font-regular leading-relaxed">Textile-inspired textures with warm, natural tones</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Rega" class="h-10 mb-6 object-contain">
+                <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Rega</h4>
+                <p class="text[#555555500 texsm font-regular] leading-relaxed">Refined elegance for high-end residential interiors</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica" class="h-10 mb-6 object-contain">
+                <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Arica</h4>
+                <p class="text-[#555555 text-sm font-regular leading-relaxed">Bold, architectural patterns for statement surfaces</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina" class="h-10 mb-6 object-contain">
+                <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Atina</h4>
+                <p class="text[#555555500 texsm font-regular] leading-relaxed">Classic woodgrains and timeless natural aesthetics</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzleberry" class="h-10 mb-6 object-contain">
+                <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Dazzleberry Pastel</h4>
+                <p class="text-gray[#555555-[13psm font-regular-relaxed">Soft, dreamy pastels for delicate, serene interiors</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+                <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Crystal" class="h-10 mb-6 object-contain">
+                <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">Crystal</h4>
+                <p class="text-gray[#555555-[13psm font-regular-relaxed">High-gloss mirror finishes for dazzling luxury</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="inline-flex items-center gap-3 bg-[#4AA13E] hover:bg-[#3d8b33] text-white px-10 py-4 rounded-full font-bold transition-all duration-300">
+        <span>View All Brands & Catalogues</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+    </a>
+</section>
+
+
+    <section class="py-6 bg-[#F7F9F7] border-b border-[#5DC94E26]">
+        <div class="mx-auto px-6">
+            <div class="swiper logo-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper flex items-center" id="swiper-wrapper-4e13101962ba09acb" aria-live="off">
+
+                    <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-active" role="group"
+                        aria-label="1 / 7" data-swiper-slide-index="0" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-next" role="group"
+                        aria-label="2 / 7" data-swiper-slide-index="1" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="3 / 7"
+                        data-swiper-slide-index="2" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="4 / 7"
+                        data-swiper-slide-index="3" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="Ranberry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="5 / 7"
+                        data-swiper-slide-index="4" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Ranwood Rega"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="6 / 7"
+                        data-swiper-slide-index="5" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzle Berry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="7 / 7"
+                        data-swiper-slide-index="6" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Rang-In"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- start Let’s Help You Choose Right section -->
+    <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
+
+        <div class="relative w-full md:w-[53%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
+            <img src="./assets/image/bg/cta.png" alt="Laminate Samples" class="w-full h-full object-cover">
+        </div>
+
+        <div class="w-full md:w-[45%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
+
+            <span class="font-inter text-[#5DC94E] font-medium text-xs tracking-widest uppercase mb-4 block">
+                Find Your Nearest Dealer
+            </span>
+
+            <h2 class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-6">
+                Let’s Help You Choose Right
+            </h2>
+
+            <p class="font-inter text-lg leading-tight text-[#C7C7C7] mb-10 max-w-xl">
+                Have questions or need help choosing the right laminate?
+                Connect with our team or locate an authorized Rosewood dealer near you for expert assistance and product
+                availability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                 <a href="contact.html"
+                    class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                    Enquire Now
+                </a>
+                <a href="about.html"
+                    class="bg-white hover:bg-gray-100 text-[#2E8B2E] px-8 py-3.5 rounded-full font-semibold text-center transition-all">
+                    Find a Dealer
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- start footer seciton  -->
+    <footer class="bg-white text-gray-700 pt-16 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+
+                <div class="space-y-4">
+                    <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="w-auto">
+                    <p class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs">
+                        India's premier decorative laminates group with 7 iconic brands. Crafting premium surfaces with
+                        IS 2046:1995 and ISO 9001:2008 certified quality.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            IS 2046:1995
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            ISO 9001:2008
+                        </span>
+                    </div>
+                </div>
+
+                <div class="lg:pl-8">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Quick Links</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="index.html" class="hover:text-green-600 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-green-600 transition-colors">About Us</a></li>
+                        <li><a href="brands.html" class="hover:text-green-600 transition-colors">Our Brands</a></li>
+                        <li><a href="products.html" class="hover:text-green-600 transition-colors">Products</a></li>
+                        <li><a href="blogs.html" class="hover:text-green-600 transition-colors">Our Blogs</a></li>
+                        <li><a href="contact.html" class="hover:text-green-600 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Collections</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden Collections</a></li>
+                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel Collections</a></li>
+                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble Collections</a></li>
+                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital Collections</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Contact Us</h4>
+                    <ul class="space-y-5 text-[14px]">
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/phone.svg" alt="phone">
+                            <a href="tel:+919876543210"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838]">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/email.svg" alt="email">
+                            <a href="mailto:info@rosewoodlaminates.com"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838] break-all">info@rosewoodlaminates.com</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <img src="./assets/image/icon/social/map.svg" alt="map">
+                            <p class="font-inter space-y-2 text-sm font-regular text-[#383838]">8-A, National
+                                Highway, Matel Road, Nr. Amardham Temple, Matel - 363622.</p>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-3 pt-4">
+                        <a href="https://www.instagram.com/rosewoodlaminates"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-[#EFFAED] transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/rosewoodlaminates"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-[#EFFAED] transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/rosewoodlaminates/?originalSubdomain=in"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-[#EFFAED] transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/linkedin.svg" alt="linkedin.svg">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCOY24GRtotJY52tLawK-tRQ"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-[#EFFAED] transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-[#00000029] text-center">
+                <p class="text-sm font-regular text-[#383838] tracking-wide">
+                    © 2026 Rosewood Laminates. All rights reserved. Crafted with precision for premium spaces.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.ProductDetails-slider', {
+            // TELL SWIPER TO USE YOUR CUSTOM CLASSES
+            wrapperClass: 'ProductDetails-slider-wrapper',
+            slideClass: 'ProductDetails-slider-slide',
+
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+
+            // Fix for the "Loop Warning"
+            loopedSlides: 4.5,
+
+            pagination: {
+                el: '.ProductDetails-slider-pagination',
+                clickable: true,
+                // Optional: custom bullet classes
+                bulletClass: 'ProductDetails-bullet',
+                bulletActiveClass: 'ProductDetails-bullet-active',
+            },
+
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1280: { slidesPerView: 4.5 },
+            }
+        });
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./assets/js/dev-script.js"></script>
+</body>
+
+</html>

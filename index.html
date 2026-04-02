@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosewood Laminates - Premium Surfaces</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/dev-style.css">
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header class="fixed top-0 w-full z-50 px-4 py-4 lg:px-10">
+        <nav
+            class="mx-auto bg-white/80 backdrop-blur-md rounded-xl flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
+            <div class="flex items-center">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+            </div>
+
+            <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
+                <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
+                <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
+                        Collections
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                        <li><a href="wooden.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
+                                Collections</a></li>
+                        <li><a href="pastel.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
+                                Collections</a></li>
+                        <li><a href="marble.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
+                                Collections</a></li>
+                        <li><a href="digital.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
+                                Collections</a></li>
+                    </ul>
+                </li>
+                <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
+                <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
+            </ul>
+
+            <a href="#"
+                class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                <span class="font-medium">Download Catalog</span>
+            </a>
+
+            <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
+                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
+                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
+                    <a href="marble.html" class="text-xl">Marble Collections</a>
+                    <a href="digital.html" class="text-xl">Digital Collections</a>
+                </div>
+            </li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="mt-auto">
+            <a href="#" class="block text-center bg-[#4AA13E] text-white py-4 rounded-xl font-bold">Download Catalog</a>
+        </div>
+    </div>
+    <!-- header section -->
+
+    <!-- hero section -->
+    <section class="relative min-h-screen w-full">
+        <div class="slide active min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
+            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home.png');">
+            <div
+                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                • India's Premium Laminate Specialists</div>
+            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
+                Surfaces That <br><span class="text-[#56cf5a] italic">Tell a Story</span></h1>
+            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">7 iconic brands. 1200+
+                premium designs transforming Indian interiors.</p>
+            <div class="flex flex-col sm:flex-row gap-5 items-center">
+                <a href="#"
+                    class="flex items-center gap-[10px] text-white px-6 py-4 rounded-full font-bold bg-[#4CAF50] shadow-lg hover:bg-[#45a049] transition-all">
+                    Explore Collections
+                </a>
+                <a href="#"
+                    class="px-6 py-4 text-white rounded-full font-bold bg-white/10 border border-white/30 transition-all hover:bg-white/20">
+                    Request Free Sample
+                </a>
+            </div>
+        </div>
+
+        <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
+            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home1.png');">
+            <div
+                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                • Luxury Finish</div>
+            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
+                Elegance in <br><span class="text-[#56cf5a] italic">Every Detail</span></h1>
+            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Experience the finest
+                textures and high-gloss finishes for your dream home.</p>
+            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">View Luxury
+                Series</a>
+        </div>
+
+        <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
+            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home2.png');">
+            <div
+                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                • Durable Quality</div>
+            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
+                Built for <br><span class="text-[#56cf5a] italic">Modern Living</span></h1>
+            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Heat and scratch-resistant
+                laminates designed for heavy-duty kitchen use.</p>
+            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">Learn More</a>
+        </div>
+
+        <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
+            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home3.png');">
+            <div
+                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                • Nature Collection</div>
+            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
+                Authentic <br><span class="text-[#56cf5a] italic">Wood Textures</span></h1>
+            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Bringing the natural
+                warmth and beauty of real wood into your space.</p>
+            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">See Collection</a>
+        </div>
+
+        <div class="slide min-h-screen flex-col items-center justify-center text-center px-6 bg-cover bg-center"
+            style="background-image: linear-gradient(to top, #000000a3, #000000A6), url('./assets/image/banner/home4.png');">
+            <div
+                class="mb-6 border border-[#5DC94E66] bg-[#5DC94E33] text-[#74E864] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+                • Innovation</div>
+            <h1 class="font-playfair font-semibold text-[48px] md:text-[94px] leading-tight text-white drop-shadow-2xl">
+                Inspired by <br><span class="text-[#56cf5a] italic">Your Vision</span></h1>
+            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">Over 1200+ designs to
+                match every unique interior style and personality.</p>
+            <a href="#" class="bg-[#4CAF50] text-white px-8 py-4 rounded-full font-bold shadow-lg">Download Catalog</a>
+        </div>
+
+        <div class="absolute bottom-12 left-0 right-0 flex justify-center items-center gap-3 z-20">
+            <div class="dot active w-2 h-2 rounded-full bg-white/20 transition-all duration-500 cursor-pointer"
+                onclick="currentSlide(0)"></div>
+            <div class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-500 cursor-pointer"
+                onclick="currentSlide(1)"></div>
+            <div class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-500 cursor-pointer"
+                onclick="currentSlide(2)"></div>
+            <div class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-500 cursor-pointer"
+                onclick="currentSlide(3)"></div>
+            <div class="dot w-2 h-2 rounded-full bg-white/20 transition-all duration-500 cursor-pointer"
+                onclick="currentSlide(4)"></div>
+        </div>
+
+        <!-- scroll top section -->
+        <button id="scroll-toggle"
+            class="fixed right-10 bottom-10 hidden lg:flex flex-col items-center gap-6 transition-all duration-500 group">
+
+            <span id="scroll-text"
+                class="uppercase tracking-widest text-white/40 text-[10px] font-bold transition-colors duration-500 group-hover:text-[#5DC94E]"
+                style="writing-mode: vertical-rl;">
+                Scroll
+            </span>
+
+            <div id="scroll-line"
+                class="w-px h-20 bg-gradient-to-b from-[#5DC94E] to-transparent transition-all duration-500 origin-bottom">
+            </div>
+        </button>
+    </section>
+
+    <!-- company section -->
+    <section class="py-6 bg-[#F7F9F7] border-b border-[#5DC94E26]">
+        <div class="mx-auto px-6">
+            <div class="swiper logo-slider">
+                <div class="swiper-wrapper flex items-center">
+
+                    <div class="swiper-slide flex justify-center items-center px-3">
+                        <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3">
+                        <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3">
+                        <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3">
+                        <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="Ranberry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3">
+                        <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Ranwood Rega"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3">
+                        <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzle Berry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3">
+                        <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Rang-In"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start countre seciton -->
+    <section class="bg-gray-50 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    <div class="mb-4">
+                        <img src="./assets/image/icon/counter/1Icon.svg" alt="Laminate Designs">
+                    </div>
+                    <h3 class="font-inter text-3xl font-semibold text-[#1A1A1A] mb-1">1,200+</h3>
+                    <p class="text-base text-[#555555] font-regular font-playfair">Laminate Designs</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    <div class="mb-4">
+                        <img src="./assets/image/icon/counter/2Icon.svg" alt="Premium Brands">
+                    </div>
+                    <h3 class="font-inter text-3xl font-semibold text-[#1A1A1A] mb-1">7</h3>
+                    <p class="text-base text-[#555555] font-regular font-playfair">Premium Brands</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    <div class="mb-4">
+                        <img src="./assets/image/icon/counter/3Icon.svg" alt="Laminate Designs">
+                    </div>
+                    <h3 class="font-inter text-3xl font-semibold text-[#1A1A1A] mb-1">28+</h3>
+                    <p class="text-base text-[#555555] font-regular font-playfair">States Covered</p>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl border border-[#00000012] shadow-sm p-8 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md">
+                    <div class="mb-4">
+                        <img src="./assets/image/icon/counter/4Icon.svg" alt="Of Excellences">
+                    </div>
+                    <h3 class="font-inter text-3xl font-semibold text-[#1A1A1A] mb-1">20+ Yrs</h3>
+                    <p class="text-base text-[#555555] font-regular font-playfair">Of Excellence</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- start our collection seciton -->
+    <section class="relative w-full text-center py-16 px-4 overflow-hidden bg-fixed bg-cover bg-center"
+        style="background-image: url('./assets/image/bg/ourcollection.png');">
+
+        <div class="max-w-7xl mx-auto relative z-10">
+
+            <span
+                class="font-inter block mb-2 uppercase font-medium text-sm tracking-widest leading-tight text-[#4AA13E]">
+                Explore
+            </span>
+
+            <h2 class="font-playfair mb-12 text-[#1A1A1A] font-medium text-[40px] leading-normal">
+                Our Collections
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 justify-items-center">
+
+                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                    <img src="./assets/image/home/ourCollection/1image.png" alt="Wooden"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pt-[40%]">
+                    </div>
+
+                    <div class="absolute inset-0 p-5 flex flex-col justify-end text-left gap-3">
+                        <div>
+                            <span
+                                class="inline-block bg-[#5DC94EE5] text-white text-xs px-2 py-0.5 rounded-[4px] leading-tight">
+                                Natural
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-white text-base leading-6 font-medium">
+                                Wooden Collection
+                            </h3>
+                            <p class="text-white/60 text-xs leading-tight">
+                                95+ Designs
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                    <img src="./assets/image/home/ourCollection/2image.png" alt="Marble"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pt-[40%]">
+                    </div>
+                    <div class="absolute inset-0 p-5 flex flex-col justify-end text-left gap-3">
+                        <div><span
+                                class="inline-block bg-[#5DC94EE5] text-white text-xs px-2 py-0.5 rounded-[4px]">Tactile</span>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-white text-base leading-6 font-medium">Marble
+                                Collection</h3>
+                            <p class="text-white/60 text-xs">80+ Designs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                    <img src="./assets/image/home/ourCollection/3image.png" alt="Pastel"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pt-[40%]">
+                    </div>
+                    <div class="absolute inset-0 p-5 flex flex-col justify-end text-left gap-3">
+                        <div><span
+                                class="inline-block bg-[#5DC94EE5] text-white text-xs px-2 py-0.5 rounded-[4px]">Bold</span>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-white text-base leading-6 font-medium">Pastel
+                                Collection</h3>
+                            <p class="text-white/60 text-xs">150+ Designs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative w-[291px] h-[280px] overflow-hidden rounded-[24px] cursor-pointer shadow-xl">
+                    <img src="./assets/image/home/ourCollection/4image.png" alt="Digital"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent pt-[40%]">
+                    </div>
+                    <div class="absolute inset-0 p-5 flex flex-col justify-end text-left gap-3">
+                        <div><span
+                                class="inline-block bg-[#5DC94EE5] text-white text-xs px-2 py-0.5 rounded-[4px]">Unique</span>
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-white text-base leading-6 font-medium">Digital
+                                Collection</h3>
+                            <p class="text-white/60 text-xs">45+ Designs</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#"
+                class="inline-flex items-center gap-2 px-10 py-4 rounded-full font-semibold text-white bg-[#5DC94E] shadow-[0_10px_20px_rgba(93,201,78,0.3)] transition-all hover:opacity-90 active:scale-95">
+                View All Collections
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- start why choose section -->
+    <section class="bg-white py-16 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+
+                <div class="w-full lg:w-1/2">
+                    <span
+                        class="font-inter block mb-4 uppercase font-medium text-sm tracking-widest leading-tight text-[#5DC94E]">
+                        Our Promise
+                    </span>
+
+                    <h2 class="font-playfair mb-6 text-[#1A1A1A] font-medium text-3xl md:text-[35px] leading-tight">
+                        Why Choose Rosewood Laminates?
+                    </h2>
+
+                    <div class="font-inter text-[#555555] space-y-4 text-sm md:text-lg leading-tight font-regular">
+                        <p>
+                            Rosewood Laminates is a trusted name in premium decorative surfaces, bringing together seven
+                            distinct brands under one roof — each crafted to meet the diverse needs of modern interiors.
+                            From rich wood grains to sleek mirror finishes, every laminate in our portfolio is designed
+                            to transform spaces with lasting beauty and purpose.
+                        </p>
+                        <p>
+                            Rooted in quality and driven by innovation, our laminates conform to IS 2046:1995 standards
+                            and are ISO 9001:2008 certified. Whether you're designing a home, a workspace, or a
+                            commercial environment, Rosewood delivers surfaces that are as dependable as they are
+                            beautiful.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-y-5 gap-x-8 mt-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/1fi_5004613.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span class="font-inter text-base font-regular text-[#383838] font-playfair">Anti
+                                Fingerprint</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/5fi_900553.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span
+                                class="font-inter text-base font-regular text-[#383838] font-playfair">Lightfastness</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/2fi_5414255.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span class="font-inter text-base font-regular text-[#383838] font-playfair">Abrasion
+                                Resistant</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/6fi_6389355.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span class="font-inter text-base font-regular text-[#383838] font-playfair">Anti
+                                Bacterial</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/3fi_3022155.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span class="font-inter text-base font-regular text-[#383838] font-playfair">Easy To
+                                Clean</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/7fi_18769150.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span class="font-inter text-base font-regular text-[#383838] font-playfair">Resistance
+                                To Heat</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/4fi_15316451.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span class="font-inter text-base font-regular text-[#383838] font-playfair">Soft
+                                Touch</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
+                                <img src="./assets/image/icon/whyChoose/8fi_7194792.svg" alt="icon"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <span class="font-inter text-base font-regular text-[#383838] font-playfair">Extremely
+                                Safe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 relative mt-16 lg:mt-0 flex justify-center lg:justify-end">
+                    <div class="relative w-[85%] sm:w-[70%]  rounded-xl overflow-hidden shadow-lg">
+                        <img src="./assets/image/home/whyChoose/1image.png" class="w-full h-full object-cover"
+                            alt="Interior Samples">
+                    </div>
+
+                    <div
+                        class="absolute bottom-16 -left-4 sm:left-10 lg:-left-12 w-[75%] sm:w-[60%] lg:w-[380px] h-[260px] rounded-[24px] overflow-hidden border-[6px] border-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-20">
+                        <img src="./assets/image/home/whyChoose/2image.png" class="w-full h-full object-cover"
+                            alt="Laminate Swatches">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-14 flex flex-wrap justify-center items-center gap-6 md:gap-10">
+                <div
+                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    <img src="./assets/image/logo/whychoose/1image.svg" max-hontain" alt="QSA">
+                </div>
+                <div
+                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    <img src="./assets/image/logo/whychoose/2image.svg" class="object-contain" alt="CE">
+                </div>
+                <div
+                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    <img src="./assets/image/logo/whychoose/3image.svg" class="object-contain" alt="ISI">
+                </div>
+                <div
+                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    <img src="./assets/image/logo/whychoose/4image.svg" class="object-contain" alt="Quality">
+                </div>
+                <div
+                    class="bg-white px-8 py-6 rounded-[16px] border border-gray-100 shadow-sm flex items-center justify-center grayscale-0  hover:grayscale hover:opacity-60 transition-all duration-300">
+                    <img src="./assets/image/logo/whychoose/5image.svg" class="object-contain" alt="Make In India">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start find your perfect shade -->
+    <section class="w-full" style="background-image: url(./assets/image/bg/FindYourPerfect.png);">
+        <div class="max-w-7xl mx-auto py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                <!-- ── LEFT: Image ── -->
+                <div class="relative w-full">
+                    <div
+                        class="rounded-3xl overflow-hidden aspect-square w-full shadow-2xl border-[10px] border-white/20 relative">
+                        <img id="heroImg"
+                            src="https://images.unsplash.com/photo-1581417478175-a9ef18f20941?auto=format&fit=crop&q=80&w=900"
+                            alt="Teak Brown" class="w-full h-full object-cover img-anim" />
+                        <div class="absolute inset-0 left-img-overlay pointer-events-none rounded-3xl"></div>
+                    </div>
+
+                    <!-- Info Bar -->
+                    <div class="absolute bottom-5 left-5 right-5 info-bar flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div id="barSwatch"
+                                class="w-14 h-14 rounded-[14px] flex-shrink-0 transition-all duration-300"
+                                style="background:#966F47; box-shadow:0px 8px 30px 0px #966F4780;"></div>
+                            <div>
+                                <p id="barName" class="font-inter text-sm font-regular text-[#1A1A1A] leading-tight">
+                                    Teak Brown
+                                </p>
+                                <p class="font-inter text-xs leading-tight mt-1 text-[#00000073]">24 matching
+                                    designs</p>
+                            </div>
+                        </div>
+                        <button
+                            class="w-9 h-9 rounded-full bg-green-50 flex items-center justify-center text-green-600 hover:bg-green-100 transition-colors flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ── RIGHT: Content ── -->
+                <div class="text-left">
+
+                    <p
+                        class="font-inter text-[#5DC94E] font-medium text-sm leading-tight tracking-widest uppercase mb-3">
+                        Curate
+                        Your Palette</p>
+
+                    <h2 class="font-playfair display text-[40px] font-medium leading-normal text-[#1A1A1A] mb-5">
+                        Find Your Perfect Shade
+                    </h2>
+
+                    <p class="font-inter text-base leading-tight text-[#555555] mb-10 max-w-md">
+                        Browse across all 7 brands by colour family. Pick a hue and explore the laminates that match
+                        your
+                        vision.
+                    </p>
+
+                    <!-- ── Fan Strip ── -->
+                    <div class="mb-12 overflow-x-auto" style="-webkit-overflow-scrolling:touch; scrollbar-width:none;">
+                        <div style="position:relative; height:160px;" id="fanWrap"></div>
+                    </div>
+
+                    <!-- Active Colour Detail -->
+                    <div class="flex items-center gap-4 mb-10">
+                        <div id="detailSwatch"
+                            class="w-14 h-14 rounded-[14px] flex-shrink-0 border-2 border-white transition-all duration-300"
+                            style="background:#966F47; border: 1px solid #966F47/30; box-shadow:0px 8px 30px 0px #966F4780;">
+                        </div>
+                        <div>
+                            <p id="detailName" class="font-playfair text-base font-medium text-[#1A1A1A] leading-tight">
+                                Teak Brown
+                            </p>
+                            <p class="font-inter text-xs text-[#555555] font-regular mt-1 leading-tight">Available
+                                in Mirror, Suede &amp;
+                                Engineered Wood finishes</p>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <button
+                        class="btn-gradient text-white px-8 py-4 rounded-full font-semibold text-[15px] flex items-center gap-3 shadow-lg hover:opacity-90 transition-opacity">
+                        Browse by Colour
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where Quality Takes Shape -->
+    <section class="py-10 md:py-16 px-10 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 items-stretch gap-0 overflow-hidden rounded-xl">
+
+            <div class="bg-[#f0f9f1] p-8 md:p-12 lg:p-16 flex flex-col items-center justify-center text-center">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="min-w-[180px]">
+
+                <span
+                    class="font-inter text-[#5DC94E] font-medium text-sm leading-tight tracking-widest uppercase mb-3 mt-5">
+                    Our Manufacturing
+                </span>
+
+                <h2 class="font-playfair display text-[40px] font-medium leading-tight text-[#1A1A1A] mb-5">
+                    Where Quality <br> Takes Shape
+                </h2>
+
+                <p class="font-inter text-lg font-SemiBold leading-tight text-[#383838] mb-10 max-w-md">
+                    Precision-engineered at every step, our state-of-the-art facility is where raw material meets
+                    craftsmanship — producing laminates that define industry standards.
+                </p>
+            </div>
+
+            <div class="h-[400px] md:h-auto overflow-hidden">
+                <img src="./assets/image/home/WhereQualityTakesShape.png" alt="Interior View"
+                    class="w-full h-full object-cover">
+            </div>
+
+            <div class="bg-[#f0f9f1] p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                <p class="font-inter text-lg leading-tight text-[#383838] mb-10 max-w-md text-center">
+                    At Rosewood Laminates, every sheet that leaves our facility carries the promise of perfection. Our
+                    manufacturing plant is equipped with advanced high-pressure lamination technology, operating under
+                    strict quality control protocols at every stage — from raw material selection to final finish. With
+                    full compliance to IS 2046:1995 standards and ISO 9001:2008 certification, we ensure that each
+                    laminate delivers on strength, durability, and visual excellence. Built on decades of industry
+                    expertise, our production facility is designed to serve the evolving demands of architects, interior
+                    designers, and homeowners across India.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- start PORTFOLIO section -->
+    <section class="relative py-20 px-4 overflow-hidden"
+        style="background-image: url('./assets/image/bg/PORTFOLIO.png'); background-size: cover; background-position: center;">
+
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+            <span
+                class="font-inter text-[#5DC94E] font-medium text-sm tracking-widest uppercase mb-3 block">Portfolio</span>
+
+            <h2 class="font-playfair text-[40px] font-medium leading-tight text-white mb-10">Our 7 Premium
+                Brands</h2>
+
+            <div class="flex flex-wrap justify-center gap-6 mb-6">
+
+                <div class="group transition-all duration-500 hover:-translate-y-3">
+                    <div
+                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px] opacity-100">
+                        <div class="flex-1 flex items-center justify-center w-full">
+                            <img src="./assets/image/home/PORTFOLIO/1Arica.png" alt="Arica"
+                                class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
+                        </div>
+                        <span class="font-playfair text-[18px] text-white font-medium text-center">Arica</span>
+                    </div>
+                </div>
+
+                <div class="group transition-all duration-500 hover:-translate-y-3">
+                    <div
+                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        <div class="flex-1 flex items-center justify-center w-full">
+                            <img src="./assets/image/home/PORTFOLIO/2RanWood.png" alt="Ranwood"
+                                class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
+                        </div>
+                        <span class="font-playfair text-[18px] text-white font-medium text-center">Ranwood</span>
+                    </div>
+                </div>
+
+                <div class="group transition-all duration-500 hover:-translate-y-3">
+                    <div
+                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        <div class="flex-1 flex items-center justify-center w-full">
+                            <img src="./assets/image/home/PORTFOLIO/3Atina.png" alt="Atina"
+                                class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
+                        </div>
+                        <span class="font-playfair text-[18px] text-white font-medium text-center">Atina</span>
+                    </div>
+                </div>
+
+                <div class="group transition-all duration-500 hover:-translate-y-3">
+                    <div
+                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        <div class="flex-1 flex items-center justify-center w-full">
+                            <img src="./assets/image/home/PORTFOLIO/4RanWoodRega.png" alt="Ranwood Rega"
+                                class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
+                        </div>
+                        <span class="font-playfair text-[18px] text-white font-medium text-center">Ranwood
+                            Rega</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <div class="group transition-all duration-500 hover:-translate-y-3">
+                    <div
+                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        <div class="flex-1 flex items-center justify-center w-full">
+                            <img src="./assets/image/home/PORTFOLIO/5DazzleBerry.png" alt="Dazzleberry"
+                                class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
+                        </div>
+                        <span class="font-playfair text-[18px] text-white font-medium text-center">Dazzleberry
+                            Pastel</span>
+                    </div>
+                </div>
+
+                <div class="group transition-all duration-500 hover:-translate-y-3">
+                    <div
+                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        <div class="flex-1 flex items-center justify-center w-full">
+                            <img src="./assets/image/home/PORTFOLIO/6RanBerry.png" alt="Ranberry"
+                                class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
+                        </div>
+                        <span class="font-playfair text-[18px] text-white font-medium text-center">RANBerry</span>
+                    </div>
+                </div>
+
+                <div class="group transition-all duration-500 hover:-translate-y-3">
+                    <div
+                        class="w-[232px] h-[254px] bg-[#0000002E] border-[0.8px] border-[#00000012] shadow-[0px_6px_8px_0px_#00000024] rounded-[16px] flex flex-col items-center justify-between pt-[17px] pb-[17px] px-[36px]">
+                        <div class="flex-1 flex items-center justify-center w-full">
+                            <img src="./assets/image/home/PORTFOLIO/7RangIn.png" alt="Rang-in"
+                                class="max-h-[160px] max-h[186px] object-contain grayscale-0 group-hover:grayscale transition-all duration-500">
+                        </div>
+                        <span class="font-playfair text-[18px] text-white font-medium text-center">Rang-in
+                            Mica</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-10">
+                <button
+                    class="flex items-center gap-3 mx-auto transition-all shadow-xl text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                    Explore All Brands & Catalogues
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- start See Your Space Transformed section -->
+    <section class="max-w-6xl mx-auto text-center py-20">
+        <span class="font-inter text-[#5DC94E] font-medium text-sm tracking-widest uppercase mb-2 block">Styled
+            Spaces</span>
+        <h2 class="font-playfair text-[40px] font-medium leading-tight text-[#1A1A1A] mb-8">See Your Space
+            Transformed</h2>
+
+        <div id="comparison-container"
+            class="relative w-full overflow-hidden rounded-[2rem] shadow-2xl select-none aspect-video md:aspect-[2/1] bg-gray-200">
+
+            <div class="absolute inset-0">
+                <img src="./assets/image/home/SeeYourSpaceTransformed.png" class="w-full h-full object-cover"
+                    alt="After Transformation">
+                <span
+                    class="absolute bottom-6 right-6 bg-black/50 backdrop-blur-md text-white text-[10px] px-4 py-1.5 rounded-md uppercase tracking-widest">After</span>
+            </div>
+
+            <div id="divisor" class="absolute top-0 left-0 h-full overflow-hidden border-r-2 border-[#5DC94E] z-10"
+                style="width: 50%;">
+                <img id="before-img" src="./assets/image/home/SeeYourSpaceTransformed.png"
+                    class="max-w-none h-full object-cover brightness-50 contrast-125" alt="Before Transformation">
+                <span
+                    class="absolute bottom-6 left-6 bg-black/50 backdrop-blur-md text-white text-[10px] px-4 py-1.5 rounded-md uppercase tracking-widest">Before</span>
+            </div>
+
+            <div id="handle"
+                class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 bg-[#5DC94E] rounded-full z-30 flex items-center justify-center cursor-ew-resize shadow-[0_0_20px_rgba(34,197,94,0.5)]"
+                style="left: 50%;">
+                <div class="flex items-center gap-1 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+
+            <input type="range" min="0" max="100" value="50"
+                class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-40"
+                oninput="moveDivisor(this.value)">
+        </div>
+    </section>
+
+    <!-- start Find Rosewood Laminates Near section -->
+    <section class="bg-[#1A1A1A] py-14 px-4 relative overflow-hidden" x-data="{ 
+    search: '',
+    locations: [
+        { city: 'Ahmedabad', state: 'Gujarat', dealers: '45' },
+        { city: 'Mumbai', state: 'Maharashtra', dealers: '38' },
+        { city: 'Delhi NCR', state: 'Delhi/UP', dealers: '52' },
+        { city: 'Bangalore', state: 'Karnataka', dealers: '29' },
+        { city: 'Chennai', state: 'Tamil Nadu', dealers: '22' },
+        { city: 'Hyderabad', state: 'Telangana', dealers: '18' },
+        { city: 'Pune', state: 'Maharashtra', dealers: '21' },
+        { city: 'Kolkata', state: 'West Bengal', dealers: '16' }
+    ],
+    get filteredLocations() {
+        return this.locations.filter(i => i.city.toLowerCase().includes(this.search.toLowerCase()) || i.state.toLowerCase().includes(this.search.toLowerCase()))
+    }
+}" style="background-image: url(./assets/image/bg/FindRosewoodLaminates.png); background-repeat: no-repeat; background-size: cover;">
+
+        <div class="absolute inset-0 opacity-10 pointer-events-none"
+            style="background-image: url('./assets/image/bg/map-dots.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+            <span class="font-inter text-[#5DC94E] font-medium text-xs tracking-widest uppercase mb-4 block">Our
+                Network</span>
+            <h2 class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-8">
+                Find Rosewood Laminates Near You</h2>
+
+            <div class="max-w-2xl mx-auto mb-10 relative">
+                <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+                    <svg class="w-5 h-5 text-[#5DC94E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <input type="text" x-model="search" placeholder="Search by city or state..."
+                    class="w-full bg-white text-gray-800 py-4 pl-14 pr-6 rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-[#5DC94E] transition-all font-inter">
+            </div>
+
+            <div class="hidden md:grid md:grid-cols-5 gap-4 justify-center">
+                <template x-for="(loc, index) in filteredLocations" :key="index">
+                    <div
+                        class="h-[128px] bg-[#121212]/80 backdrop-blur-md border border-[#5DC94ECC] hover:border-[#5DC94E] rounded-2xl p-4 transition-all duration-300 group flex flex-col items-center justify-center cursor-pointer shadow-lg">
+                        <div class="text-[#5DC94E] mb-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <h4 class="font-playfair text-white text-base font-medium mb-0.5" x-text="loc.city"></h4>
+                        <p class="font-inter text-gray-400 text-[10px] mb-2 uppercase tracking-tighter"
+                            x-text="loc.state"></p>
+                        <span
+                            class="inline-block bg-[#5DC94E1A] text-[#5DC94E] text-[9px] font-bold px-3 py-1 rounded-full border border-[#5DC94E33]"
+                            x-text="loc.dealers + ' dealers'"></span>
+                    </div>
+                </template>
+            </div>
+
+            <div class="md:hidden">
+                <div class="swiper locSwiper">
+                    <div class="swiper-wrapper">
+                        <template x-for="(loc, index) in filteredLocations" :key="index">
+                            <div class="swiper-slide px-2">
+                                <div
+                                    class="bg-[#121212] border border-[#5DC94E33] rounded-2xl p-6 h-[180px] flex flex-col items-center justify-center">
+                                    <div class="text-[#5DC94E] mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                    </div>
+                                    <h4 class="font-playfair text-white text-xl font-medium mb-1" x-text="loc.city">
+                                    </h4>
+                                    <p class="font-inter text-gray-400 text-xs mb-4" x-text="loc.state"></p>
+                                    <span
+                                        class="bg-[#5DC94E1A] text-[#5DC94E] text-xs font-bold px-5 py-1.5 rounded-full border border-[#5DC94E33]"
+                                        x-text="loc.dealers + ' dealers'"></span>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="swiper-pagination !static mt-6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start Let’s Help You Choose Right section -->
+    <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
+
+        <div class="relative w-full md:w-[53%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
+            <img src="./assets/image/bg/cta.png" alt="Laminate Samples" class="w-full h-full object-cover">
+        </div>
+
+        <div class="w-full md:w-[45%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
+
+            <span class="font-inter text-[#5DC94E] font-medium text-xs tracking-widest uppercase mb-4 block">
+                Find Your Nearest Dealer
+            </span>
+
+            <h2 class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-8">
+                Let’s Help You Choose Right
+            </h2>
+
+            <p class="font-inter text-lg leading-tight text-[#C7C7C7] mb-10 max-w-xl">
+                Have questions or need help choosing the right laminate?
+                Connect with our team or locate an authorized Rosewood dealer near you for expert assistance and product
+                availability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                 <a href="contact.html"
+                    class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                    Enquire Now
+                </a>
+                <a href="about.html"
+                    class="bg-white hover:bg-gray-100 text-[#2E8B2E] px-8 py-3.5 rounded-full font-semibold text-center transition-all">
+                    Find a Dealer
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- start footer seciton  -->
+    <footer class="bg-white text-gray-700 pt-16 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+
+                <div class="space-y-4">
+                    <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="w-auto">
+                    <p class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs">
+                        India's premier decorative laminates group with 7 iconic brands. Crafting premium surfaces with
+                        IS 2046:1995 and ISO 9001:2008 certified quality.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            IS 2046:1995
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            ISO 9001:2008
+                        </span>
+                    </div>
+                </div>
+
+                <div class="lg:pl-8">
+                    <h4 class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Quick Links</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="index.html" class="hover:text-green-600 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-green-600 transition-colors">About Us</a></li>
+                        <li><a href="brands.html" class="hover:text-green-600 transition-colors">Our Brands</a></li>
+                        <li><a href="products.html" class="hover:text-green-600 transition-colors">Products</a></li>
+                        <li><a href="blogs.html" class="hover:text-green-600 transition-colors">Our Blogs</a></li>
+                        <li><a href="contact.html" class="hover:text-green-600 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Collections</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden Collections</a></li>
+                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel Collections</a></li>
+                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble Collections</a></li>
+                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital Collections</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Contact Us</h4>
+                    <ul class="space-y-5 text-[14px]">
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/phone.svg" alt="phone">
+                            <a href="tel:+919876543210"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838]">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/email.svg" alt="email">
+                            <a href="mailto:info@rosewoodlaminates.com"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838] break-all">info@rosewoodlaminates.com</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <img src="./assets/image/icon/social/map.svg" alt="map">
+                            <p class="font-inter space-y-2 text-sm font-regular text-[#383838]">8-A, National Highway,
+                                Matel Road, Nr. Amardham Temple, Matel - 363622.</p>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-3 pt-4">
+                        <a href="https://www.instagram.com/rosewoodlaminates"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/rosewoodlaminates#"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/rosewoodlaminates/?originalSubdomain=in"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/linkedin.svg" alt="linkedin">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCOY24GRtotJY52tLawK-tRQ"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-[#00000029] text-center">
+                <p class="text-sm font-regular text-[#383838] tracking-wide">
+                    © 2026 Rosewood Laminates. All rights reserved. Crafted with precision for premium spaces.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dev-script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>

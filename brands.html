@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosewood Laminates - Premium Surfaces</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/dev-style.css">
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header class="fixed top-0 w-full z-50 px-4 py-4 lg:px-10">
+        <nav
+            class="mx-auto bg-white/80 backdrop-blur-md rounded-xl flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
+            <div class="flex items-center">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+            </div>
+
+            <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
+                <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
+                <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
+                        Collections
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                        <li><a href="wooden.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
+                                Collections</a></li>
+                        <li><a href="pastel.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
+                                Collections</a></li>
+                        <li><a href="marble.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
+                                Collections</a></li>
+                        <li><a href="digital.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
+                                Collections</a></li>
+                    </ul>
+                </li>
+                <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
+                <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
+            </ul>
+
+            <a href="#"
+                class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                <span class="font-medium">Download Catalog</span>
+            </a>
+
+            <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
+                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
+                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
+                    <a href="marble.html" class="text-xl">Marble Collections</a>
+                    <a href="digital.html" class="text-xl">Digital Collections</a>
+                </div>
+            </li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="mt-auto">
+            <a href="#"
+                class="block text-center bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95 text-white py-4 rounded-xl font-bold">Download
+                Catalog</a>
+        </div>
+    </div>
+    <!-- header section -->
+
+    <!-- hero section -->
+    <section class="relative h-[420px] w-full flex items-center justify-center overflow-hidden bg-[#1a1a1a]">
+
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/image/banner/brand.png" alt="Hero Background"
+                class="w-full h-full object-cover brightness-50 lg:brightness-75">
+
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 mt-16"> <span
+                class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm mb-2 block font-inter">
+                OUR CATALOG
+            </span>
+            <h1 class="text-white text-5xl md:text-7xl font-playfair leading-tight font-playfair mb-2">
+                Discover Our 7 Brands
+            </h1>
+            <p class="font-inter text-base leading-relaxed text-[#E3E3E3] max-w-2xl mx-auto font-light">
+                Each brand in the Rosewood family has a distinct identity, aesthetic, and audience. Together they cover
+                every style, taste, and application.
+            </p>
+        </div>
+
+        <div class="absolute bottom-2 right-6 lg:bottom-2 lg:right-6 z-20 opacity-80">
+            <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="h-12 md:h-16 lg:h-20">
+        </div>
+    </section>
+
+    <section class="relative bg-[#E3E6DF33]  py-16 px-6 lg:px-20 overflow-hidden"
+        style="background-image: url(./assets/image/bg/brands.png);">
+
+        <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
+            <img src="./assets/image/logo/logo-green.svg" class="w-1/2 h-auto" alt="">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="flex flex-col justify-between p-8 rounded-[20px] bg-white border-[0.8px] border-[#00000012] border-t-[#C4853A20] shadow-[0px_4px_24px_0px_#0000000F] hover:shadow-[0px_8px_30px_0px_#0000001A] transition-all duration-300 hover:-translate-y-1">
+
+                    <div>
+                        <div class="flex justify-between items-start ">
+                            <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood" class="h-10">
+                            <div class="inline-flex flex-col items-center justify-center px-4 py-2 rounded-2xl bg-[#C4853A0D] border border-[#C4853A20] text-[#4AA13E] min-w-[80px]">
+                                <span class="mb-2 text-[#C4853A] text-[14px] font-bold font-inter leading-tight">
+                                    145+
+                                </span>
+                                <span
+                                    class="text-xs uppercase text-[#00000066] tracking-wider font-medium font-inter leading-tight opacity-80">
+                                    Designs
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-playfair text-lg text-[#C4853A] font-medium mb-3">
+                            Warmth Woven Into Every Surface
+                        </h3>
+                        <p class="font-inter text-sm font-regular text-[#0000008C] leading-relaxed mb-3">
+                            Inspired by natural textiles and woven fabrics, Ranwood creates laminates with soft, warm
+                            aesthetics. Perfect for cozy residential interiors.
+                        </p>
+
+                        <div class="mb-8">
+                            <span
+                                class="font-inter text-xs font-regular text-[#00000059] uppercase tracking-wider block mb-3">
+                                Texture Preview
+                            </span>
+                            <div class="flex flex-wrap gap-3">
+                                <img src="./assets/image/brands/WarmthWoven/Image.png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(1).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(2).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(3).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(4).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="BrandDetailPage.html"
+                            class="inline-flex items-center justify-center gap-2 bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] text-white px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:brightness-110 transition-all active:scale-95">
+                            <span>View Details</span>
+                            <img src="./assets/image/icon/right-arrow.svg" alt="arrow" class="w-4 h-4">
+                        </a>
+
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 border bg-[#5DC94E1A] border-[#4AA13E] text-[#4AA13E] px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:bg-[#4AA13E25] transition-all active:scale-95">
+                            <img src="./assets/image/icon/download.svg" alt="download" class="w-4 h-4">
+                            <span>Download Catalogue</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between p-8 rounded-[20px] bg-white border-[0.8px] border-[#00000012] border-t-[#C4853A20] shadow-[0px_4px_24px_0px_#0000000F] hover:shadow-[0px_8px_30px_0px_#0000001A] transition-all duration-300 hover:-translate-y-1">
+
+                    <div>
+                        <div class="flex justify-between items-start ">
+                            <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="Ranwood" class="h-10">
+                            <div class="inline-flex flex-col items-center justify-center px-4 py-2 rounded-2xl bg-[#19A5A50D] border border-[#19A5A520] text-[#4AA13E] min-w-[80px]">
+                                <span class="text-[#19A5A5] mb-2 text-[14px] font-bold font-inter leading-tight">
+                                    180+
+                                </span>
+                                <span
+                                    class="text-xs uppercase text-[#00000066] tracking-wider font-medium font-inter leading-tight opacity-80">
+                                    Designs
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-playfair text-lg text-[#19A5A5] font-medium mb-3">
+                            Bold Colours, Fearless Design
+                        </h3>
+                        <p class="font-inter text-sm font-regular text-[#0000008C] leading-relaxed mb-3">
+                            RANBerry brings vibrant energy to every surface. Designed for the bold, modern homeowner who isn't afraid of colour — this brand delivers statement-making laminates that transform any room instantly.
+                        </p>
+
+                        <div class="mb-8">
+                            <span
+                                class="font-inter text-xs font-regular text-[#00000059] uppercase tracking-wider block mb-3">
+                                Texture Preview
+                            </span>
+                            <div class="flex flex-wrap gap-3">
+                                <img src="./assets/image/brands/WarmthWoven/Image.png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(1).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(2).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(3).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(4).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="BrandDetailPage.html"
+                            class="inline-flex items-center justify-center gap-2 bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] text-white px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:brightness-110 transition-all active:scale-95">
+                            <span>View Details</span>
+                            <img src="./assets/image/icon/right-arrow.svg" alt="arrow" class="w-4 h-4">
+                        </a>
+
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 border bg-[#5DC94E1A] border-[#4AA13E] text-[#4AA13E] px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:bg-[#4AA13E25] transition-all active:scale-95">
+                            <img src="./assets/image/icon/download.svg" alt="download" class="w-4 h-4">
+                            <span>Download Catalogue</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between p-8 rounded-[20px] bg-white border-[0.8px] border-[#00000012] border-t-[#C4853A20] shadow-[0px_4px_24px_0px_#0000000F] hover:shadow-[0px_8px_30px_0px_#0000001A] transition-all duration-300 hover:-translate-y-1">
+
+                    <div>
+                        <div class="flex justify-between items-start ">
+                            <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Ranwood" class="h-10">
+                            <div class="inline-flex flex-col items-center justify-center px-4 py-2 rounded-2xl bg-[#2A5C8B0D] border border-[#2A5C8B20] text-[#4AA13E] min-w-[80px]">
+                                <span class="mb-2 text-[#2A5C8B] text-[14px] font-bold font-inter leading-tight">
+                                    120+
+                                </span>
+                                <span
+                                    class="text-xs uppercase text-[#00000066] tracking-wider font-medium font-inter leading-tight opacity-80">
+                                    Designs
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-playfair text-lg text-[#2A5C8B] font-medium mb-3">
+                           Refined Luxury for Discerning Spaces
+                        </h3>
+                        <p class="font-inter text-sm font-regular text-[#0000008C] leading-relaxed mb-3">
+                            Rega is the premium arm of Rosewood — crafted for high-end residential and commercial spaces. Each design is meticulously curated to exude sophistication, restraint, and lasting elegance.
+                        </p>
+
+                        <div class="mb-8">
+                            <span
+                                class="font-inter text-xs font-regular text-[#00000059] uppercase tracking-wider block mb-3">
+                                Texture Preview
+                            </span>
+                            <div class="flex flex-wrap gap-3">
+                                <img src="./assets/image/brands/WarmthWoven/Image.png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(1).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(2).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(3).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(4).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="BrandDetailPage.html"
+                            class="inline-flex items-center justify-center gap-2 bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] text-white px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:brightness-110 transition-all active:scale-95">
+                            <span>View Details</span>
+                            <img src="./assets/image/icon/right-arrow.svg" alt="arrow" class="w-4 h-4">
+                        </a>
+
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 border bg-[#5DC94E1A] border-[#4AA13E] text-[#4AA13E] px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:bg-[#4AA13E25] transition-all active:scale-95">
+                            <img src="./assets/image/icon/download.svg" alt="download" class="w-4 h-4">
+                            <span>Download Catalogue</span>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col justify-between p-8 rounded-[20px] bg-white border-[0.8px] border-[#00000012] border-t-[#C4853A20] shadow-[0px_4px_24px_0px_#0000000F] hover:shadow-[0px_8px_30px_0px_#0000001A] transition-all duration-300 hover:-translate-y-1">
+
+                    <div>
+                        <div class="flex justify-between items-start ">
+                            <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Ranwood" class="h-10">
+                            <div class="inline-flex flex-col items-center justify-center px-4 py-2 rounded-2xl bg-[#7B3F9E0D] border border-[#7B3F9E20] text-[#4AA13E] min-w-[80px]">
+                                <span class="mb-2 text-[14px] text-[#7B3F9E] font-bold font-inter leading-tight">
+                                    98+
+                                </span>
+                                <span
+                                    class="text-xs uppercase text-[#00000066] tracking-wider font-medium font-inter leading-tight opacity-80">
+                                    Designs
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-playfair text-lg text-[#7B3F9E] font-medium mb-3">
+                            Architecture-Inspired Bold Patterns
+                        </h3>
+                        <p class="font-inter text-sm font-regular text-[#0000008C] leading-relaxed mb-3">
+                            Arica draws from architecture, art, and urban culture. Bold geometrics, striking monochromes, and raw industrial textures — for spaces that demand attention and command presence.
+                        </p>
+
+                        <div class="mb-8">
+                            <span
+                                class="font-inter text-xs font-regular text-[#00000059] uppercase tracking-wider block mb-3">
+                                Texture Preview
+                            </span>
+                            <div class="flex flex-wrap gap-3">
+                                <img src="./assets/image/brands/WarmthWoven/Image.png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(1).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(2).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(3).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(4).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="BrandDetailPage.html"
+                            class="inline-flex items-center justify-center gap-2 bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] text-white px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:brightness-110 transition-all active:scale-95">
+                            <span>View Details</span>
+                            <img src="./assets/image/icon/right-arrow.svg" alt="arrow" class="w-4 h-4">
+                        </a>
+
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 border bg-[#5DC94E1A] border-[#4AA13E] text-[#4AA13E] px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:bg-[#4AA13E25] transition-all active:scale-95">
+                            <img src="./assets/image/icon/download.svg" alt="download" class="w-4 h-4">
+                            <span>Download Catalogue</span>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col justify-between p-8 rounded-[20px] bg-white border-[0.8px] border-[#00000012] border-t-[#C4853A20] shadow-[0px_4px_24px_0px_#0000000F] hover:shadow-[0px_8px_30px_0px_#0000001A] transition-all duration-300 hover:-translate-y-1">
+
+                    <div>
+                        <div class="flex justify-between items-start ">
+                            <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Ranwood" class="h-10">
+                            <div class="inline-flex flex-col items-center justify-center px-4 py-2 rounded-2xl bg-[#3A7A3A0D] border border-[#3A7A3A20] text-[#4AA13E] min-w-[80px]">
+                                <span class="mb-2 text-[#3A7A3A] text-[14px] font-bold font-inter leading-tight">
+                                    210+
+                                </span>
+                                <span
+                                    class="text-xs uppercase text-[#00000066] tracking-wider font-medium font-inter leading-tight opacity-80">
+                                    Designs
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-playfair text-lg text-[#3A7A3A] font-medium mb-3">
+                            Nature's Grain, Perfected
+                        </h3>
+                        <p class="font-inter text-sm font-regular text-[#0000008C] leading-relaxed mb-3">
+                            Atina celebrates the timeless beauty of wood. From light oak to rich mahogany, each design faithfully replicates natural grain patterns with depth and authenticity that complements any interior style.
+                        </p>
+
+                        <div class="mb-8">
+                            <span
+                                class="font-inter text-xs font-regular text-[#00000059] uppercase tracking-wider block mb-3">
+                                Texture Preview
+                            </span>
+                            <div class="flex flex-wrap gap-3">
+                                <img src="./assets/image/brands/WarmthWoven/Image.png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(1).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(2).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(3).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(4).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="BrandDetailPage.html"
+                            class="inline-flex items-center justify-center gap-2 bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] text-white px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:brightness-110 transition-all active:scale-95">
+                            <span>View Details</span>
+                            <img src="./assets/image/icon/right-arrow.svg" alt="arrow" class="w-4 h-4">
+                        </a>
+
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 border bg-[#5DC94E1A] border-[#4AA13E] text-[#4AA13E] px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:bg-[#4AA13E25] transition-all active:scale-95">
+                            <img src="./assets/image/icon/download.svg" alt="download" class="w-4 h-4">
+                            <span>Download Catalogue</span>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col justify-between p-8 rounded-[20px] bg-white border-[0.8px] border-[#00000012] border-t-[#C4853A20] shadow-[0px_4px_24px_0px_#0000000F] hover:shadow-[0px_8px_30px_0px_#0000001A] transition-all duration-300 hover:-translate-y-1">
+
+                    <div>
+                        <div class="flex justify-between items-start ">
+                            <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Ranwood" class="h-10">
+                            <div class="inline-flex flex-col items-center justify-center px-4 py-2 rounded-2xl bg-[#D4458F0D] border border-[#D4458F20] text-[#4AA13E] min-w-[80px]">
+                                <span class="mb-2 text-[#D4458F] text-[14px] font-bold font-inter leading-tight">
+                                    85+
+                                </span>
+                                <span
+                                    class="text-xs uppercase text-[#00000066] tracking-wider font-medium font-inter leading-tight opacity-80">
+                                    Designs
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-playfair text-lg text-[#D4458F] font-medium mb-3">
+                            Soft Hues, Dreamy Spaces
+                        </h3>
+                        <p class="font-inter text-sm font-regular text-[#0000008C] leading-relaxed mb-3">
+                            Dazzleberry Pastel brings a breath of fresh air with its curated range of soft, muted tones. Ideal for nurseries, bedrooms, cafés, and any space where a calm, serene atmosphere is desired.
+                        </p>
+
+                        <div class="mb-8">
+                            <span
+                                class="font-inter text-xs font-regular text-[#00000059] uppercase tracking-wider block mb-3">
+                                Texture Preview
+                            </span>
+                            <div class="flex flex-wrap gap-3">
+                                <img src="./assets/image/brands/WarmthWoven/Image.png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(1).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(2).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(3).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(4).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="BrandDetailPage.html"
+                            class="inline-flex items-center justify-center gap-2 bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] text-white px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:brightness-110 transition-all active:scale-95">
+                            <span>View Details</span>
+                            <img src="./assets/image/icon/right-arrow.svg" alt="arrow" class="w-4 h-4">
+                        </a>
+
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 border bg-[#5DC94E1A] border-[#4AA13E] text-[#4AA13E] px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:bg-[#4AA13E25] transition-all active:scale-95">
+                            <img src="./assets/image/icon/download.svg" alt="download" class="w-4 h-4">
+                            <span>Download Catalogue</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-8 pt-8">
+                <div class="flex flex-col justify-between p-8 rounded-[20px] bg-white border-[0.8px] border-[#00000012] border-t-[#C4853A20] shadow-[0px_4px_24px_0px_#0000000F] hover:shadow-[0px_8px_30px_0px_#0000001A] transition-all duration-300 hover:-translate-y-1">
+
+                    <div>
+                        <div class="flex justify-between items-start ">
+                            <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Ranwood" class="h-10">
+                            <div class="inline-flex flex-col items-center justify-center px-4 py-2 rounded-2xl bg-[#C4853A0D] border border-[#C4853A20] text-[#4AA13E] min-w-[80px]">
+                                <span class="mb-2 text-[#EE7A3A] text-[14px] font-bold font-inter leading-tight">
+                                    145+
+                                </span>
+                                <span
+                                    class="text-xs uppercase text-[#00000066] tracking-wider font-medium font-inter leading-tight opacity-80">
+                                    Designs
+                                </span>
+                            </div>
+                        </div>
+
+                        <h3 class="font-playfair text-lg text-[#EE7A3A] font-medium mb-3">
+                            Mirror-Bright Luxury
+                        </h3>
+                        <p class="font-inter text-sm font-regular text-[#0000008C] leading-relaxed mb-3">
+                            Crystal is the high-gloss, mirror-finish specialist in the Rosewood family. Designed for feature walls, furniture fronts, and statement surfaces — Crystal's reflective finishes bring dazzling luxury to premium spaces.
+                        </p>
+
+                        <div class="mb-8">
+                            <span
+                                class="font-inter text-xs font-regular text-[#00000059] uppercase tracking-wider block mb-3">
+                                Texture Preview
+                            </span>
+                            <div class="flex flex-wrap gap-3">
+                                <img src="./assets/image/brands/WarmthWoven/Image.png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(1).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(2).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(3).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                                <img src="./assets/image/brands/WarmthWoven/Image(4).png"
+                                    class="rounded-xl object-cover border border-white shadow-sm" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="BrandDetailPage.html"
+                            class="inline-flex items-center justify-center gap-2 bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] text-white px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:brightness-110 transition-all active:scale-95">
+                            <span>View Details</span>
+                            <img src="./assets/image/icon/right-arrow.svg" alt="arrow" class="w-4 h-4">
+                        </a>
+
+                        <a href="#"
+                            class="inline-flex items-center justify-center gap-2 border bg-[#5DC94E1A] border-[#4AA13E] text-[#4AA13E] px-8 py-3 rounded-full font-inter text-[14px] font-medium hover:bg-[#4AA13E25] transition-all active:scale-95">
+                            <img src="./assets/image/icon/download.svg" alt="download" class="w-4 h-4">
+                            <span>Download Catalogue</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 bg-[#F7F9F7] border-b border-[#5DC94E26]">
+        <div class="mx-auto px-6">
+            <div class="swiper logo-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper flex items-center" id="swiper-wrapper-4e13101962ba09acb" aria-live="off">
+
+                    <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-active" role="group"
+                        aria-label="1 / 7" data-swiper-slide-index="0" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-next" role="group"
+                        aria-label="2 / 7" data-swiper-slide-index="1" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="3 / 7"
+                        data-swiper-slide-index="2" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="4 / 7"
+                        data-swiper-slide-index="3" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="Ranberry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="5 / 7"
+                        data-swiper-slide-index="4" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Ranwood Rega"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="6 / 7"
+                        data-swiper-slide-index="5" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzle Berry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="7 / 7"
+                        data-swiper-slide-index="6" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Rang-In"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- start Let’s Help You Choose Right section -->
+    <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
+
+        <div class="relative w-full md:w-[53%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
+            <img src="./assets/image/bg/cta.png" alt="Laminate Samples" class="w-full h-full object-cover">
+        </div>
+
+        <div class="w-full md:w-[45%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
+
+            <span class="font-inter text-[#5DC94E] font-medium text-xs tracking-widest uppercase mb-4 block">
+                Find Your Nearest Dealer
+            </span>
+
+            <h2 class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-6">
+                Let’s Help You Choose Right
+            </h2>
+
+            <p class="font-inter text-lg leading-tight text-[#C7C7C7] mb-10 max-w-xl">
+                Have questions or need help choosing the right laminate?
+                Connect with our team or locate an authorized Rosewood dealer near you for expert assistance and product
+                availability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                 <a href="contact.html"
+                    class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                    Enquire Now
+                </a>
+                <a href="about.html"
+                    class="bg-white hover:bg-gray-100 text-[#2E8B2E] px-8 py-3.5 rounded-full font-semibold text-center transition-all">
+                    Find a Dealer
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- start footer seciton  -->
+    <footer class="bg-white text-gray-700 pt-16 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+
+                <div class="space-y-3">
+                    <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="w-auto">
+                    <p class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs">
+                        India's premier decorative laminates group with 7 iconic brands. Crafting premium surfaces with
+                        IS 2046:1995 and ISO 9001:2008 certified quality.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            IS 2046:1995
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            ISO 9001:2008
+                        </span>
+                    </div>
+                </div>
+
+                <div class="lg:pl-8">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Quick Links</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="index.html" class="hover:text-green-600 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-green-600 transition-colors">About Us</a></li>
+                        <li><a href="brands.html" class="hover:text-green-600 transition-colors">Our Brands</a></li>
+                        <li><a href="products.html" class="hover:text-green-600 transition-colors">Products</a></li>
+                        <li><a href="blogs.html" class="hover:text-green-600 transition-colors">Our Blogs</a></li>
+                        <li><a href="contact.html" class="hover:text-green-600 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Collections</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden Collections</a></li>
+                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel Collections</a></li>
+                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble Collections</a></li>
+                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital Collections</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Contact Us</h4>
+                    <ul class="space-y-5 text-[14px]">
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/phone.svg" alt="phone">
+                            <a href="tel:+919876543210"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838]">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/email.svg" alt="email">
+                            <a href="mailto:info@rosewoodlaminates.com"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838] break-all">info@rosewoodlaminates.com</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <img src="./assets/image/icon/social/map.svg" alt="map">
+                            <p class="font-inter space-y-2 text-sm font-regular text-[#383838]">8-A, National
+                                Highway, Matel Road, Nr. Amardham Temple, Matel - 363622.</p>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-3 pt-4">
+                        <a href="https://www.instagram.com/rosewoodlaminates"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/rosewoodlaminates#"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/rosewoodlaminates/?originalSubdomain=in"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/linkedin.svg" alt="linkedin">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCOY24GRtotJY52tLawK-tRQ"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-[#00000029] text-center">
+                <p class="text-sm font-regular text-[#383838] tracking-wide">
+                    © 2026 Rosewood Laminates. All rights reserved. Crafted with precision for premium spaces.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dev-script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>

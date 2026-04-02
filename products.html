@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosewood Laminates - Premium Surfaces</title>
+    <link rel="icon" type="image/png" href="./assets/image/logo/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/dev-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header class="fixed top-0 w-full z-50 px-4 py-4 lg:px-10">
+        <nav
+            class="mx-auto bg-white/80 backdrop-blur-md rounded-xl flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
+            <div class="flex items-center">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+            </div>
+
+            <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
+                <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
+                <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
+                <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
+                        Collections
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                        <li><a href="wooden.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
+                                Collections</a></li>
+                        <li><a href="pastel.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
+                                Collections</a></li>
+                        <li><a href="marble.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
+                                Collections</a></li>
+                        <li><a href="digital.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
+                                Collections</a></li>
+                    </ul>
+                </li>
+                <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
+                <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
+            </ul>
+
+            <a href="#"
+                class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                <span class="font-medium">Download Catalog</span>
+            </a>
+
+            <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+        <div class="flex justify-between items-center mb-10">
+            <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
+            <button onclick="toggleMenu()" class="text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="brands.html">Our Brands</a></li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
+                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
+                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
+                    <a href="marble.html" class="text-xl">Marble Collections</a>
+                    <a href="digital.html" class="text-xl">Digital Collections</a>
+                </div>
+            </li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="mt-auto">
+            <a href="#"
+                class="block text-center bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95 text-white py-4 rounded-xl font-bold">Download
+                Catalog</a>
+        </div>
+    </div>
+    <!-- header section -->
+
+    <!-- hero section -->
+    <section class="relative h-[420px] w-full flex items-center justify-center overflow-hidden bg-[#1a1a1a]">
+
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/image/banner/product.png" alt="Hero Background"
+                class="w-full h-full object-cover brightness-50 lg:brightness-75">
+
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 mt-16"> <span
+                class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm mb-2 block font-inter">
+                BROWSE & EXPLORE
+            </span>
+            <h1 class="text-white text-5xl md:text-7xl font-playfair leading-tight font-playfair mb-2">
+                Surface Collections
+            </h1>
+            <p class="font-inter text-base leading-relaxed text-[#E3E3E3] max-w-2xl mx-auto font-light">
+                Each brand in the Rosewood family has a distinct identity, aesthetic, and audience. Together they cover
+                every style, taste, and application.
+            </p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 py-10" x-data="{ 
+        search: '', 
+        selectedBrands: [], 
+        selectedCollections: [], 
+        selectedFinishes: [],
+        products: [
+            { name: 'Antique Birch Wood', code: 'MR-6099', brand: 'Atina', collection: 'Wooden Collection', finish: 'Engineered Wood', img: './assets/image/BrandDetailPage/1.png' },
+            { name: 'Teak Harvest', code: 'AT-2041', brand: 'Ranwood', collection: 'Wooden Collection', finish: 'Suede Finish', img: './assets/image/BrandDetailPage/2.png' },
+            { name: 'Marble Grey', code: 'MG-302', brand: 'Rega', collection: 'Marbel Collection', finish: 'Mirror Finish', img: './assets/image/BrandDetailPage/3.png' },
+            { name: 'Pastel Mint', code: 'PM-404', brand: 'Dazzleberry Pastel', collection: 'Pastel Collection', finish: 'Plain Color', img: './assets/image/BrandDetailPage/4.png' },
+            { name: 'Digital Circuit', code: 'DC-101', brand: 'RANBerry', collection: 'Digital Collection', finish: 'Mirror Finish', img: './assets/image/BrandDetailPage/5.png' },
+            { name: 'Oak Classic', code: 'OC-550', brand: 'Atina', collection: 'Wooden Collection', finish: 'Engineered Wood', img: './assets/image/BrandDetailPage/6.png' },
+            { name: 'Pastel Pink', code: 'PP-202', brand: 'Dazzleberry Pastel', collection: 'Pastel Collection', finish: 'Plain Color', img: './assets/image/BrandDetailPage/7.png' },
+            { name: 'Marble White', code: 'MW-305', brand: 'Rega', collection: 'Marbel Collection', finish: 'Mirror Finish', img: './assets/image/BrandDetailPage/8.png' },
+            { name: 'Digital Matrix', code: 'DM-110', brand: 'RANBerry', collection: 'Digital Collection', finish: 'Mirror Finish', img: './assets/image/BrandDetailPage/9.png' },
+            { name: 'Teak Harvest', code: 'AT-2041', brand: 'Ranwood', collection: 'Wooden Collection', finish: 'Suede Finish', img: './assets/image/BrandDetailPage/10.png' },
+            { name: 'Marble Grey', code: 'MG-302', brand: 'Rega', collection: 'Marbel Collection', finish: 'Mirror Finish', img: './assets/image/BrandDetailPage/11.png' },
+            { name: 'Pastel Mint', code: 'PM-404', brand: 'Dazzleberry Pastel', collection: 'Pastel Collection', finish: 'Plain Color', img: './assets/image/BrandDetailPage/12.png' },
+        ],
+        get filteredProducts() {
+            return this.products.filter(p => {
+                const s = this.search.toLowerCase();
+                const matchesSearch = p.name.toLowerCase().includes(s) || p.code.toLowerCase().includes(s);
+                const matchesBrand = this.selectedBrands.length === 0 || this.selectedBrands.includes(p.brand);
+                const matchesCol = this.selectedCollections.length === 0 || this.selectedCollections.includes(p.collection);
+                const matchesFinish = this.selectedFinishes.length === 0 || this.selectedFinishes.includes(p.finish);
+                
+                return matchesSearch && matchesBrand && matchesCol && matchesFinish;
+            })
+        }
+    }">
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <aside class="w-full lg:w-72 flex-shrink-0">
+                <div class="sticky top-10 bg-white border border-gray-100 rounded-2xl p-6 shadow-md">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-playfair text-[#1A1A1A] text-base font-regular">Filters</h2>
+                        <button @click="selectedBrands=[]; selectedCollections=[]; selectedFinishes=[]; search=''"
+                            class="font-inter text-sm text-[#5DC94E] font-medium">Clear All</button>
+                    </div>
+
+                    <div class="mb-8" x-data="{ open: true }">
+                        <button @click="open = !open"
+                            class="border-t border-[#C7C7C7] pt-4 font-inter flex justify-between w-full text-base uppercase font-medium tracking-widest text-[#5DC94E] mb-4">
+                            BRANDS <span x-text="open ? '−' : '+'"></span>
+                        </button>
+                        <div x-show="open" class="space-y-3">
+                            <template x-for="brand in ['Atina', 'Rega', 'Ranwood', 'RANBerry', 'Arica']">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="relative flex items-center justify-center">
+                                        <input type="checkbox" :value="brand" x-model="selectedBrands"
+                                            class="peer appearance-none w-5 h-5 border-2 border-gray-200 rounded-full checked:border-[#5DC94E] transition-all cursor-pointer">
+                                        <div
+                                            class="absolute w-2.5 h-2.5 rounded-full bg-[#5DC94E] scale-0 peer-checked:scale-100 transition-transform pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-sm font-regular font-inter text-[#555555] group-hover:text-[#1a1a1a]"
+                                        x-text="brand"></span>
+                                </label>
+                            </template>
+                        </div>
+                    </div>
+
+                    <div class="mb-8" x-data="{ open: true }">
+                        <button @click="open = !open"
+                            class="border-t border-[#C7C7C7] pt-4 font-inter flex justify-between w-full text-base uppercase font-medium tracking-widest text-[#5DC94E] mb-4">
+                            COLLECTIONS <span x-text="open ? '−' : '+'"></span>
+                        </button>
+                        <div x-show="open" class="space-y-3">
+                            <template
+                                x-for="col in ['Wooden Collection', 'Pastel Collection', 'Marbel Collection', 'Digital Collection']">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="relative flex items-center justify-center">
+                                        <label class="flex items-center gap-2 cursor-pointer">
+                                            <input type="checkbox" :value="col" x-model="selectedCollections"
+                                                class="peer appearance-none w-5 h-5 border-2 border-gray-200 rounded  checked:bg-[#5DC94E] checked:border-[#5DC94E]  flex items-center justify-center relative">
+
+                                            <!-- Check Icon -->
+                                            <span
+                                                class="absolute w-5 h-5 flex items-center justify-center pointer-events-none">
+                                                <img src="./assets/image/icon/arrow.svg" alt="">
+                                            </span>
+                                        </label>
+                                        <div
+                                            class="absolute w-2.5 h-2.5 rounded-full bg-[#5DC94E] scale-0 peer-checked:scale-100 transition-transform pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="text-sm font-regular font-inter text-[#555555] group-hover:text-[#1a1a1a]"
+                                        x-text="col"></span>
+                                </label>
+                            </template>
+                        </div>
+                    </div>
+
+                    <div x-data="{ open: true }">
+                        <button @click="open = !open"
+                            class="border-t border-[#C7C7C7] pt-4 font-inter flex justify-between w-full text-base uppercase font-medium tracking-widest text-[#5DC94E] mb-4">
+                            FINISH TYPE <span x-text="open ? '−' : '+'"></span>
+                        </button>
+                        <div x-show="open" class="space-y-3">
+                            <template
+                                x-for="fin in ['Engineered Wood', 'Mirror Finish', 'Suede Finish', 'Plain Color']">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="relative flex items-center justify-center">
+                                        <input type="checkbox" :value="fin" x-model="selectedFinishes"
+                                            class="peer appearance-none w-5 h-5 border-2 border-gray-200 rounded checked:bg-[#5DC94E] checked:border-[#5DC94E] transition-all">
+
+                                        <span
+                                            class="absolute opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">
+                                            <img src="./assets/image/icon/arrow.svg" alt=""
+                                                class="w-3 h-3 brightness-0 invert">
+                                        </span>
+                                    </div>
+                                    <span
+                                        class="text-sm font-regular font-inter text-[#555555] group-hover:text-[#1a1a1a]"
+                                        x-text="fin"></span>
+                                </label>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="flex-1">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                    <h1 class="text-2xl font-playfair font-SemiBold text-[#1a1a1a]">All Brands</h1>
+                    <div class="relative w-full md:w-80">
+                        <input type="text" x-model="search" placeholder="Search by name or code..."
+                            class="w-full px-4 py-2.5 rounded-2xl border border-[#E3E3E3] outline-none focus:border-[#5DC94E] text-sm">
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <template x-for="p in filteredProducts" :key="p.code">
+                        <div class="bg-white rounded-2xl overflow-hidden border border-[#E3E3E3] shadow-md group"
+                            x-data="{ hover: false, openModal: false }" @mouseenter="hover = true"
+                            @mouseleave="hover = false">
+
+                            <div class="relative aspect-[283/352] bg-gray-50 overflow-hidden">
+                                <span
+                                    class="font-inter absolute top-3 left-3 bg-[#5DC94E] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase z-10">New</span>
+
+                                <div class="absolute inset-0 bg-[#363636] z-20 transition-opacity duration-300"
+                                    :class="hover ? 'opacity-80' : 'opacity-0'" style="height: 100%;">
+                                    <div class="flex items-center justify-center gap-4 h-full">
+                                        <a href="#" @click.stop
+                                            class="w-14 h-14 rounded-full bg-[#5DC94E] flex items-center justify-center hover:scale-105 transition-transform duration-200">
+                                            <img src="./assets/image/icon/eyeview.svg" alt="Details" class="">
+                                        </a>
+                                        <button @click="openModal = true" @click.stop
+                                            class="w-14 h-14 rounded-full bg-[#5DC94E] flex items-center justify-center hover:scale-105 transition-transform duration-200">
+                                            <img src="./assets/image/icon/360view.svg" alt="360 View" class="">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <img :src="p.img" :alt="p.name"
+                                    class="w-full h-full object-cover z-0 transition-transform duration-500"
+                                    :class="hover ? 'scale-105' : 'scale-100'">
+                            </div>
+
+                            <div class="p-5 text-center">
+                                <h3 class="text-base font-playfair font-medium text-[#1a1a1a]" x-text="p.name"></h3>
+                                <p class="text-base font-inter font-regular text-[#38792F] mt-1" x-text="p.code">
+                                </p>
+                            </div>
+
+                            <template x-if="openModal">
+                                <div class="fixed inset-0 z-50 flex items-center justify-center px-4 py-6"
+                                    style="background: rgba(0,0,0,0.7);" @click="openModal = false">
+
+                                    <div class="relative bg-white p-6 rounded-2xl shadow-xl w-full max-w-4xl h-[600px]"
+                                        @click.stop x-init="$nextTick(() => {
+                                                pannellum.viewer('panorama-container', {
+                                                    'type': 'equirectangular',
+                                                'panorama': p.image360 || './assets/image/shot-panoramic-composition-living-room.jpg',
+                                                'autoLoad': true,
+                                                'compass': true
+                                        });
+                                     })">
+                                        <button
+                                            class="absolute top-4 right-4 z-10 bg-white/80 rounded-full p-2 text-gray-500 hover:text-black shadow-sm"
+                                            @click="openModal = false">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+
+                                        <div class="flex flex-col h-full">
+                                            <h2 class="font-playfair text-2xl mb-4 text-center text-[#1C1C1C]"
+                                                x-text="'360° View of ' + p.name"></h2>
+
+                                            <div id="panorama-container"
+                                                class="flex-1 bg-gray-100 rounded-xl overflow-hidden">
+                                            </div>
+
+                                            <div class="mt-3 text-center">
+                                                <span class="font-inter text-sm text-gray-500"
+                                                    x-text="'Product Code: ' + p.code"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <section class="py-6 bg-[#F7F9F7] border-b border-[#5DC94E26]">
+        <div class="mx-auto px-6">
+            <div class="swiper logo-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper flex items-center" id="swiper-wrapper-4e13101962ba09acb" aria-live="off">
+
+                    <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-active" role="group"
+                        aria-label="1 / 7" data-swiper-slide-index="0" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-next" role="group"
+                        aria-label="2 / 7" data-swiper-slide-index="1" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="3 / 7"
+                        data-swiper-slide-index="2" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="4 / 7"
+                        data-swiper-slide-index="3" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="Ranberry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="5 / 7"
+                        data-swiper-slide-index="4" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Ranwood Rega"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="6 / 7"
+                        data-swiper-slide-index="5" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzle Berry"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="7 / 7"
+                        data-swiper-slide-index="6" style="width: 167.571px; margin-right: 50px;">
+                        <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Rang-In"
+                            class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
+                    </div>
+
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- start Let’s Help You Choose Right section -->
+    <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
+
+        <div class="relative w-full md:w-[53%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
+            <img src="./assets/image/bg/cta.png" alt="Laminate Samples" class="w-full h-full object-cover">
+        </div>
+
+        <div class="w-full md:w-[45%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
+
+            <span class="font-inter text-[#5DC94E] font-medium text-xs tracking-widest uppercase mb-4 block">
+                Find Your Nearest Dealer
+            </span>
+
+            <h2 class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-6">
+                Let’s Help You Choose Right
+            </h2>
+
+            <p class="font-inter text-lg leading-tight text-[#C7C7C7] mb-10 max-w-xl">
+                Have questions or need help choosing the right laminate?
+                Connect with our team or locate an authorized Rosewood dealer near you for expert assistance and product
+                availability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                 <a href="contact.html"
+                    class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                    Enquire Now
+                </a>
+                <a href="about.html"
+                    class="bg-white hover:bg-gray-100 text-[#2E8B2E] px-8 py-3.5 rounded-full font-semibold text-center transition-all">
+                    Find a Dealer
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- start footer seciton  -->
+    <footer class="bg-white text-gray-700 pt-16 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+
+                <div class="space-y-3">
+                    <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="w-auto">
+                    <p class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs">
+                        India's premier decorative laminates group with 7 iconic brands. Crafting premium surfaces with
+                        IS 2046:1995 and ISO 9001:2008 certified quality.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            IS 2046:1995
+                        </span>
+                        <span
+                            class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
+                            <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            ISO 9001:2008
+                        </span>
+                    </div>
+                </div>
+
+                <div class="lg:pl-8">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Quick Links</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="index.html" class="hover:text-green-600 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-green-600 transition-colors">About Us</a></li>
+                        <li><a href="brands.html" class="hover:text-green-600 transition-colors">Our Brands</a></li>
+                        <li><a href="products.html" class="hover:text-green-600 transition-colors">Products</a></li>
+                        <li><a href="blogs.html" class="hover:text-green-600 transition-colors">Our Blogs</a></li>
+                        <li><a href="contact.html" class="hover:text-green-600 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Collections</h4>
+                    <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden Collections</a></li>
+                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel Collections</a></li>
+                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble Collections</a></li>
+                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital Collections</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4
+                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                        Contact Us</h4>
+                    <ul class="space-y-5 text-[14px]">
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/phone.svg" alt="phone">
+                            <a href="tel:+919876543210"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838]">+91 98765 43210</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <img src="./assets/image/icon/social/email.svg" alt="email">
+                            <a href="mailto:info@rosewoodlaminates.com"
+                                class="font-inter space-y-2 text-sm font-regular text-[#383838] break-all">info@rosewoodlaminates.com</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <img src="./assets/image/icon/social/map.svg" alt="map">
+                            <p class="font-inter space-y-2 text-sm font-regular text-[#383838]">8-A, National
+                                Highway, Matel Road, Nr. Amardham Temple, Matel - 363622.</p>
+                        </li>
+                    </ul>
+
+                    <div class="flex gap-3 pt-4">
+                        <a href="https://www.instagram.com/rosewoodlaminates"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/rosewoodlaminates#"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/company/rosewoodlaminates/?originalSubdomain=in"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/linkedin.svg" alt="linkedin">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCOY24GRtotJY52tLawK-tRQ"
+                            class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+                            <img src="./assets/image/icon/social/youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-[#00000029] text-center">
+                <p class="text-sm font-regular text-[#383838] tracking-wide">
+                    © 2026 Rosewood Laminates. All rights reserved. Crafted with precision for premium spaces.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/dev-script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+</body>
+
+</html>

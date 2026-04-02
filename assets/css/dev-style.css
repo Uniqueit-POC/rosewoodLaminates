@@ -1,0 +1,196 @@
+.font-playfair {
+    font-family: 'Playfair Display', serif !important;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif !important;
+  }
+
+/* home heor banner section */
+.slide {
+  display   : none;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* ડોટ્સ માટે */
+.dot.active {
+  width           : 32px;
+  height          : 6px;
+  background-color: #4CAF50;
+  border-radius   : 999px;
+  opacity         : 1;
+}
+
+/* nav enu mobile seciton */
+#mobile-menu {
+  transform : translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+#mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* <!--home  company section --> */
+.grayscale {
+  filter : grayscale(100%);
+  opacity: 0.7;
+}
+
+.grayscale:hover {
+  filter : grayscale(0%);
+  opacity: 1;
+}
+
+/* Custom Gradient Overlay */
+.card-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.88) 100%);
+}
+
+.bg-linen {
+  background-color: #F2EEE4;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8bfaa' fill-opacity='0.13'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── Fan swatch ── */
+.swatch {
+  position     : absolute;
+  width        : 96px;
+  height       : 140px;
+  border-radius: 10px;
+  cursor       : pointer;
+  transition   : all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border       : 2px solid transparent;
+}
+
+.swatch:hover {
+  filter: brightness(1.06);
+}
+
+.swatch.active {
+  border : 3px solid white !important;
+  z-index: 100 !important;
+}
+
+.swatch-shade {
+  position      : absolute;
+  top           : 0;
+  left          : 0;
+  right         : 0;
+  height        : 40%;
+  border-radius : 9px 9px 0 0;
+  background    : linear-gradient(to bottom, rgba(255, 255, 255, 0.12), transparent);
+  pointer-events: none;
+}
+
+.swatch-tip {
+  position      : absolute;
+  bottom        : calc(100% + 8px);
+  left          : 50%;
+  transform     : translateX(-50%);
+  background    : #1a1a1a;
+  color         : #fff;
+  font-size     : 10px;
+  font-family   : 'Inter', sans-serif;
+  letter-spacing: 0.04em;
+  padding       : 4px 10px;
+  border-radius : 6px;
+  white-space   : nowrap;
+  opacity       : 0;
+  pointer-events: none;
+  transition    : opacity 0.2s;
+  z-index       : 999;
+}
+
+.swatch:hover .swatch-tip {
+  opacity: 1;
+}
+
+/* ── Image fade-in ── */
+@keyframes imgIn {
+  from {
+    opacity  : 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity  : 1;
+    transform: scale(1);
+  }
+}
+
+.img-anim {
+  animation: imgIn 0.55s ease forwards;
+}
+
+.left-img-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.info-bar {
+  background   : #FFFFFFEB;
+  border-top   : 0.8px solid #00000012;
+  border-radius: 16px;
+  padding      : 16.8px 16.8px 12px 16.8px;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #2E8B2E 0%, #5DC94E 100%);
+}
+
+.swiper-pagination-bullet {
+  background: #8E8E8E !important;
+  opacity   : 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  background: #5DC94E !important;
+  opacity   : 1;
+}
+
+/* Custom curve to match the UI precisely */
+@media (min-width: 768px) {
+  .curved-clip {
+    clip-path: ellipse(100% 100% at 0% 50%);
+  }
+}
+
+.BrandDetailPage-slider-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.BrandDetailPage-slider-card-gradient {
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+/* Custom Swiper Pagination Styling */
+.BrandDetailPage-slider-pagination {
+  position       : relative !important;
+  margin-top     : 40px !important;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  gap            : 8px;
+}
+
+.BrandDetailPage-slider-pagination .swiper-pagination-bullet {
+  width     : 8px;
+  height    : 8px;
+  background: #9ca3af;
+  opacity   : 1;
+  margin    : 0 !important;
+  transition: all 0.3s ease;
+}
+
+.BrandDetailPage-slider-pagination .swiper-pagination-bullet-active {
+  background    : #16a34a;
+  /* green-600 */
+  outline       : 1px solid #16a34a;
+  outline-offset: 3px;
+  width         : 8px;
+  height        : 8px;
+}

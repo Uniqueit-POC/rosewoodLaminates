@@ -19,43 +19,18 @@
 <body>
 
     <!-- header section -->
-    <header class="fixed  w-full z-50">
+    <header class="fixed  w-full z-[200]">
         <nav
             class="mx-auto bg-white backdrop-blur-md  flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
             <div class="flex items-center">
-                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-12">
             </div>
 
             <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
                 <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
                 <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
                 <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
-                <li class="relative group">
-                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
-                        Collections
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <ul
-                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
-                        <li><a href="wooden.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
-                                Collections</a></li>
-                        <li><a href="pastel.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
-                                Collections</a></li>
-                        <li><a href="marble.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
-                                Collections</a></li>
-                        <li><a href="digital.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
-                                Collections</a></li>
-                    </ul>
-                </li>
+                <li><a href="products.html" class="hover:text-[#4AA13E] transition-colors">Collections</a></li>
                 <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
                 <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
             </ul>
@@ -73,7 +48,7 @@
             </button>
         </nav>
     </header>
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[300] bg-white flex flex-col p-8 md:hidden">
         <div class="flex justify-between items-center mb-10">
             <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
             <button onclick="toggleMenu()" class="text-black">
@@ -83,19 +58,11 @@
                 </svg>
             </button>
         </div>
-        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+        <ul class="flex flex-col space-y-4 text-[#383838] text-base font-regular tracking-widest">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="brands.html">Our Brands</a></li>
-            <li class="flex flex-col">
-                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
-                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
-                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
-                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
-                    <a href="marble.html" class="text-xl">Marble Collections</a>
-                    <a href="digital.html" class="text-xl">Digital Collections</a>
-                </div>
-            </li>
+             <li><a href="products.html">Collections</a></li>
             <li><a href="blogs.html">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>

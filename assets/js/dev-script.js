@@ -89,36 +89,77 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // 04. HOME PAGE HERO BANNER (Manual Slider)
     // ==========================================
-    let heroIndex = 0;
-    const heroSlides = document.querySelectorAll(".slide");
-    const heroDots = document.querySelectorAll(".dot");
+   // 1. Initialize variables
+let heroIndex = 0;
+const heroSlides = document.querySelectorAll(".slide");
+const heroDots = document.querySelectorAll(".dot");
 
-    function showHeroSlides(n) {
-        if (heroSlides.length === 0) return;
-        heroSlides.forEach((s) => s.classList.remove("active"));
-        heroDots.forEach((d) => d.classList.remove("active"));
+// 2. Define the main display function
+function showHeroSlides(n) {
+    if (heroSlides.length === 0) return;
 
-        heroIndex = (n + heroSlides.length) % heroSlides.length;
-        heroSlides[heroIndex].classList.add("active");
-        if (heroDots[heroIndex]) heroDots[heroIndex].classList.add("active");
+    // Reset: Hide all slides and reset dot styles
+    heroSlides.forEach((s) => {
+        s.classList.remove("active");
+        s.style.display = "none"; 
+    });
+    
+    heroDots.forEach((d) => {
+        d.classList.remove("active", "bg-white", "w-8");
+        d.classList.add("bg-white/20", "w-2");
+    });
+
+    // Calculate the correct index (looping back to 0 if at the end)
+    heroIndex = (n + heroSlides.length) % heroSlides.length;
+
+    // Show the active slide
+    heroSlides[heroIndex].classList.add("active");
+    heroSlides[heroIndex].style.display = "flex"; 
+
+    // Highlight the active dot
+    if (heroDots[heroIndex]) {
+        heroDots[heroIndex].classList.add("active", "bg-white", "w-8");
+        heroDots[heroIndex].classList.remove("bg-white/20", "w-2");
     }
+}
 
-    if (heroSlides.length > 0) {
-        setInterval(() => { showHeroSlides(heroIndex + 1); }, 5000);
-    }
+/** * 3. THE FIX: Define currentSlide globally 
+ * This is what your HTML onclick="currentSlide(0)" is looking for
+ */
+window.currentSlide = function(n) {
+    showHeroSlides(n);
+    resetTimer(); // Reset auto-play when user clicks manually
+};
+
+// 4. Auto-play Logic
+let autoPlayInterval = setInterval(() => { 
+    showHeroSlides(heroIndex + 1); 
+}, 5000);
+
+function resetTimer() {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = setInterval(() => { 
+        showHeroSlides(heroIndex + 1); 
+    }, 5000);
+}
+
+// 5. Initialize the first slide on page load
+document.addEventListener("DOMContentLoaded", () => {
+    showHeroSlides(0);
+});
 
     // ==========================================
     // 05. COMPANY LOGO SLIDER (Swiper)
     // ==========================================
     new Swiper(".logo-slider", {
-        slidesPerView: 2,
+        slidesPerView: 3.5,
         spaceBetween: 20,
         loop: true,
         autoplay: { delay: 2500, disableOnInteraction: false },
         breakpoints: {
-            640: { slidesPerView: 3, spaceBetween: 30 },
+            640: { slidesPerView: 3.5, spaceBetween: 30 },
             768: { slidesPerView: 4, spaceBetween: 40 },
-            1024: { slidesPerView: 7, spaceBetween: 50, allowTouchMove: false },
+            1024: { slidesPerView: 7, spaceBetween: 10, allowTouchMove: false },
         },
     });
 
@@ -130,46 +171,84 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // 07. FIND YOUR PERFECT SHADE (Color Fan)
     // ==========================================
-    const colors = [
+   const colors = [
         { name: 'Forest Green', hex: '#2D5A27', img: 'https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=900' },
-        { name: 'Slate Gray', hex: '#5A6472', img: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=900' },
-        { name: 'Teak Brown', hex: '#966F47', img: './assets/image/home/FindYourPerfect/1image.png' },
+            { name: 'Slate Gray', hex: '#5A6472', img: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=900' },
+            { name: 'Cream White', hex: '#EDE8E0', img: 'https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=900' },
+            { name: 'Carbon Black', hex: '#1A1A1A', img: 'https://images.unsplash.com/photo-1507337722123-25a25917ad6f?q=80&w=900' },
+            { name: 'Teak Brown', hex: '#966F47', img: './assets/image/home/FindYourPerfect/1image.png' },
+            { name: 'Olive Green', hex: '#6B7B3A', img: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=900' },
+            { name: 'Dark Cherry', hex: '#72243A', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=900' },
+            { name: 'Sandstone', hex: '#C4A882', img: 'https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=900' },
+            { name: 'Ocean Blue', hex: '#4A7B9D', img: 'https://images.unsplash.com/photo-1505144808405-026874426778?q=80&w=900' },
+            { name: 'Rose Dust', hex: '#C4818A', img: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=900' },
+            { name: 'Midnight Blue', hex: '#1E3A5F', img: 'https://images.unsplash.com/photo-1505144808405-026874426778?q=80&w=900' },
+            { name: 'Moss Green', hex: '#6B7B3A', img: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=900' },
+            { name: 'Deep Burgundy', hex: '#72243A', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=900' },
+            { name: 'Light Oak', hex: '#C4A882', img: 'https://images.unsplash.com/photo-1581417478175-a9ef18f20941?q=80&w=900' },
+            { name: 'Steel Blue', hex: '#4A7B9D', img: 'https://images.unsplash.com/photo-1505144808405-026874426778?q=80&w=900' }
     ];
 
-    let activeColIndex = 4;
+let activeColIndex = 4;
+
+window.buildFan = function() {
     const fanWrap = document.getElementById('fanWrap');
+    if (!fanWrap) return;
+    fanWrap.innerHTML = '';
+    const SWATCH_W = 85;
+    const OVERLAP = 52;
 
-    window.buildFan = function() {
-        if (!fanWrap) return;
-        fanWrap.innerHTML = '';
-        const SWATCH_W = 85;
-        const OVERLAP = 52;
+    colors.forEach((c, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'swatch' + (i === activeColIndex ? ' active' : '');
+        btn.style.backgroundColor = c.hex;
+        btn.style.left = (i * (SWATCH_W - OVERLAP)) + 'px';
+        btn.style.zIndex = i === activeColIndex ? 100 : i + 1;
+        btn.onclick = () => { 
+            activeColIndex = i; 
+            buildFan(); 
+            updateColorUI(); 
+        };
+        fanWrap.appendChild(btn);
+    });
+};
 
-        colors.forEach((c, i) => {
-            const btn = document.createElement('button');
-            btn.className = 'swatch' + (i === activeColIndex ? ' active' : '');
-            btn.style.backgroundColor = c.hex;
-            btn.style.left = (i * (SWATCH_W - OVERLAP)) + 'px';
-            btn.style.zIndex = i === activeColIndex ? 100 : i + 1;
-            btn.onclick = () => { activeColIndex = i; buildFan(); updateColorUI(); };
-            fanWrap.appendChild(btn);
-        });
-    };
+function updateColorUI() {
+    const c = colors[activeColIndex];
+    if (!c) return;
 
-    function updateColorUI() {
-        const c = colors[activeColIndex];
-        const img = document.getElementById('heroImg');
-        if (img && c) {
-            img.src = c.img;
-            img.classList.remove('img-anim');
-            void img.offsetWidth;
-            img.classList.add('img-anim');
-        }
-        if (document.getElementById('barName') && c) document.getElementById('barName').textContent = c.name;
+    // 1. Update Hero Image
+    const img = document.getElementById('heroImg');
+    if (img) {
+        img.src = c.img;
+        img.classList.remove('img-anim');
+        void img.offsetWidth; // Trigger reflow for animation
+        img.classList.add('img-anim');
     }
 
-    buildFan();
-    updateColorUI();
+    // 2. Update Overlay Bar Swatch and Name
+    const barSwatch = document.getElementById('barSwatch');
+    const barName = document.getElementById('barName');
+    if (barSwatch) {
+        barSwatch.style.backgroundColor = c.hex;
+        barSwatch.style.boxShadow = `0px 8px 30px 0px ${c.hex}80`; // 80 adds transparency to hex
+    }
+    if (barName) barName.textContent = c.name;
+
+    // 3. Update Detail Swatch and Name
+    const detailSwatch = document.getElementById('detailSwatch');
+    const detailName = document.getElementById('detailName');
+    if (detailSwatch) {
+        detailSwatch.style.backgroundColor = c.hex;
+        detailSwatch.style.boxShadow = `0px 8px 30px 0px ${c.hex}80`;
+        detailSwatch.style.borderColor = c.hex;
+    }
+    if (detailName) detailName.textContent = c.name;
+}
+
+// Initial Call
+buildFan();
+updateColorUI();
 
     // ==========================================
     // 08. BEFORE/AFTER IMAGE COMPARISON

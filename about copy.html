@@ -19,18 +19,43 @@
 <body>
 
     <!-- header section -->
-    <header class="fixed top-0 w-full z-[200] px-4 py-4 lg:px-10">
+    <header class="fixed top-0 w-full z-50 px-4 py-4 lg:px-10">
         <nav
             class="mx-auto bg-white/80 backdrop-blur-md rounded-xl flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
             <div class="flex items-center">
-                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-12">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
             </div>
 
             <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
                 <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
                 <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
                 <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
-                <li><a href="products.html" class="hover:text-[#4AA13E] transition-colors">Collections</a></li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
+                        Collections
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <ul
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                        <li><a href="wooden.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
+                                Collections</a></li>
+                        <li><a href="pastel.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
+                                Collections</a></li>
+                        <li><a href="marble.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
+                                Collections</a></li>
+                        <li><a href="digital.html"
+                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
+                                Collections</a></li>
+                    </ul>
+                </li>
                 <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li>
                 <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
             </ul>
@@ -48,7 +73,7 @@
             </button>
         </nav>
     </header>
-    <div id="mobile-menu" class="fixed inset-0 z-[300] bg-white flex flex-col p-8 md:hidden">
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
         <div class="flex justify-between items-center mb-10">
             <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
             <button onclick="toggleMenu()" class="text-black">
@@ -58,11 +83,19 @@
                 </svg>
             </button>
         </div>
-        <ul class="flex flex-col space-y-4 text-[#383838] text-base font-regular tracking-widest">
+        <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="brands.html">Our Brands</a></li>
-             <li><a href="products.html">Collections</a></li>
+            <li class="flex flex-col">
+                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
+                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
+                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
+                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
+                    <a href="marble.html" class="text-xl">Marble Collections</a>
+                    <a href="digital.html" class="text-xl">Digital Collections</a>
+                </div>
+            </li>
             <li><a href="blogs.html">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
@@ -99,7 +132,7 @@
                 <span class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm block mb-2 font-inter">Our
                     Story</span>
 
-                <h1 class="font-playfair mb-4 text-[#1A1A1A] font-medium text-2xl md:text-[40px]  leading-none">
+                <h1 class="font-playfair mb-4 text-[#1A1A1A] font-medium text-[40px] leading-none">
                     Two Decades of Crafting<br>Premium Surfaces
                 </h1>
 
@@ -168,6 +201,41 @@
     </section>
 
     <!-- start See It. Style It. Own It. seciton -->
+    <section class="px-4 py-10 lg:px-10">
+        <div
+            class="relative w-full h-[500px] md:h-[600px] rounded-[40px] overflow-hidden flex items-center justify-center text-center px-6">
+
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/image/about/SeeItStyleItOwnIt.png" alt="Interior Background"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+
+            <div class="relative z-10 flex flex-col items-center gap-6">
+
+                <div class="border border-[#5DC94E]/40 bg-black/10 backdrop-blur-md px-4 py-1.5 rounded-full">
+                    <span class="font-playfair uppercase tracking-widest text-[#5DC94E] font-semibold text-sm">
+                        See it. Style it. Own it.
+                    </span>
+                </div>
+
+                <h2 class="text-white text-4xl md:text-6xl max-w-5xl leading-tight font-semibold font-playfair">
+                    See Your Dream Space Come to Life
+                </h2>
+
+                <a href="collections.html"
+                    class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95 flex">
+                    <span>View All Collections</span>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- start Quality Assurance section -->
     <section class="max-w-7xl mx-auto px-6 py-14">
@@ -303,7 +371,77 @@
     </section>
 
     <!-- start Purpose & Principles section -->
-    
+    <section class="py-16" style="background-image: url(./assets/image/bg/PurposePrinciples.png);">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 items-start">
+
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <span
+                            class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm block mb-2 font-inter">Purpose
+                            & Principles</span>
+                        <h1 class="font-playfair mb-4 text-[#1A1A1A] font-medium text-4xl leading-none">Our Foundation
+                        </h1>
+                        <p
+                            class="max-w-sm text-[#383838] leading-relaxed text-base font-regular md:text-2xl font-playfair">
+                            How we think, what we believe, and why it shows in every surface we make.
+                        </p>
+                    </div>
+
+                    <div class="rounded-sm overflow-hidden shadow-sm">
+                        <img src="./assets/image/about/PurposePrinciples.png" alt="Interior Design View"
+                            class="w-full h-auto object-cover grayscale-[0.2] brightness-95">
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-6 pt-0 lg:pt-12">
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex gap-6 items-start">
+                        <div
+                            class="w-12 h-12 bg-[#5DC94E14] border border-[#53A54A] rounded-2xl flex-shrink-0 flex items-center justify-center">
+                            <img src="./assets/image/icon/PurposePrinciples/Mission.svg" alt="Mission">
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-medium text-[#1A1A1A] mb-2">Our Mission</h3>
+                            <p class="text-[#383838] font-regular text-sm md:text-base leading-relaxed">
+                                To democratise premium surface design in India by offering world-class decorative
+                                laminates at accessible price points, backed by rigorous quality standards.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex gap-6 items-start">
+                        <div
+                            class="w-12 h-12 bg-[#5DC94E14] border border-[#53A54A] rounded-2xl flex-shrink-0 flex items-center justify-center">
+                            <img src="./assets/image/icon/PurposePrinciples/Vision.svg" alt="Vision">
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-medium text-[#1A1A1A] mb-2">Our Vision</h3>
+                            <p class="text-[#383838] font-regular text-sm md:text-lg leading-relaxed">
+                                To become India's most trusted laminate group — synonymous with design innovation,
+                                superior craftsmanship, and customer delight.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex gap-6 items-start">
+                        <div
+                            class="w-12 h-12 bg-[#5DC94E14] border border-[#53A54A] rounded-2xl flex-shrink-0 flex items-center justify-center">
+                            <img src="./assets/image/icon/PurposePrinciples/Values.svg" alt="Values">
+                        </div>
+                        <div>
+                            <h3 class="font-playfair text-xl font-medium text-[#1A1A1A] mb-2">Our Values</h3>
+                            <p class="text-[#383838] font-regular text-sm md:text-base leading-relaxed">
+                                Quality without compromise. Innovation with purpose. Partnerships built on trust.
+                                Sustainability embedded in every layer we produce.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- start OUR BRANDS section -->
     <section class="max-w-7xl mx-auto px-6 py-20 text-center">

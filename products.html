@@ -14,7 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/dev-style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
 </head>
 
 <body>
@@ -63,7 +63,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="brands.html">Our Brands</a></li>
-             <li><a href="products.html">Collections</a></li>
+            <li><a href="products.html">Collections</a></li>
             <li><a href="blogs.html">Blogs</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
@@ -244,30 +244,36 @@
                                 <span
                                     class="font-inter absolute top-3 left-3 bg-[#5DC94E] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase z-10">New</span>
 
-                                <div class="absolute inset-0 bg-[#363636] z-20 transition-opacity duration-300"
+                                <!-- <div class="absolute inset-0 bg-[#363636] z-20 transition-opacity duration-300"
                                     :class="hover ? 'opacity-80' : 'opacity-0'" style="height: 100%;">
                                     <div class="flex items-center justify-center gap-4 h-full">
                                         <a href="#" @click.stop
                                             class="w-14 h-14 rounded-full bg-[#5DC94E] flex items-center justify-center hover:scale-105 transition-transform duration-200">
                                             <img src="./assets/image/icon/eyeview.svg" alt="Details" class="">
                                         </a>
-                                        <button @click="openModal = true" @click.stop
-                                            class="w-14 h-14 rounded-full bg-[#5DC94E] flex items-center justify-center hover:scale-105 transition-transform duration-200">
-                                            <img src="./assets/image/icon/360view.svg" alt="360 View" class="">
-                                        </button>
+                                        
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <img :src="p.img" :alt="p.name"
                                     class="w-full h-full object-cover z-0 transition-transform duration-500"
                                     :class="hover ? 'scale-105' : 'scale-100'">
                             </div>
 
-                            <div class="p-5 text-center">
-                                <h3 class="text-base font-playfair font-medium text-[#1a1a1a]" x-text="p.name"></h3>
-                                <p class="text-base font-inter font-regular text-[#38792F] mt-1" x-text="p.code">
-                                </p>
+                            <div class="p-5 flex items-center justify-between gap-4">
+                                <!-- Left Content -->
+                                <div>
+                                    <h3 class="text-base font-playfair font-medium text-[#1a1a1a]" x-text="p.name"></h3>
+                                    <p class="text-sm font-inter font-medium text-[#38792F] mt-2" x-text="p.code"></p>
+                                </div>
+
+                                <!-- Right Button -->
+                                <button @click="openModal = true" @click.stop
+                                            class="flex items-center justify-center ">
+                                            <img src="./assets/image/icon/360Button.png" alt="360 View" class="">
+                                        </button>
                             </div>
+
 
                             <template x-if="openModal">
                                 <div class="fixed inset-0 z-50 flex items-center justify-center px-4 py-6"
@@ -318,7 +324,7 @@
     <section class="py-6 bg-[#F7F9F7] border-b border-[#5DC94E26]">
         <div class="mx-auto px-6">
             <div class="swiper logo-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
-                <div class="swiper-wrapper flex items-center" id="swiper-wrapper-4e13101962ba09acb" aria-live="off">
+                <div class="swiper-wrapper flex items-center justify-center" id="swiper-wrapper-4e13101962ba09acb" aria-live="off">
 
                     <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-active" role="group"
                         aria-label="1 / 7" data-swiper-slide-index="0" style="width: 167.571px; margin-right: 50px;">
@@ -356,11 +362,11 @@
                             class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
                     </div>
 
-                    <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="7 / 7"
+                    <!-- <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="7 / 7"
                         data-swiper-slide-index="6" style="width: 167.571px; margin-right: 50px;">
                         <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Rang-In"
                             class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
-                    </div>
+                    </div> -->
 
                 </div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
@@ -393,7 +399,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4">
-                 <a href="contact.html"
+                <a href="contact.html"
                     class="items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
                     Enquire Now
                 </a>
@@ -438,8 +444,7 @@
                 </div>
 
                 <div class="lg:pl-8">
-                    <h4
-                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                    <h4 class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
                         Quick Links</h4>
                     <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
                         <li><a href="index.html" class="hover:text-green-600 transition-colors">Home</a></li>
@@ -452,20 +457,22 @@
                 </div>
 
                 <div>
-                    <h4
-                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                    <h4 class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
                         Collections</h4>
                     <ul class="font-inter space-y-2 text-sm font-regular text-[#383838]">
-                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden Collections</a></li>
-                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel Collections</a></li>
-                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble Collections</a></li>
-                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital Collections</a></li>
+                        <li><a href="WoodenCollections.html" class="hover:text-green-600 transition-colors">Wooden
+                                Collections</a></li>
+                        <li><a href="PastelCollections.html" class="hover:text-green-600 transition-colors">Pastel
+                                Collections</a></li>
+                        <li><a href="MarbleCollections.html" class="hover:text-green-600 transition-colors">Marble
+                                Collections</a></li>
+                        <li><a href="DigitalCollections.html" class="hover:text-green-600 transition-colors">Digital
+                                Collections</a></li>
                     </ul>
                 </div>
 
                 <div class="space-y-6">
-                    <h4
-                        class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
+                    <h4 class="font-playfair text-lg text-[#1A1A1A] font-semiBold mb-4 tracking-wide uppercase text-sm">
                         Contact Us</h4>
                     <ul class="space-y-5 text-[14px]">
                         <li class="flex items-start gap-3">
@@ -517,8 +524,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/dev-script.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 
 </body>

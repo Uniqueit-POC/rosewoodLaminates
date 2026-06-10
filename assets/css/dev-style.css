@@ -197,3 +197,5 @@
 .dot {
     transition: all 0.4s ease;
 }
+ body { font-family: 'Inter', sans-serif; }
+        .heading-font { font-family: 'Playfair Display', serif; }

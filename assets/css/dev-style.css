@@ -165,13 +165,11 @@
 }
 
 /* Custom curve to match the UI precisely */
-@media (min-width: 768px) {
-  .curved-clip {
-    /* clip-path: ellipse(220% 220% at -130% 50%); */
-    border-top-right-radius: 300px;
-    border-bottom-right-radius: 300px;
-    overflow: hidden;
-  }
+
+.curved-clip {
+  border-top-right-radius: 300px;
+  border-bottom-right-radius: 300px;
+  overflow: hidden;
 }
 
 .BrandDetailPage-slider-title {

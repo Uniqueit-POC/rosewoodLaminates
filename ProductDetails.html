@@ -1,287 +1,176 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rosewood Laminates - Premium Surfaces</title>
-    <link rel="icon" type="image/png" href="./assets/image/logo/favicon.svg" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/dev-style.css" />
-  </head>
 
-  <body>
-    <!-- header section -->
-    <header class="fixed w-full z-[200]">
-      <nav
-        class="mx-auto bg-white backdrop-blur-md flex items-center justify-between px-6 py-3 border-b border-[#00000012]"
-      >
-        <div class="flex items-center">
-          <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-12" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosewood Laminates - Premium Surfaces</title>
+  <link rel="icon" type="image/png" href="./assets/image/logo/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/dev-style.css" />
+</head>
+
+<body>
+  <!-- header section -->
+  <header class="fixed top-0 w-full z-50 px-4 py-4 lg:px-10">
+    <nav
+      class="mx-auto bg-white/80 backdrop-blur-md rounded-xl flex items-center justify-between px-6 py-3 shadow-2xl border border-white/20">
+      <div class="flex items-center">
+        <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-9">
+      </div>
+
+      <ul class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]">
+        <li><a href="index.html" class="hover:text-[#4AA13E] transition-colors">Home</a></li>
+        <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
+        <li><a href="brands.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Our Brands</a></li>
+        <li>
+          <a href="products.html" class="hover:text-[#4AA13E] transition-colors">
+            Collections
+          </a>
+        </li>
+        <!-- <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li> -->
+        <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
+      </ul>
+
+      <a href="#"
+        class="hidden md:flex items-center text-white px-2 py-2 lg:px-4 lg:py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" class="lg:hidden w-5 h-5" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v10m0 0l-4-4m4 4l4-4M5 20h14" />
+        </svg>
+        <span class="hidden lg:flex font-medium">Download Catalog</span>
+      </a>
+
+      <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white flex flex-col p-8 md:hidden">
+    <div class="flex justify-between items-center mb-10">
+      <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8">
+      <button onclick="toggleMenu()" class="text-black">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-6 text-black text-2xl font-semibold">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="brands.html">Our Brands</a></li>
+      <li>
+        <a href="products.html">Collections</a>
+      </li>
+      <!-- <li><a href="blogs.html">Blogs</a></li> -->
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="mt-auto">
+      <a href="#" class="block text-center bg-[#4AA13E] text-white py-4 rounded-xl font-bold">Download Catalog</a>
+    </div>
+  </div>
+  <!-- header section -->
+
+  <nav class="w-full bg-white px-6 py-4 pt-24 md:pt-20 flex justify-between items-center border-b border-[#00000012]">
+    <div class="text-2xl font-playfair font-regular text-[#1C1C1C]">
+      Products / <span class="text-gray-800 font-medium">Product Detail</span>
+    </div>
+
+    <a href="products.html"
+      class="border border-[#5DC94E99] text-[#5DC94E] px-4 py-2 rounded-full text-xs flex items-center gap-1 hover:bg-[#EFFAED] transition-colors">
+      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+      </svg>
+      Back
+    </a>
+  </nav>
+
+  <section class="max-w-7xl mx-auto p-12 bg-white min-h-screen">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 items-start">
+      <div
+        class="bg-[#EBEBEB] rounded-lg lg:w-[500px] flex items-center justify-center p-12 overflow-hidden shadow-sm relative group">
+        <div class="relative w-full max-w-[308px] h-[512px]">
+          <span
+            class="absolute top-6 left-6 text-white text-base font-inter font-medium tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] z-10">
+            300 X 190 MM
+          </span>
+
+          <img src="./assets/image/ProductDetails/1.png" alt="Antique Birch Sample"
+            class="w-full object-cover rounded-sm shadow-xl border border-white/50 h-[512px]" />
+        </div>
+      </div>
+
+      <div class="flex flex-col pt-0 lg:pt-3">
+        <h1 class="font-inter font-semibold text-3xl leading-tight text-rosewood-text uppercase mb-6 tracking-wide">
+          ANTIQUE BIRCH WOOD - 6099
+        </h1>
+
+        <div class="space-y-0 border-t border-rosewood-border mb-8">
+          <div class="flex items-center p-2 border border-rosewood-border">
+            <span class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Brand</span>
+            <span class="font-inter text-sm font-regular text-[#1C1C1C]">Renberry</span>
+          </div>
+
+          <div class="flex items-center p-2 border border-rosewood-border">
+            <span class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Finish</span>
+            <span class="font-inter text-sm font-regular text-[#1C1C1C]">Mirror</span>
+          </div>
+
+          <div class="flex items-center p-2 border border-rosewood-border">
+            <span class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Design
+              Number</span>
+            <span class="font-inter text-sm font-regular text-[#1C1C1C]">MR-6099</span>
+          </div>
+
+          <div class="flex items-center p-2 border border-rosewood-border">
+            <span class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Size</span>
+            <span class="font-inter text-sm font-regular text-[#1C1C1C]">1220 mm × 2440 mm (8' × 4')</span>
+          </div>
+
+          <div class="flex items-center p-2 border border-rosewood-border">
+            <span
+              class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide">Thickness</span>
+            <span class="font-inter text-sm font-regular text-[#1C1C1C]">
+              1 mm (Other thicknesses available on request)
+            </span>
+          </div>
         </div>
 
-        <ul
-          class="hidden md:flex items-center space-x-8 font-medium text-base leading-tight text-[#383838]"
-        >
-          <li>
-            <a
-              href="index.html"
-              class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a href="about.html" class="hover:text-[#4AA13E] transition-colors"
-              >About Us</a
-            >
-          </li>
-          <li>
-            <a href="brands.html" class="hover:text-[#4AA13E] transition-colors"
-              >Our Brands</a
-            >
-          </li>
-          <li>
-            <a
-              href="products.html"
-              class="hover:text-[#4AA13E] transition-colors"
-              >Collections</a
-            >
-          </li>
-          <!-- <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li> -->
-          <li>
-            <a
-              href="contact.html"
-              class="hover:text-[#4AA13E] transition-colors"
-              >Contact Us</a
-            >
-          </li>
-        </ul>
+        <div class="mb-6 overflow-hidden rounded-lg shadow-lg border border-rosewood-border/50">
+          <img src="./assets/image/ProductDetails/Frame40330.png" alt="Room Installation Preview"
+            class="w-full h-[385px] object-cover hover:scale-[1.03] transition-transform duration-700" />
+        </div>
 
-        <a
-          href="#"
-          class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95"
-        >
-          <span class="font-medium">Download Catalog</span>
-        </a>
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="#" target="_blank"
+            class="flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.215 3.076.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            Share
+          </a>
 
-        <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-7 w-7"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
-      </nav>
-    </header>
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 z-[300] bg-white flex flex-col p-8 md:hidden"
-    >
-      <div class="flex justify-between items-center mb-10">
-        <img src="./assets/image/logo/logo.svg" alt="Logo" class="h-8" />
-        <button onclick="toggleMenu()" class="text-black">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </div>
-      <ul
-        class="flex flex-col space-y-4 text-[#383838] text-base font-regular tracking-widest"
-      >
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="brands.html">Our Brands</a></li>
-        <li><a href="products.html">Collections</a></li>
-        <!-- <li><a href="blogs.html">Blogs</a></li> -->
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="mt-auto">
-        <a
-          href="#"
-          class="block text-center bg-[#4AA13E] text-white py-4 rounded-xl font-bold"
-          >Download Catalog</a
-        >
+          <button
+            class="border-2 border-[#5DC94E] text-[#5DC94E] hover:bg-[#EFFAED] hover:text-[#5DC94E] px-9 py-4 rounded-full font-inter text-base font-bold transition-all duration-300">
+            Send Enquiry
+          </button>
+        </div>
       </div>
     </div>
-    <!-- header section -->
+  </section>
 
-    <nav
-      class="w-full bg-white px-6 py-4 pt-24 md:pt-20 flex justify-between items-center border-b border-[#00000012]"
-    >
-      <div class="text-2xl font-playfair font-regular text-[#1C1C1C]">
-        Products / <span class="text-gray-800 font-medium">Product Detail</span>
-      </div>
-
-      <a
-        href="products.html"
-        class="border border-[#5DC94E99] text-[#5DC94E] px-4 py-2 rounded-full text-xs flex items-center gap-1 hover:bg-[#EFFAED] transition-colors"
-      >
-        <svg
-          class="w-3 h-3"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M10 19l-7-7m0 0l7-7m-7 7h18"
-          ></path>
-        </svg>
-        Back
-      </a>
-    </nav>
-
-    <section class="max-w-7xl mx-auto p-12 bg-white min-h-screen">
-      <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 items-start">
-        <div
-          class="bg-[#EBEBEB] rounded-lg lg:w-[500px] flex items-center justify-center p-12 overflow-hidden shadow-sm relative group"
-        >
-          <div class="relative w-full max-w-[308px] h-[512px]">
-            <span
-              class="absolute top-6 left-6 text-white text-base font-inter font-medium tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] z-10"
-            >
-              300 X 190 MM
-            </span>
-
-            <img
-              src="./assets/image/ProductDetails/1.png"
-              alt="Antique Birch Sample"
-              class="w-full object-cover rounded-sm shadow-xl border border-white/50 h-[512px]"
-            />
-          </div>
-        </div>
-
-        <div class="flex flex-col pt-0 lg:pt-3">
-          <h1
-            class="font-inter font-semibold text-3xl leading-tight text-rosewood-text uppercase mb-6 tracking-wide"
-          >
-            ANTIQUE BIRCH WOOD - 6099
-          </h1>
-
-          <div class="space-y-0 border-t border-rosewood-border mb-8">
-            <div class="flex items-center p-2 border border-rosewood-border">
-              <span
-                class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide"
-                >Brand</span
-              >
-              <span class="font-inter text-sm font-regular text-[#1C1C1C]"
-                >Renberry</span
-              >
-            </div>
-
-            <div class="flex items-center p-2 border border-rosewood-border">
-              <span
-                class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide"
-                >Finish</span
-              >
-              <span class="font-inter text-sm font-regular text-[#1C1C1C]"
-                >Mirror</span
-              >
-            </div>
-
-            <div class="flex items-center p-2 border border-rosewood-border">
-              <span
-                class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide"
-                >Design Number</span
-              >
-              <span class="font-inter text-sm font-regular text-[#1C1C1C]"
-                >MR-6099</span
-              >
-            </div>
-
-            <div class="flex items-center p-2 border border-rosewood-border">
-              <span
-                class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide"
-                >Size</span
-              >
-              <span class="font-inter text-sm font-regular text-[#1C1C1C]"
-                >1220 mm × 2440 mm (8' × 4')</span
-              >
-            </div>
-
-            <div class="flex items-center p-2 border border-rosewood-border">
-              <span
-                class="w-[180px] font-inter text-sm font-regular uppercase text-[#8E8E8E] tracking-wide"
-                >Thickness</span
-              >
-              <span class="font-inter text-sm font-regular text-[#1C1C1C]">
-                1 mm (Other thicknesses available on request)
-              </span>
-            </div>
-          </div>
-
-          <div
-            class="mb-6 overflow-hidden rounded-lg shadow-lg border border-rosewood-border/50"
-          >
-            <img
-              src="./assets/image/ProductDetails/Frame40330.png"
-              alt="Room Installation Preview"
-              class="w-full h-[385px] object-cover hover:scale-[1.03] transition-transform duration-700"
-            />
-          </div>
-
-          <div class="flex flex-wrap gap-4 pt-4">
-            <a
-              href="#"
-              target="_blank"
-              class="flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.215 3.076.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
-                />
-              </svg>
-              Share
-            </a>
-
-            <button
-              class="border-2 border-[#5DC94E] text-[#5DC94E] hover:bg-[#EFFAED] hover:text-[#5DC94E] px-9 py-4 rounded-full font-inter text-base font-bold transition-all duration-300"
-            >
-              Send Enquiry
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--Technical Specificatio slider  -->
-    <!-- <section class="bg-white pt-16 px-4">
+  <!--Technical Specificatio slider  -->
+  <!-- <section class="bg-white pt-16 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
                 <h4 class="font-inter block mb-2 uppercase font-medium text-sm tracking-widest leading-tight text-[#4AA13E]">Quality Assurance</h4>
@@ -353,450 +242,318 @@
         </div>
     </section> -->
 
-    <section class="w-full py-16 px-4 sm:px-6 lg:px-8 bg-[#F5F5F5]">
-      <div class="max-w-7xl mx-auto">
-        <!-- Section Header -->
-        <div class="text-center mb-12">
-          <p
-            class="font-['Inter'] font-semibold text-[16px] leading-[16px] tracking-[2.6px] text-[#4AA13E] uppercase mb-4"
-          >
-            Built to Last
-          </p>
+  <section class="w-full py-16 px-4 sm:px-6 lg:px-8 bg-[#F5F5F5]">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <p
+          class="font-['Inter'] font-semibold text-[16px] leading-[16px] tracking-[2.6px] text-[#4AA13E] uppercase mb-4">
+          Built to Last
+        </p>
 
-          <h2
-            class="font-['Playfair_Display'] font-medium text-[32px] leading-[48px] text-[#1A1A1A]"
-          >
-            Long-Lasting Surface Protection
-          </h2>
-        </div>
-
-        <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div
-            class="relative bg-white rounded-[12px] border-t border-[rgba(0,0,0,0.06)] shadow-[0px_4px_24px_rgba(0,0,0,0.06)] p-5 flex flex-col gap-5 overflow-hidden"
-          >
-            <h3
-              class="font-['Inter'] font-semibold text-[14px] leading-[20px] tracking-[2.6px] uppercase text-[#1A1A1A]"
-            >
-              Scratch & Impact Protection
-            </h3>
-
-            <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Don't place lighted cigarettes directly on laminate surface.
-                </p>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Knives or other sharp utensils may slice or scratch the
-                  surface.
-                </p>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Avoid ironing or placing a hot iron on laminate surface.
-                </p>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Heavy blows of hammer or metal may crack the laminate surface.
-                </p>
-              </li>
-            </ul>
-
-            <!-- Watermark Icon -->
-            <svg
-              class="absolute bottom-4 right-4 w-[72px] h-[72px] pointer-events-none"
-              width="100"
-              height="100"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="0.2">
-                <path
-                  d="M34.0949 11.0132L17.9574 0.452506C17.1047 -0.105306 16.0187 -0.150423 15.1232 0.333952C14.2279 0.818327 13.6719 1.75114 13.6719 2.76872V82.7734C13.7318 84.7103 16.5416 84.7088 16.601 82.7734V3.06598L32.4184 13.4172V86.5826L16.601 96.9338V89.6947C16.541 87.7578 13.7312 87.7594 13.6719 89.6947V97.231C13.6719 98.2486 14.2279 99.1816 15.1232 99.6658C15.5361 99.889 15.9891 100 16.441 99.9998C16.9701 99.9998 17.4979 99.848 17.9574 99.5472L34.0947 88.9865C34.8791 88.4732 35.3475 87.6074 35.3475 86.6703V13.3295C35.3475 12.3924 34.8791 11.5263 34.0949 11.0132Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M21.8668 26.2075C22.6758 26.2075 23.3314 25.5517 23.3314 24.7427V23.1745C23.2715 21.2376 20.4617 21.2392 20.4023 23.1745V24.7427C20.4021 25.5517 21.0578 26.2075 21.8668 26.2075Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M20.4023 37.7634C20.4623 39.7003 23.2721 39.6988 23.3314 37.7634V36.1953C23.2715 34.2583 20.4617 34.2599 20.4023 36.1953V37.7634Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M20.4023 50.7844C20.4623 52.7213 23.2721 52.7198 23.3314 50.7844V49.2163C23.2715 47.2793 20.4617 47.2809 20.4023 49.2163V50.7844Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M20.4023 63.8042C20.4623 65.7411 23.2721 65.7395 23.3314 63.8042V62.236C23.2715 60.2991 20.4617 60.3007 20.4023 62.236V63.8042Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M20.4023 76.8249C20.4623 78.7619 23.2721 78.7603 23.3314 76.8249V75.2568C23.2715 73.3199 20.4617 73.3214 20.4023 75.2568V76.8249Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M28.4215 20.4355C29.2305 20.4355 29.8861 19.7796 29.8861 18.9707V17.2265C29.8262 15.2896 27.0164 15.2912 26.957 17.2265V18.9707C26.9568 19.7796 27.6125 20.4355 28.4215 20.4355Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M26.957 31.7312C27.017 33.6681 29.8268 33.6665 29.8861 31.7312V29.987C29.8262 28.0501 27.0164 28.0517 26.957 29.987V31.7312Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M26.957 44.4917C27.017 46.4286 29.8268 46.427 29.8861 44.4917V42.7475C29.8262 40.8106 27.0164 40.8122 26.957 42.7475V44.4917Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M26.957 57.2524C27.017 59.1893 29.8268 59.1877 29.8861 57.2524V55.5083C29.8262 53.5713 27.0164 53.5729 26.957 55.5083V57.2524Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M26.957 70.0129C27.017 71.9498 29.8268 71.9482 29.8861 70.0129V68.2688C29.8262 66.3318 27.0164 66.3334 26.957 68.2688V70.0129Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M26.957 82.7736C27.017 84.7105 29.8268 84.709 29.8861 82.7736V81.0295C29.8262 79.0926 27.0164 79.0941 26.957 81.0295V82.7736Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M84.531 68.8841L78.2802 62.6319C77.7081 62.0599 76.781 62.0599 76.2089 62.6319C75.6371 63.204 75.6371 64.1315 76.2089 64.7036L82.4599 70.9558C83.624 72.1202 83.6919 74.0118 82.6122 75.1716C82.0533 75.7708 81.296 76.1087 80.48 76.1229C79.6699 76.1429 78.896 75.827 78.3189 75.2497C77.8337 74.7645 77.5374 74.1466 77.4621 73.4677C77.2966 71.9249 76.5646 70.4345 75.4011 69.2708L69.5396 63.4079C68.5597 62.4278 67.3234 61.7671 65.9638 61.497L65.0056 61.3067C64.2169 61.1501 63.4996 60.7667 62.9308 60.1981L62.1687 59.436L66.5556 55.0481L71.3947 59.8884C71.9665 60.4604 72.8937 60.4606 73.466 59.8884C74.0378 59.3163 74.0378 58.3888 73.466 57.8167L67.5913 51.9405C67.5888 51.938 67.5859 51.9358 67.5833 51.9333L45.6996 30.0446C45.0982 29.4435 44.2251 29.2395 43.4195 29.513C42.6144 29.7862 42.0453 30.4798 41.9343 31.3229L41.3033 36.1171C40.823 39.7649 42.0894 43.4958 44.6902 46.0972L59.0613 60.4716C59.0632 60.4735 59.0654 60.4751 59.0673 60.477L60.8593 62.2696C61.8394 63.2499 63.0757 63.9106 64.4351 64.1804L65.3931 64.3706C66.182 64.5272 66.8994 64.9106 67.4679 65.4794L73.3294 71.3423C74.0216 72.0347 74.455 72.9005 74.5499 73.7852C74.8285 76.7095 77.4839 79.1101 80.4244 79.053C80.4597 79.053 80.4951 79.0528 80.5306 79.0522C82.1482 79.0241 83.648 78.3558 84.7548 77.169C86.9339 74.8282 86.8355 71.1892 84.531 68.8841ZM44.8384 31.7054C44.8384 31.7061 44.8382 31.7067 44.8382 31.7075L44.8384 31.7054ZM44.2074 36.4997L44.6498 33.1382L64.4837 52.9767L60.097 57.3643L46.7615 44.0259C44.8003 42.0638 43.8455 39.2505 44.2074 36.4997Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M56.8821 33.2186C56.3931 33.8629 56.5188 34.7819 57.163 35.2711C57.8015 35.7575 58.7233 35.6381 59.2151 34.9901C63.6227 29.1832 68.8118 24.4987 74.6382 21.0665C75.3352 20.6559 75.5675 19.7581 75.1571 19.0608C74.7466 18.3635 73.8483 18.1315 73.1518 18.542C66.9954 22.1688 61.5214 27.1067 56.8821 33.2186Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M53.6787 30.0176C54.3172 30.504 55.2391 30.3846 55.7309 29.7366C60.1385 23.9297 65.3276 19.2452 71.1539 15.8129C71.851 15.4024 72.0832 14.5045 71.6729 13.8073C71.2623 13.11 70.3641 12.8782 69.6676 13.2885C63.5111 16.9151 58.0371 21.853 53.3977 27.9649C52.9086 28.6094 53.0346 29.5284 53.6787 30.0176Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M51.8957 56.8052C51.9281 55.9969 51.299 55.3152 50.4908 55.2828C49.6837 55.249 49.0013 55.8797 48.9689 56.6879C48.4755 69.0129 50.532 78.1724 50.6197 78.5562C50.7966 79.3504 51.6056 79.8392 52.3734 79.6574C53.1617 79.4773 53.655 78.692 53.4753 77.9035C53.4546 77.8131 51.4187 68.7172 51.8957 56.8052Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M45.6652 56.4387C45.6976 55.6303 45.0685 54.9487 44.2603 54.9163C43.4587 54.8872 42.7709 55.5131 42.7384 56.3213C42.2451 68.6463 44.3015 77.8057 44.3892 78.1897C44.5662 78.984 45.3755 79.4731 46.1435 79.2911C46.932 79.1108 47.425 78.3252 47.2449 77.5364C47.224 77.4463 45.1873 68.3774 45.6652 56.4387Z"
-                  fill="#5DC94E"
-                />
-              </g>
-            </svg>
-          </div>
-
-          <div
-            class="relative bg-white rounded-[12px] border-t border-[rgba(0,0,0,0.06)] shadow-[0px_4px_24px_rgba(0,0,0,0.06)] p-5 flex flex-col gap-5 overflow-hidden"
-          >
-            <h3
-              class="font-['Inter'] font-semibold text-[14px] leading-[20px] tracking-[2.6px] uppercase text-[#1A1A1A]"
-            >
-              Ordinary Cleaning
-            </h3>
-
-            <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Use a clean, damp, non-abrasive cotton cloth and a mild liquid
-                  detergent or household cleaner.
-                </p>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Rinse with clean water. Don't flood the laminate since water
-                  can be absorbed and results substrate to swell.
-                </p>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Dry the surface with a soft, clean and non-abrasive cotton
-                  cloth.
-                </p>
-              </li>
-            </ul>
-
-            <!-- Watermark Icon -->
-            <svg
-              class="absolute bottom-4 right-4 w-[72px] h-[72px] pointer-events-none"
-              width="100"
-              height="100"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="0.2" clip-path="url(#clip0_689_1187)">
-                <path
-                  d="M99.6337 31.0068C98.9 28.2683 97.1436 25.9791 94.688 24.5616L82.2636 17.3883C81.3296 16.8492 80.1351 17.169 79.5957 18.1031C79.0563 19.0372 79.3764 20.2315 80.3105 20.771L92.735 27.9443C94.2869 28.8403 95.3968 30.2868 95.8606 32.0175C96.3243 33.7485 96.0864 35.5563 95.1903 37.1081L85.3304 54.1861V40.2611C85.3304 36.8384 82.5458 34.0538 79.1231 34.0538C78.3104 34.0538 77.5339 34.2108 76.8218 34.4959V29.1927C76.8218 25.77 74.0372 22.9853 70.6145 22.9853C69.7661 22.9853 68.9571 23.1562 68.2198 23.4658C67.7089 20.554 65.1616 18.3343 62.1056 18.3343C59.0497 18.3343 56.5026 20.554 55.9916 23.4658C55.2544 23.1564 54.4452 22.9853 53.597 22.9853C50.1743 22.9853 47.3897 25.77 47.3897 29.1927L47.3893 52.8274L45.2216 49.4436C43.5172 46.7825 40.2263 45.6013 37.219 46.572C33.6252 47.7315 31.6232 51.4835 32.661 55.1142L32.8235 55.6823C33.6764 58.6662 34.8394 61.543 36.278 64.2683L22.822 56.4995C19.6184 54.6498 18.5169 50.5388 20.3664 47.3352L43.5012 7.26548C44.3972 5.71359 45.8438 4.60348 47.5746 4.13963C49.3054 3.67559 51.1133 3.91386 52.6652 4.80992L65.0905 11.9834C66.0248 12.5231 67.2191 12.203 67.7583 11.2686C68.2978 10.3345 67.9777 9.1402 67.0435 8.60077L54.6183 1.42725C52.1627 0.00973368 49.3021 -0.367203 46.5635 0.36675C43.825 1.10051 41.5358 2.85707 40.1183 5.31244L38.8842 7.44984C34.1121 6.07158 29.178 5.32083 24.1928 5.22045C24.1793 5.22025 24.1661 5.22006 24.1528 5.22006C23.0925 5.22006 22.2224 6.06885 22.2009 7.13384C22.1792 8.21212 23.0358 9.10407 24.1143 9.12575C28.4348 9.21266 32.7137 9.82416 36.8681 10.9421L23.9331 33.346C21.1262 32.381 18.1974 31.8638 15.2047 31.8105C14.1239 31.7888 13.2365 32.6499 13.2171 33.7282C13.1978 34.8069 14.0565 35.6965 15.135 35.7158C17.4599 35.7574 19.7395 36.123 21.9374 36.8025L16.9841 45.382C14.0577 50.4507 15.8006 56.9555 20.8693 59.882L41.0687 71.544C43.3996 74.4349 46.0872 77.0428 49.0781 79.2854V98.046C49.0781 99.1244 49.9524 99.999 51.0311 99.999C52.1098 99.999 52.9842 99.1244 52.9842 98.046V78.2954C52.9842 77.665 52.6797 77.073 52.1668 76.7064C44.6535 71.3364 39.1178 63.4885 36.5794 54.6088L36.4169 54.0406C35.9611 52.4462 36.8403 50.7984 38.4184 50.2894C39.7386 49.8637 41.1843 50.382 41.9327 51.5503L47.6981 60.5505C48.1658 61.2805 49.0591 61.6149 49.8913 61.3714C50.7237 61.1278 51.2956 60.3644 51.2956 59.497V51.4079C51.2958 51.395 51.2959 51.3821 51.2959 51.3692V29.1929C51.2959 27.924 52.3283 26.8916 53.5972 26.8916C54.8661 26.8916 55.8985 27.924 55.8985 29.1929V47.5345C55.8985 48.6129 56.7729 49.4875 57.8515 49.4875C58.9302 49.4875 59.8046 48.6129 59.8046 47.5345V24.5417C59.8046 23.2728 60.8369 22.2404 62.1058 22.2404C63.3749 22.2404 64.4071 23.2728 64.4071 24.5417V47.5345C64.4071 48.6129 65.2815 49.4875 66.3601 49.4875C67.4388 49.4875 68.3132 48.6129 68.3132 47.5345V29.1929C68.3132 27.924 69.3456 26.8916 70.6145 26.8916C71.8833 26.8916 72.9157 27.924 72.9157 29.1929V47.5345C72.9157 48.6129 73.7901 49.4875 74.8688 49.4875C75.9474 49.4875 76.8218 48.6129 76.8218 47.5345V40.2615C76.8218 38.9926 77.8542 37.9603 79.1231 37.9603C80.392 37.9603 81.4243 38.9926 81.4243 40.2615V56.2706C81.4243 63.942 78.3088 71.4483 72.8767 76.8648C72.5093 77.2312 72.3027 77.7289 72.3027 78.2478V98.0463C72.3027 99.1248 73.177 99.9994 74.2557 99.9994C75.3344 99.9994 76.2087 99.1248 76.2087 98.0463V79.0444C80.4537 74.6011 83.3182 69.1745 84.5867 63.2865L98.573 39.0616C99.9911 36.606 100.368 33.7454 99.6337 31.0068Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M1.95421 13.3044C2.20342 13.3044 2.45692 13.2563 2.70144 13.1548C6.62979 11.5263 10.7597 10.3734 14.9765 9.72796C16.0429 9.56488 16.7749 8.56824 16.6116 7.50207C16.4485 6.43571 15.4523 5.70489 14.3857 5.86699C9.85836 6.55973 5.42398 7.79777 1.20561 9.54671C0.209168 9.95978 -0.263663 11.1023 0.149405 12.0988C0.460915 12.8507 1.18784 13.3044 1.95421 13.3044Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M1.95443 26.0397C2.20208 26.0397 2.45382 25.9923 2.69698 25.8921C8.79242 23.3836 15.4861 22.4846 22.0543 23.2922C23.1252 23.4256 24.0996 22.6629 24.2312 21.5923C24.3628 20.5218 23.6017 19.547 22.5311 19.4154C15.298 18.5254 7.92507 19.5166 1.21032 22.2801C0.212904 22.6907 -0.263052 23.8318 0.147477 24.8294C0.45801 25.5837 1.1863 26.0397 1.95443 26.0397Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M4.85567 33.5586C3.53678 34.0447 2.24367 34.6347 1.01208 35.3122C0.0670053 35.8321 -0.277706 37.0196 0.242193 37.9646C0.597842 38.6113 1.26598 38.9769 1.95521 38.9769C2.27336 38.9769 2.59639 38.8988 2.89481 38.7347C3.9559 38.1512 5.07011 37.6428 6.20658 37.2239C7.21865 36.8508 7.73679 35.728 7.36357 34.7158C6.99053 33.7039 5.86754 33.1854 4.85567 33.5586Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M73.6777 16.6396C74.1914 16.6396 74.6934 16.4307 75.0586 16.0674C75.4219 15.7041 75.6309 15.2002 75.6309 14.6865C75.6309 14.1709 75.4219 13.667 75.0586 13.3037C74.6934 12.9406 74.1912 12.7314 73.6777 12.7314C73.1641 12.7314 72.6602 12.9404 72.2969 13.3037C71.9316 13.6689 71.7246 14.1709 71.7246 14.6865C71.7246 15.2002 71.9316 15.7021 72.2969 16.0674C72.6602 16.4307 73.1619 16.6396 73.6777 16.6396Z"
-                  fill="#5DC94E"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_689_1187">
-                  <rect width="100" height="100" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-
-          <div
-            class="relative bg-white rounded-[12px] border-t border-[rgba(0,0,0,0.06)] shadow-[0px_4px_24px_rgba(0,0,0,0.06)] p-5 flex flex-col gap-5 overflow-hidden"
-          >
-            <h3
-              class="font-['Inter'] font-semibold text-[14px] leading-[20px] tracking-[2.6px] uppercase text-[#1A1A1A]"
-            >
-              Chemical Damage
-            </h3>
-
-            <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Never use cleaners containing acid, alkali or sodium
-                  hypochlorite.
-                </p>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  These cleaners will mar, etch, corrode and permanently
-                  discolour the laminate surface.
-                </p>
-              </li>
-
-              <li class="flex items-start gap-3">
-                <span
-                  class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"
-                ></span>
-                <p
-                  class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]"
-                >
-                  Make sure bottles, rags and other materials contaminated with
-                  these cleaners never come in contact with the laminate
-                  surface.
-                </p>
-              </li>
-            </ul>
-
-            <!-- Watermark Icon -->
-            <svg
-              class="absolute bottom-4 right-4 w-[72px] h-[72px] pointer-events-none"
-              width="100"
-              height="100"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="0.2">
-                <path
-                  d="M56.4834 8.64059C55.8692 7.45041 54.9393 6.45222 53.7956 5.75539C52.6518 5.05855 51.3384 4.68994 49.9991 4.68994C48.6597 4.68994 47.3463 5.05855 46.2025 5.75539C45.0588 6.45222 44.1289 7.45041 43.5147 8.64059L2.57718 83.5C1.89344 84.7466 1.54547 86.1495 1.56738 87.5712C1.58929 88.9928 1.98035 90.3844 2.70218 91.6093C3.34515 92.7294 4.27096 93.6609 5.38699 94.3108C6.50301 94.9606 7.77012 95.3061 9.06156 95.3125H90.9366C92.228 95.3061 93.4951 94.9606 94.6111 94.3108C95.7271 93.6609 96.653 92.7294 97.2959 91.6093C98.0158 90.3842 98.4069 88.9939 98.4316 87.5731C98.4562 86.1524 98.1135 84.7493 97.4366 83.5L56.4834 8.64059ZM94.6084 90.0156C94.2421 90.6691 93.7096 91.2142 93.0647 91.5956C92.4199 91.977 91.6857 92.1812 90.9366 92.1875H9.06156C8.31239 92.1812 7.5782 91.977 6.93337 91.5956C6.28853 91.2142 5.75598 90.6691 5.38968 90.0156C4.936 89.2605 4.68985 88.399 4.67613 87.5183C4.66241 86.6375 4.88161 85.7688 5.31155 85L46.2491 10.1406C46.5959 9.4426 47.1307 8.85527 47.7932 8.4447C48.4557 8.03412 49.2196 7.81659 49.9991 7.81659C50.7785 7.81659 51.5424 8.03412 52.2049 8.4447C52.8674 8.85527 53.4022 9.4426 53.7491 10.1406L94.6866 85C95.1165 85.7688 95.3357 86.6375 95.322 87.5183C95.3083 88.399 95.0621 89.2605 94.6084 90.0156Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M55.454 20.4532C54.9135 19.4764 54.1212 18.6621 53.1594 18.0951C52.1977 17.5281 51.1016 17.229 49.9852 17.229C48.8688 17.229 47.7727 17.5281 46.811 18.0951C45.8492 18.6621 45.0569 19.4764 44.5165 20.4532L11.704 79.2657C11.1199 80.2805 10.8125 81.4308 10.8125 82.6017C10.8125 83.7725 11.1199 84.9228 11.704 85.9376C12.2585 86.8983 13.0588 87.6942 14.0226 88.2433C14.9865 88.7925 16.0791 89.0753 17.1883 89.0626H82.8133C83.9067 89.0587 84.9799 88.7681 85.9258 88.2198C86.8717 87.6714 87.6573 86.8845 88.2039 85.9376C88.7999 84.9297 89.1208 83.783 89.1345 82.6121C89.1482 81.4413 88.8543 80.2873 88.2821 79.2657L55.454 20.4532ZM85.4383 84.3751C85.1711 84.8384 84.7894 85.2254 84.3298 85.499C83.8701 85.7726 83.348 85.9236 82.8133 85.9376H17.1883C16.643 85.9343 16.108 85.7884 15.6365 85.5143C15.165 85.2401 14.7735 84.8474 14.5008 84.3751C14.1864 83.837 14.0207 83.2249 14.0207 82.6017C14.0207 81.9784 14.1864 81.3664 14.5008 80.8282L47.3133 22.0157C47.5677 21.5172 47.9513 21.0961 48.4241 20.7965C48.8969 20.4969 49.4414 20.3298 50.0008 20.3126C50.5624 20.3212 51.1113 20.4811 51.5897 20.7753C52.0682 21.0695 52.4585 21.4872 52.7196 21.9845L85.5321 80.797C85.8383 81.3471 85.9911 81.9694 85.9747 82.5989C85.9582 83.2283 85.7729 83.8417 85.4383 84.3751Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M47.8595 68.3594C47.9065 68.894 48.1526 69.3915 48.549 69.7532C48.9455 70.1149 49.4634 70.3146 50.0001 70.3125C50.5374 70.3114 51.0553 70.1111 51.4536 69.7503C51.8518 69.3896 52.1022 68.894 52.1563 68.3594L56.2501 35.3281C56.2884 35.0095 56.2596 34.6864 56.1654 34.3796C56.0712 34.0728 55.9137 33.7891 55.7032 33.5469C55.508 33.3227 55.2683 33.1416 54.9993 33.0152C54.7303 32.8887 54.4379 32.8197 54.1407 32.8125H45.922C45.6248 32.8197 45.3324 32.8887 45.0634 33.0152C44.7944 33.1416 44.5546 33.3227 44.3595 33.5469C44.1378 33.7839 43.9689 34.0652 43.8639 34.3722C43.7589 34.6792 43.7201 35.005 43.7501 35.3281L47.8595 68.3594ZM53.0001 35.9375L50.0001 60.2813L47.0001 35.9375H53.0001Z"
-                  fill="#5DC94E"
-                />
-                <path
-                  d="M50 71.875C48.7639 71.875 47.5555 72.2416 46.5277 72.9283C45.4999 73.6151 44.6988 74.5912 44.2258 75.7332C43.7527 76.8753 43.6289 78.1319 43.8701 79.3443C44.1113 80.5567 44.7065 81.6703 45.5806 82.5444C46.4547 83.4185 47.5683 84.0138 48.7807 84.2549C49.9931 84.4961 51.2497 84.3723 52.3918 83.8992C53.5338 83.4262 54.5099 82.6251 55.1967 81.5973C55.8834 80.5695 56.25 79.3611 56.25 78.125C56.25 76.4674 55.5915 74.8777 54.4194 73.7056C53.2473 72.5335 51.6576 71.875 50 71.875ZM50 81.25C49.3819 81.25 48.7777 81.0667 48.2638 80.7233C47.7499 80.38 47.3494 79.8919 47.1129 79.3209C46.8764 78.7499 46.8145 78.1215 46.935 77.5153C47.0556 76.9091 47.3533 76.3523 47.7903 75.9153C48.2273 75.4782 48.7842 75.1806 49.3903 75.06C49.9965 74.9395 50.6249 75.0014 51.1959 75.2379C51.7669 75.4744 52.255 75.8749 52.5983 76.3888C52.9417 76.9027 53.125 77.5069 53.125 78.125C53.125 78.9538 52.7958 79.7487 52.2097 80.3347C51.6237 80.9208 50.8288 81.25 50 81.25Z"
-                  fill="#5DC94E"
-                />
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- start OUR BRANDS section -->
-    <section class="max-w-7xl mx-auto px-6 py-20 text-center">
-      <div class="mb-10">
-        <span
-          class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm block mb-2 font-inter"
-          >Our Brands</span
-        >
-        <h2
-          class="font-playfair mb-4 text-[#1A1A1A] font-medium text-4xl leading-none"
-        >
-          The Rosewood Family
+        <h2 class="font-['Playfair_Display'] font-medium text-[32px] leading-[48px] text-[#1A1A1A]">
+          Long-Lasting Surface Protection
         </h2>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-6 mb-16">
+      <!-- Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
-        >
-          <div
-            class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src="./assets/image/logo/companysection/4RANBERRY.svg"
-              alt="RANBerry"
-              class="h-10 mb-6 object-contain"
-            />
-            <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
-              RANBerry
-            </h4>
-            <p class="text-[#555555 text-sm font-regular leading-relaxed">
-              Vibrant, youthful designs for contemporary spaces
-            </p>
-          </div>
+          class="relative bg-white rounded-[12px] border-t border-[rgba(0,0,0,0.06)] shadow-[0px_4px_24px_rgba(0,0,0,0.06)] p-5 flex flex-col gap-5 overflow-hidden">
+          <h3 class="font-['Inter'] font-semibold text-[14px] leading-[20px] tracking-[2.6px] uppercase text-[#1A1A1A]">
+            Scratch & Impact Protection
+          </h3>
 
-          <div
-            class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src="./assets/image/logo/companysection/3RANWOODmain.svg"
-              alt="Ranwood"
-              class="h-10 mb-6 object-contain"
-            />
-            <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
-              Ranwood
-            </h4>
-            <p class="text-[#555555 text-sm font-regular leading-relaxed">
-              Textile-inspired textures with warm, natural tones
-            </p>
-          </div>
+          <ul class="flex flex-col gap-4">
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Don't place lighted cigarettes directly on laminate surface.
+              </p>
+            </li>
 
-          <div
-            class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src="./assets/image/logo/companysection/5RANWOODREGA.svg"
-              alt="Rega"
-              class="h-10 mb-6 object-contain"
-            />
-            <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
-              Rega
-            </h4>
-            <p class="text[#555555500 texsm font-regular] leading-relaxed">
-              Refined elegance for high-end residential interiors
-            </p>
-          </div>
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Knives or other sharp utensils may slice or scratch the
+                surface.
+              </p>
+            </li>
 
-          <div
-            class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src="./assets/image/logo/companysection/2ARICA.svg"
-              alt="Arica"
-              class="h-10 mb-6 object-contain"
-            />
-            <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
-              Arica
-            </h4>
-            <p class="text-[#555555 text-sm font-regular leading-relaxed">
-              Bold, architectural patterns for statement surfaces
-            </p>
-          </div>
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Avoid ironing or placing a hot iron on laminate surface.
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Heavy blows of hammer or metal may crack the laminate surface.
+              </p>
+            </li>
+          </ul>
+
+          <!-- Watermark Icon -->
+          <svg class="absolute bottom-4 right-4 w-[72px] h-[72px] pointer-events-none" width="100" height="100"
+            viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.2">
+              <path
+                d="M34.0949 11.0132L17.9574 0.452506C17.1047 -0.105306 16.0187 -0.150423 15.1232 0.333952C14.2279 0.818327 13.6719 1.75114 13.6719 2.76872V82.7734C13.7318 84.7103 16.5416 84.7088 16.601 82.7734V3.06598L32.4184 13.4172V86.5826L16.601 96.9338V89.6947C16.541 87.7578 13.7312 87.7594 13.6719 89.6947V97.231C13.6719 98.2486 14.2279 99.1816 15.1232 99.6658C15.5361 99.889 15.9891 100 16.441 99.9998C16.9701 99.9998 17.4979 99.848 17.9574 99.5472L34.0947 88.9865C34.8791 88.4732 35.3475 87.6074 35.3475 86.6703V13.3295C35.3475 12.3924 34.8791 11.5263 34.0949 11.0132Z"
+                fill="#5DC94E" />
+              <path
+                d="M21.8668 26.2075C22.6758 26.2075 23.3314 25.5517 23.3314 24.7427V23.1745C23.2715 21.2376 20.4617 21.2392 20.4023 23.1745V24.7427C20.4021 25.5517 21.0578 26.2075 21.8668 26.2075Z"
+                fill="#5DC94E" />
+              <path
+                d="M20.4023 37.7634C20.4623 39.7003 23.2721 39.6988 23.3314 37.7634V36.1953C23.2715 34.2583 20.4617 34.2599 20.4023 36.1953V37.7634Z"
+                fill="#5DC94E" />
+              <path
+                d="M20.4023 50.7844C20.4623 52.7213 23.2721 52.7198 23.3314 50.7844V49.2163C23.2715 47.2793 20.4617 47.2809 20.4023 49.2163V50.7844Z"
+                fill="#5DC94E" />
+              <path
+                d="M20.4023 63.8042C20.4623 65.7411 23.2721 65.7395 23.3314 63.8042V62.236C23.2715 60.2991 20.4617 60.3007 20.4023 62.236V63.8042Z"
+                fill="#5DC94E" />
+              <path
+                d="M20.4023 76.8249C20.4623 78.7619 23.2721 78.7603 23.3314 76.8249V75.2568C23.2715 73.3199 20.4617 73.3214 20.4023 75.2568V76.8249Z"
+                fill="#5DC94E" />
+              <path
+                d="M28.4215 20.4355C29.2305 20.4355 29.8861 19.7796 29.8861 18.9707V17.2265C29.8262 15.2896 27.0164 15.2912 26.957 17.2265V18.9707C26.9568 19.7796 27.6125 20.4355 28.4215 20.4355Z"
+                fill="#5DC94E" />
+              <path
+                d="M26.957 31.7312C27.017 33.6681 29.8268 33.6665 29.8861 31.7312V29.987C29.8262 28.0501 27.0164 28.0517 26.957 29.987V31.7312Z"
+                fill="#5DC94E" />
+              <path
+                d="M26.957 44.4917C27.017 46.4286 29.8268 46.427 29.8861 44.4917V42.7475C29.8262 40.8106 27.0164 40.8122 26.957 42.7475V44.4917Z"
+                fill="#5DC94E" />
+              <path
+                d="M26.957 57.2524C27.017 59.1893 29.8268 59.1877 29.8861 57.2524V55.5083C29.8262 53.5713 27.0164 53.5729 26.957 55.5083V57.2524Z"
+                fill="#5DC94E" />
+              <path
+                d="M26.957 70.0129C27.017 71.9498 29.8268 71.9482 29.8861 70.0129V68.2688C29.8262 66.3318 27.0164 66.3334 26.957 68.2688V70.0129Z"
+                fill="#5DC94E" />
+              <path
+                d="M26.957 82.7736C27.017 84.7105 29.8268 84.709 29.8861 82.7736V81.0295C29.8262 79.0926 27.0164 79.0941 26.957 81.0295V82.7736Z"
+                fill="#5DC94E" />
+              <path
+                d="M84.531 68.8841L78.2802 62.6319C77.7081 62.0599 76.781 62.0599 76.2089 62.6319C75.6371 63.204 75.6371 64.1315 76.2089 64.7036L82.4599 70.9558C83.624 72.1202 83.6919 74.0118 82.6122 75.1716C82.0533 75.7708 81.296 76.1087 80.48 76.1229C79.6699 76.1429 78.896 75.827 78.3189 75.2497C77.8337 74.7645 77.5374 74.1466 77.4621 73.4677C77.2966 71.9249 76.5646 70.4345 75.4011 69.2708L69.5396 63.4079C68.5597 62.4278 67.3234 61.7671 65.9638 61.497L65.0056 61.3067C64.2169 61.1501 63.4996 60.7667 62.9308 60.1981L62.1687 59.436L66.5556 55.0481L71.3947 59.8884C71.9665 60.4604 72.8937 60.4606 73.466 59.8884C74.0378 59.3163 74.0378 58.3888 73.466 57.8167L67.5913 51.9405C67.5888 51.938 67.5859 51.9358 67.5833 51.9333L45.6996 30.0446C45.0982 29.4435 44.2251 29.2395 43.4195 29.513C42.6144 29.7862 42.0453 30.4798 41.9343 31.3229L41.3033 36.1171C40.823 39.7649 42.0894 43.4958 44.6902 46.0972L59.0613 60.4716C59.0632 60.4735 59.0654 60.4751 59.0673 60.477L60.8593 62.2696C61.8394 63.2499 63.0757 63.9106 64.4351 64.1804L65.3931 64.3706C66.182 64.5272 66.8994 64.9106 67.4679 65.4794L73.3294 71.3423C74.0216 72.0347 74.455 72.9005 74.5499 73.7852C74.8285 76.7095 77.4839 79.1101 80.4244 79.053C80.4597 79.053 80.4951 79.0528 80.5306 79.0522C82.1482 79.0241 83.648 78.3558 84.7548 77.169C86.9339 74.8282 86.8355 71.1892 84.531 68.8841ZM44.8384 31.7054C44.8384 31.7061 44.8382 31.7067 44.8382 31.7075L44.8384 31.7054ZM44.2074 36.4997L44.6498 33.1382L64.4837 52.9767L60.097 57.3643L46.7615 44.0259C44.8003 42.0638 43.8455 39.2505 44.2074 36.4997Z"
+                fill="#5DC94E" />
+              <path
+                d="M56.8821 33.2186C56.3931 33.8629 56.5188 34.7819 57.163 35.2711C57.8015 35.7575 58.7233 35.6381 59.2151 34.9901C63.6227 29.1832 68.8118 24.4987 74.6382 21.0665C75.3352 20.6559 75.5675 19.7581 75.1571 19.0608C74.7466 18.3635 73.8483 18.1315 73.1518 18.542C66.9954 22.1688 61.5214 27.1067 56.8821 33.2186Z"
+                fill="#5DC94E" />
+              <path
+                d="M53.6787 30.0176C54.3172 30.504 55.2391 30.3846 55.7309 29.7366C60.1385 23.9297 65.3276 19.2452 71.1539 15.8129C71.851 15.4024 72.0832 14.5045 71.6729 13.8073C71.2623 13.11 70.3641 12.8782 69.6676 13.2885C63.5111 16.9151 58.0371 21.853 53.3977 27.9649C52.9086 28.6094 53.0346 29.5284 53.6787 30.0176Z"
+                fill="#5DC94E" />
+              <path
+                d="M51.8957 56.8052C51.9281 55.9969 51.299 55.3152 50.4908 55.2828C49.6837 55.249 49.0013 55.8797 48.9689 56.6879C48.4755 69.0129 50.532 78.1724 50.6197 78.5562C50.7966 79.3504 51.6056 79.8392 52.3734 79.6574C53.1617 79.4773 53.655 78.692 53.4753 77.9035C53.4546 77.8131 51.4187 68.7172 51.8957 56.8052Z"
+                fill="#5DC94E" />
+              <path
+                d="M45.6652 56.4387C45.6976 55.6303 45.0685 54.9487 44.2603 54.9163C43.4587 54.8872 42.7709 55.5131 42.7384 56.3213C42.2451 68.6463 44.3015 77.8057 44.3892 78.1897C44.5662 78.984 45.3755 79.4731 46.1435 79.2911C46.932 79.1108 47.425 78.3252 47.2449 77.5364C47.224 77.4463 45.1873 68.3774 45.6652 56.4387Z"
+                fill="#5DC94E" />
+            </g>
+          </svg>
         </div>
 
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-2Sxl md:flex justify-center"
-        >
-          <div
-            class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src="./assets/image/logo/companysection/1ATINA.svg"
-              alt="Atina"
-              class="h-10 mb-6 object-contain"
-            />
-            <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
-              Atina
-            </h4>
-            <p class="text[#555555500 texsm font-regular] leading-relaxed">
-              Classic woodgrains and timeless natural aesthetics
-            </p>
-          </div>
+          class="relative bg-white rounded-[12px] border-t border-[rgba(0,0,0,0.06)] shadow-[0px_4px_24px_rgba(0,0,0,0.06)] p-5 flex flex-col gap-5 overflow-hidden">
+          <h3 class="font-['Inter'] font-semibold text-[14px] leading-[20px] tracking-[2.6px] uppercase text-[#1A1A1A]">
+            Ordinary Cleaning
+          </h3>
 
-          <div
-            class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300"
-          >
-            <img
-              src="./assets/image/logo/companysection/6DAZZLEBERRY.svg"
-              alt="Dazzleberry"
-              class="h-10 mb-6 object-contain"
-            />
-            <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
-              Dazzleberry Pastel
-            </h4>
-            <p class="text-gray[#555555-[13psm font-regular-relaxed">
-              Soft, dreamy pastels for delicate, serene interiors
-            </p>
-          </div>
+          <ul class="flex flex-col gap-4">
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Use a clean, damp, non-abrasive cotton cloth and a mild liquid
+                detergent or household cleaner.
+              </p>
+            </li>
 
-          <!-- <div
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Rinse with clean water. Don't flood the laminate since water
+                can be absorbed and results substrate to swell.
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Dry the surface with a soft, clean and non-abrasive cotton
+                cloth.
+              </p>
+            </li>
+          </ul>
+
+          <!-- Watermark Icon -->
+          <svg class="absolute bottom-4 right-4 w-[72px] h-[72px] pointer-events-none" width="100" height="100"
+            viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.2" clip-path="url(#clip0_689_1187)">
+              <path
+                d="M99.6337 31.0068C98.9 28.2683 97.1436 25.9791 94.688 24.5616L82.2636 17.3883C81.3296 16.8492 80.1351 17.169 79.5957 18.1031C79.0563 19.0372 79.3764 20.2315 80.3105 20.771L92.735 27.9443C94.2869 28.8403 95.3968 30.2868 95.8606 32.0175C96.3243 33.7485 96.0864 35.5563 95.1903 37.1081L85.3304 54.1861V40.2611C85.3304 36.8384 82.5458 34.0538 79.1231 34.0538C78.3104 34.0538 77.5339 34.2108 76.8218 34.4959V29.1927C76.8218 25.77 74.0372 22.9853 70.6145 22.9853C69.7661 22.9853 68.9571 23.1562 68.2198 23.4658C67.7089 20.554 65.1616 18.3343 62.1056 18.3343C59.0497 18.3343 56.5026 20.554 55.9916 23.4658C55.2544 23.1564 54.4452 22.9853 53.597 22.9853C50.1743 22.9853 47.3897 25.77 47.3897 29.1927L47.3893 52.8274L45.2216 49.4436C43.5172 46.7825 40.2263 45.6013 37.219 46.572C33.6252 47.7315 31.6232 51.4835 32.661 55.1142L32.8235 55.6823C33.6764 58.6662 34.8394 61.543 36.278 64.2683L22.822 56.4995C19.6184 54.6498 18.5169 50.5388 20.3664 47.3352L43.5012 7.26548C44.3972 5.71359 45.8438 4.60348 47.5746 4.13963C49.3054 3.67559 51.1133 3.91386 52.6652 4.80992L65.0905 11.9834C66.0248 12.5231 67.2191 12.203 67.7583 11.2686C68.2978 10.3345 67.9777 9.1402 67.0435 8.60077L54.6183 1.42725C52.1627 0.00973368 49.3021 -0.367203 46.5635 0.36675C43.825 1.10051 41.5358 2.85707 40.1183 5.31244L38.8842 7.44984C34.1121 6.07158 29.178 5.32083 24.1928 5.22045C24.1793 5.22025 24.1661 5.22006 24.1528 5.22006C23.0925 5.22006 22.2224 6.06885 22.2009 7.13384C22.1792 8.21212 23.0358 9.10407 24.1143 9.12575C28.4348 9.21266 32.7137 9.82416 36.8681 10.9421L23.9331 33.346C21.1262 32.381 18.1974 31.8638 15.2047 31.8105C14.1239 31.7888 13.2365 32.6499 13.2171 33.7282C13.1978 34.8069 14.0565 35.6965 15.135 35.7158C17.4599 35.7574 19.7395 36.123 21.9374 36.8025L16.9841 45.382C14.0577 50.4507 15.8006 56.9555 20.8693 59.882L41.0687 71.544C43.3996 74.4349 46.0872 77.0428 49.0781 79.2854V98.046C49.0781 99.1244 49.9524 99.999 51.0311 99.999C52.1098 99.999 52.9842 99.1244 52.9842 98.046V78.2954C52.9842 77.665 52.6797 77.073 52.1668 76.7064C44.6535 71.3364 39.1178 63.4885 36.5794 54.6088L36.4169 54.0406C35.9611 52.4462 36.8403 50.7984 38.4184 50.2894C39.7386 49.8637 41.1843 50.382 41.9327 51.5503L47.6981 60.5505C48.1658 61.2805 49.0591 61.6149 49.8913 61.3714C50.7237 61.1278 51.2956 60.3644 51.2956 59.497V51.4079C51.2958 51.395 51.2959 51.3821 51.2959 51.3692V29.1929C51.2959 27.924 52.3283 26.8916 53.5972 26.8916C54.8661 26.8916 55.8985 27.924 55.8985 29.1929V47.5345C55.8985 48.6129 56.7729 49.4875 57.8515 49.4875C58.9302 49.4875 59.8046 48.6129 59.8046 47.5345V24.5417C59.8046 23.2728 60.8369 22.2404 62.1058 22.2404C63.3749 22.2404 64.4071 23.2728 64.4071 24.5417V47.5345C64.4071 48.6129 65.2815 49.4875 66.3601 49.4875C67.4388 49.4875 68.3132 48.6129 68.3132 47.5345V29.1929C68.3132 27.924 69.3456 26.8916 70.6145 26.8916C71.8833 26.8916 72.9157 27.924 72.9157 29.1929V47.5345C72.9157 48.6129 73.7901 49.4875 74.8688 49.4875C75.9474 49.4875 76.8218 48.6129 76.8218 47.5345V40.2615C76.8218 38.9926 77.8542 37.9603 79.1231 37.9603C80.392 37.9603 81.4243 38.9926 81.4243 40.2615V56.2706C81.4243 63.942 78.3088 71.4483 72.8767 76.8648C72.5093 77.2312 72.3027 77.7289 72.3027 78.2478V98.0463C72.3027 99.1248 73.177 99.9994 74.2557 99.9994C75.3344 99.9994 76.2087 99.1248 76.2087 98.0463V79.0444C80.4537 74.6011 83.3182 69.1745 84.5867 63.2865L98.573 39.0616C99.9911 36.606 100.368 33.7454 99.6337 31.0068Z"
+                fill="#5DC94E" />
+              <path
+                d="M1.95421 13.3044C2.20342 13.3044 2.45692 13.2563 2.70144 13.1548C6.62979 11.5263 10.7597 10.3734 14.9765 9.72796C16.0429 9.56488 16.7749 8.56824 16.6116 7.50207C16.4485 6.43571 15.4523 5.70489 14.3857 5.86699C9.85836 6.55973 5.42398 7.79777 1.20561 9.54671C0.209168 9.95978 -0.263663 11.1023 0.149405 12.0988C0.460915 12.8507 1.18784 13.3044 1.95421 13.3044Z"
+                fill="#5DC94E" />
+              <path
+                d="M1.95443 26.0397C2.20208 26.0397 2.45382 25.9923 2.69698 25.8921C8.79242 23.3836 15.4861 22.4846 22.0543 23.2922C23.1252 23.4256 24.0996 22.6629 24.2312 21.5923C24.3628 20.5218 23.6017 19.547 22.5311 19.4154C15.298 18.5254 7.92507 19.5166 1.21032 22.2801C0.212904 22.6907 -0.263052 23.8318 0.147477 24.8294C0.45801 25.5837 1.1863 26.0397 1.95443 26.0397Z"
+                fill="#5DC94E" />
+              <path
+                d="M4.85567 33.5586C3.53678 34.0447 2.24367 34.6347 1.01208 35.3122C0.0670053 35.8321 -0.277706 37.0196 0.242193 37.9646C0.597842 38.6113 1.26598 38.9769 1.95521 38.9769C2.27336 38.9769 2.59639 38.8988 2.89481 38.7347C3.9559 38.1512 5.07011 37.6428 6.20658 37.2239C7.21865 36.8508 7.73679 35.728 7.36357 34.7158C6.99053 33.7039 5.86754 33.1854 4.85567 33.5586Z"
+                fill="#5DC94E" />
+              <path
+                d="M73.6777 16.6396C74.1914 16.6396 74.6934 16.4307 75.0586 16.0674C75.4219 15.7041 75.6309 15.2002 75.6309 14.6865C75.6309 14.1709 75.4219 13.667 75.0586 13.3037C74.6934 12.9406 74.1912 12.7314 73.6777 12.7314C73.1641 12.7314 72.6602 12.9404 72.2969 13.3037C71.9316 13.6689 71.7246 14.1709 71.7246 14.6865C71.7246 15.2002 71.9316 15.7021 72.2969 16.0674C72.6602 16.4307 73.1619 16.6396 73.6777 16.6396Z"
+                fill="#5DC94E" />
+            </g>
+            <defs>
+              <clipPath id="clip0_689_1187">
+                <rect width="100" height="100" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
+        <div
+          class="relative bg-white rounded-[12px] border-t border-[rgba(0,0,0,0.06)] shadow-[0px_4px_24px_rgba(0,0,0,0.06)] p-5 flex flex-col gap-5 overflow-hidden">
+          <h3 class="font-['Inter'] font-semibold text-[14px] leading-[20px] tracking-[2.6px] uppercase text-[#1A1A1A]">
+            Chemical Damage
+          </h3>
+
+          <ul class="flex flex-col gap-4">
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Never use cleaners containing acid, alkali or sodium
+                hypochlorite.
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                These cleaners will mar, etch, corrode and permanently
+                discolour the laminate surface.
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <span class="w-[5px] h-[5px] min-w-[5px] rounded-full bg-[#4AA13E] mt-[7px]"></span>
+              <p class="font-['Inter'] text-[14px] leading-[20px] text-[rgba(0,0,0,0.55)]">
+                Make sure bottles, rags and other materials contaminated with
+                these cleaners never come in contact with the laminate
+                surface.
+              </p>
+            </li>
+          </ul>
+
+          <!-- Watermark Icon -->
+          <svg class="absolute bottom-4 right-4 w-[72px] h-[72px] pointer-events-none" width="100" height="100"
+            viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.2">
+              <path
+                d="M56.4834 8.64059C55.8692 7.45041 54.9393 6.45222 53.7956 5.75539C52.6518 5.05855 51.3384 4.68994 49.9991 4.68994C48.6597 4.68994 47.3463 5.05855 46.2025 5.75539C45.0588 6.45222 44.1289 7.45041 43.5147 8.64059L2.57718 83.5C1.89344 84.7466 1.54547 86.1495 1.56738 87.5712C1.58929 88.9928 1.98035 90.3844 2.70218 91.6093C3.34515 92.7294 4.27096 93.6609 5.38699 94.3108C6.50301 94.9606 7.77012 95.3061 9.06156 95.3125H90.9366C92.228 95.3061 93.4951 94.9606 94.6111 94.3108C95.7271 93.6609 96.653 92.7294 97.2959 91.6093C98.0158 90.3842 98.4069 88.9939 98.4316 87.5731C98.4562 86.1524 98.1135 84.7493 97.4366 83.5L56.4834 8.64059ZM94.6084 90.0156C94.2421 90.6691 93.7096 91.2142 93.0647 91.5956C92.4199 91.977 91.6857 92.1812 90.9366 92.1875H9.06156C8.31239 92.1812 7.5782 91.977 6.93337 91.5956C6.28853 91.2142 5.75598 90.6691 5.38968 90.0156C4.936 89.2605 4.68985 88.399 4.67613 87.5183C4.66241 86.6375 4.88161 85.7688 5.31155 85L46.2491 10.1406C46.5959 9.4426 47.1307 8.85527 47.7932 8.4447C48.4557 8.03412 49.2196 7.81659 49.9991 7.81659C50.7785 7.81659 51.5424 8.03412 52.2049 8.4447C52.8674 8.85527 53.4022 9.4426 53.7491 10.1406L94.6866 85C95.1165 85.7688 95.3357 86.6375 95.322 87.5183C95.3083 88.399 95.0621 89.2605 94.6084 90.0156Z"
+                fill="#5DC94E" />
+              <path
+                d="M55.454 20.4532C54.9135 19.4764 54.1212 18.6621 53.1594 18.0951C52.1977 17.5281 51.1016 17.229 49.9852 17.229C48.8688 17.229 47.7727 17.5281 46.811 18.0951C45.8492 18.6621 45.0569 19.4764 44.5165 20.4532L11.704 79.2657C11.1199 80.2805 10.8125 81.4308 10.8125 82.6017C10.8125 83.7725 11.1199 84.9228 11.704 85.9376C12.2585 86.8983 13.0588 87.6942 14.0226 88.2433C14.9865 88.7925 16.0791 89.0753 17.1883 89.0626H82.8133C83.9067 89.0587 84.9799 88.7681 85.9258 88.2198C86.8717 87.6714 87.6573 86.8845 88.2039 85.9376C88.7999 84.9297 89.1208 83.783 89.1345 82.6121C89.1482 81.4413 88.8543 80.2873 88.2821 79.2657L55.454 20.4532ZM85.4383 84.3751C85.1711 84.8384 84.7894 85.2254 84.3298 85.499C83.8701 85.7726 83.348 85.9236 82.8133 85.9376H17.1883C16.643 85.9343 16.108 85.7884 15.6365 85.5143C15.165 85.2401 14.7735 84.8474 14.5008 84.3751C14.1864 83.837 14.0207 83.2249 14.0207 82.6017C14.0207 81.9784 14.1864 81.3664 14.5008 80.8282L47.3133 22.0157C47.5677 21.5172 47.9513 21.0961 48.4241 20.7965C48.8969 20.4969 49.4414 20.3298 50.0008 20.3126C50.5624 20.3212 51.1113 20.4811 51.5897 20.7753C52.0682 21.0695 52.4585 21.4872 52.7196 21.9845L85.5321 80.797C85.8383 81.3471 85.9911 81.9694 85.9747 82.5989C85.9582 83.2283 85.7729 83.8417 85.4383 84.3751Z"
+                fill="#5DC94E" />
+              <path
+                d="M47.8595 68.3594C47.9065 68.894 48.1526 69.3915 48.549 69.7532C48.9455 70.1149 49.4634 70.3146 50.0001 70.3125C50.5374 70.3114 51.0553 70.1111 51.4536 69.7503C51.8518 69.3896 52.1022 68.894 52.1563 68.3594L56.2501 35.3281C56.2884 35.0095 56.2596 34.6864 56.1654 34.3796C56.0712 34.0728 55.9137 33.7891 55.7032 33.5469C55.508 33.3227 55.2683 33.1416 54.9993 33.0152C54.7303 32.8887 54.4379 32.8197 54.1407 32.8125H45.922C45.6248 32.8197 45.3324 32.8887 45.0634 33.0152C44.7944 33.1416 44.5546 33.3227 44.3595 33.5469C44.1378 33.7839 43.9689 34.0652 43.8639 34.3722C43.7589 34.6792 43.7201 35.005 43.7501 35.3281L47.8595 68.3594ZM53.0001 35.9375L50.0001 60.2813L47.0001 35.9375H53.0001Z"
+                fill="#5DC94E" />
+              <path
+                d="M50 71.875C48.7639 71.875 47.5555 72.2416 46.5277 72.9283C45.4999 73.6151 44.6988 74.5912 44.2258 75.7332C43.7527 76.8753 43.6289 78.1319 43.8701 79.3443C44.1113 80.5567 44.7065 81.6703 45.5806 82.5444C46.4547 83.4185 47.5683 84.0138 48.7807 84.2549C49.9931 84.4961 51.2497 84.3723 52.3918 83.8992C53.5338 83.4262 54.5099 82.6251 55.1967 81.5973C55.8834 80.5695 56.25 79.3611 56.25 78.125C56.25 76.4674 55.5915 74.8777 54.4194 73.7056C53.2473 72.5335 51.6576 71.875 50 71.875ZM50 81.25C49.3819 81.25 48.7777 81.0667 48.2638 80.7233C47.7499 80.38 47.3494 79.8919 47.1129 79.3209C46.8764 78.7499 46.8145 78.1215 46.935 77.5153C47.0556 76.9091 47.3533 76.3523 47.7903 75.9153C48.2273 75.4782 48.7842 75.1806 49.3903 75.06C49.9965 74.9395 50.6249 75.0014 51.1959 75.2379C51.7669 75.4744 52.255 75.8749 52.5983 76.3888C52.9417 76.9027 53.125 77.5069 53.125 78.125C53.125 78.9538 52.7958 79.7487 52.2097 80.3347C51.6237 80.9208 50.8288 81.25 50 81.25Z"
+                fill="#5DC94E" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- start OUR BRANDS section -->
+  <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+    <div class="mb-10">
+      <span class="uppercase tracking-widest text-[#5DC94E] font-semibold text-sm block mb-2 font-inter">Our
+        Brands</span>
+      <h2 class="font-playfair mb-4 text-[#1A1A1A] font-medium text-4xl leading-none">
+        The Rosewood Family
+      </h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6 mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+          <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="RANBerry" class="h-10 mb-6 object-contain" />
+          <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
+            RANBerry
+          </h4>
+          <p class="text-[#555555 text-sm font-regular leading-relaxed">
+            Vibrant, youthful designs for contemporary spaces
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+          <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood"
+            class="h-10 mb-6 object-contain" />
+          <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
+            Ranwood
+          </h4>
+          <p class="text-[#555555 text-sm font-regular leading-relaxed">
+            Textile-inspired textures with warm, natural tones
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+          <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Rega" class="h-10 mb-6 object-contain" />
+          <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
+            Rega
+          </h4>
+          <p class="text[#555555500 texsm font-regular] leading-relaxed">
+            Refined elegance for high-end residential interiors
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+          <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica" class="h-10 mb-6 object-contain" />
+          <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
+            Arica
+          </h4>
+          <p class="text-[#555555 text-sm font-regular leading-relaxed">
+            Bold, architectural patterns for statement surfaces
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-2Sxl md:flex justify-center">
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+          <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina" class="h-10 mb-6 object-contain" />
+          <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
+            Atina
+          </h4>
+          <p class="text[#555555500 texsm font-regular] leading-relaxed">
+            Classic woodgrains and timeless natural aesthetics
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
+          <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzleberry"
+            class="h-10 mb-6 object-contain" />
+          <h4 class="text-[#4AA13E] font-medium text-sm mb-2 font-playfair">
+            Dazzleberry Pastel
+          </h4>
+          <p class="text-gray[#555555-[13psm font-regular-relaxed">
+            Soft, dreamy pastels for delicate, serene interiors
+          </p>
+        </div>
+
+        <!-- <div
                     class="bg-white p-6 rounded-xl shadow-lg border border-[#00000012] flex flex-col items-start text-left hover:shadow-2xl transition-all duration-300">
                     <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Crystal"
                         class="h-10 mb-6 object-contain">
@@ -804,203 +561,124 @@
                     <p class="text-gray[#555555-[13psm font-regular-relaxed">High-gloss mirror finishes for dazzling
                         luxury</p>
                 </div> -->
-        </div>
       </div>
+    </div>
 
-      <a
-        href="#"
-        class="inline-flex items-center gap-3 bg-[#4AA13E] hover:bg-[#3d8b33] text-white px-10 py-4 rounded-full font-bold transition-all duration-300"
-      >
-        <span>View All Brands & Catalogues</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-      </a>
-    </section>
+    <a href="#"
+      class="inline-flex items-center gap-3 bg-[#4AA13E] hover:bg-[#3d8b33] text-white px-10 py-4 rounded-full font-bold transition-all duration-300">
+      <span>View All Brands & Catalogues</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </a>
+  </section>
 
-    <section class="py-6 bg-[#F7F9F7] border-b border-[#5DC94E26]">
-      <div class="mx-auto px-6">
-        <div
-          class="swiper logo-slider swiper-initialized swiper-horizontal swiper-backface-hidden"
-        >
-          <div
-            class="swiper-wrapper flex items-center justify-center"
-            id="swiper-wrapper-4e13101962ba09acb"
-            aria-live="off"
-          >
-            <div
-              class="swiper-slide flex justify-center items-center px-3 swiper-slide-active"
-              role="group"
-              aria-label="1 / 7"
-              data-swiper-slide-index="0"
-              style="width: 167.571px; margin-right: 50px"
-            >
-              <img
-                src="./assets/image/logo/companysection/1ATINA.svg"
-                alt="Atina"
-                class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300"
-              />
-            </div>
+  <section class="py-6 bg-[#F7F9F7] border-b border-[#5DC94E26]">
+    <div class="mx-auto px-6">
+      <div class="swiper logo-slider swiper-initialized swiper-horizontal swiper-backface-hidden">
+        <div class="swiper-wrapper flex items-center justify-center" id="swiper-wrapper-4e13101962ba09acb"
+          aria-live="off">
+          <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-active" role="group"
+            aria-label="1 / 7" data-swiper-slide-index="0" style="width: 167.571px; margin-right: 50px">
+            <img src="./assets/image/logo/companysection/1ATINA.svg" alt="Atina"
+              class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300" />
+          </div>
 
-            <div
-              class="swiper-slide flex justify-center items-center px-3 swiper-slide-next"
-              role="group"
-              aria-label="2 / 7"
-              data-swiper-slide-index="1"
-              style="width: 167.571px; margin-right: 50px"
-            >
-              <img
-                src="./assets/image/logo/companysection/2ARICA.svg"
-                alt="Arica"
-                class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300"
-              />
-            </div>
+          <div class="swiper-slide flex justify-center items-center px-3 swiper-slide-next" role="group"
+            aria-label="2 / 7" data-swiper-slide-index="1" style="width: 167.571px; margin-right: 50px">
+            <img src="./assets/image/logo/companysection/2ARICA.svg" alt="Arica"
+              class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300" />
+          </div>
 
-            <div
-              class="swiper-slide flex justify-center items-center px-3"
-              role="group"
-              aria-label="3 / 7"
-              data-swiper-slide-index="2"
-              style="width: 167.571px; margin-right: 50px"
-            >
-              <img
-                src="./assets/image/logo/companysection/3RANWOODmain.svg"
-                alt="Ranwood"
-                class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300"
-              />
-            </div>
+          <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="3 / 7"
+            data-swiper-slide-index="2" style="width: 167.571px; margin-right: 50px">
+            <img src="./assets/image/logo/companysection/3RANWOODmain.svg" alt="Ranwood"
+              class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300" />
+          </div>
 
-            <div
-              class="swiper-slide flex justify-center items-center px-3"
-              role="group"
-              aria-label="4 / 7"
-              data-swiper-slide-index="3"
-              style="width: 167.571px; margin-right: 50px"
-            >
-              <img
-                src="./assets/image/logo/companysection/4RANBERRY.svg"
-                alt="Ranberry"
-                class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300"
-              />
-            </div>
+          <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="4 / 7"
+            data-swiper-slide-index="3" style="width: 167.571px; margin-right: 50px">
+            <img src="./assets/image/logo/companysection/4RANBERRY.svg" alt="Ranberry"
+              class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300" />
+          </div>
 
-            <div
-              class="swiper-slide flex justify-center items-center px-3"
-              role="group"
-              aria-label="5 / 7"
-              data-swiper-slide-index="4"
-              style="width: 167.571px; margin-right: 50px"
-            >
-              <img
-                src="./assets/image/logo/companysection/5RANWOODREGA.svg"
-                alt="Ranwood Rega"
-                class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300"
-              />
-            </div>
+          <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="5 / 7"
+            data-swiper-slide-index="4" style="width: 167.571px; margin-right: 50px">
+            <img src="./assets/image/logo/companysection/5RANWOODREGA.svg" alt="Ranwood Rega"
+              class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300" />
+          </div>
 
-            <div
-              class="swiper-slide flex justify-center items-center px-3"
-              role="group"
-              aria-label="6 / 7"
-              data-swiper-slide-index="5"
-              style="width: 167.571px; margin-right: 50px"
-            >
-              <img
-                src="./assets/image/logo/companysection/6DAZZLEBERRY.svg"
-                alt="Dazzle Berry"
-                class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300"
-              />
-            </div>
+          <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="6 / 7"
+            data-swiper-slide-index="5" style="width: 167.571px; margin-right: 50px">
+            <img src="./assets/image/logo/companysection/6DAZZLEBERRY.svg" alt="Dazzle Berry"
+              class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300" />
+          </div>
 
-            <!-- <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="7 / 7"
+          <!-- <div class="swiper-slide flex justify-center items-center px-3" role="group" aria-label="7 / 7"
                         data-swiper-slide-index="6" style="width: 167.571px; margin-right: 50px;">
                         <img src="./assets/image/logo/companysection/7RANGIN.svg" alt="Rang-In"
                             class="h-12 md:h-16 object-contain grayscale-0 hover:grayscale transition-all duration-300">
                     </div> -->
-          </div>
-          <span
-            class="swiper-notification"
-            aria-live="assertive"
-            aria-atomic="true"
-          ></span>
         </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- start Let’s Help You Choose Right section -->
-      <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
+  <!-- start Let’s Help You Choose Right section -->
+  <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
 
-        <div class="relative w-full md:w-[40%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
-            <img src="./assets/image/bg/curved-footer-new.jpg" alt="Laminate Samples" class="w-full h-full object-cover">
-        </div>
+    <div class="relative w-full md:w-[40%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
+      <img src="./assets/image/bg/curved-footer-new.jpg" alt="Laminate Samples" class="w-full h-full object-cover">
+    </div>
 
-        <div class="w-full md:w-[60%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
+    <div class="w-full md:w-[60%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
 
-            <span class="font-inter text-[#5DC94E] font-semibold text-[14px] sm:text-base tracking-widest uppercase mb-4 block">
-                Find Your Nearest Dealer
-            </span>
+      <span
+        class="font-inter text-[#5DC94E] font-semibold text-[14px] sm:text-base tracking-widest uppercase mb-4 block">
+        Find Your Nearest Dealer
+      </span>
 
-            <h2 class="font-playfair text-2xl md:text-[36px] font-medium leading-tight text-white mb-8">
-                Let’s Help You Choose Right
-            </h2>
+      <h2 class="font-playfair text-2xl md:text-[36px] font-medium leading-tight text-white mb-8">
+        Let’s Help You Choose Right
+      </h2>
 
-            <p class="font-inter text-base md:text-xl leading-tight text-[#C7C7C7] mb-10 max-w-xl">
-                Have questions or need help choosing the right laminate?
-                Connect with our team or locate an authorized Rosewood dealer near you for expert assistance and product
-                availability.
-            </p>
+      <p class="font-inter text-base md:text-xl leading-tight text-[#C7C7C7] mb-10 max-w-xl">
+        Have questions or need help choosing the right laminate?
+        Connect with our team or locate an authorized Rosewood dealer near you for expert assistance and product
+        availability.
+      </p>
 
-            <div class="flex flex-row gap-2">
-                <a href="contact.html" 
-                 class="flex-1  inline-flex text-center items-center justify-center gap-[10px] px-6 py-3 rounded-full
+      <div class="flex flex-row gap-2">
+        <a href="contact.html" class="flex-1  inline-flex text-center items-center justify-center gap-[10px] px-6 py-3 rounded-full
          text-white font-medium text-base leading-tight
          bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)]
          shadow-[0px_0px_20px_rgba(93,201,78,0.3)]
          hover:shadow-[0px_0px_25px_rgba(46,139,46,0.6)]
          hover:scale-[1.02] active:scale-95
-         transition-all duration-300 ease-in-out"
-                 >
-                    Enquire Now
-                </a>
-                <a href="about.html"
-                    class="flex-1  bg-white hover:bg-gray-100 text-base text-[#2E8B2E] px-6 py-3 rounded-full font-medium text-center transition-all">
-                    Find a Dealer
-                </a>
-            </div>
-        </div>
+         transition-all duration-300 ease-in-out">
+          Enquire Now
+        </a>
+        <a href="about.html"
+          class="flex-1  bg-white hover:bg-gray-100 text-base text-[#2E8B2E] px-6 py-3 rounded-full font-medium text-center transition-all">
+          Find a Dealer
+        </a>
+      </div>
+    </div>
 
-    </section>
+  </section>
 
-    <!-- start footer seciton  -->
-    <footer class="bg-white text-gray-700 pt-16 pb-10 px-6">
-      <div class="max-w-7xl mx-auto">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12"
-        >
-          <div class="space-y-4">
-            <img
-              src="./assets/image/logo/logo.svg"
-              alt="Rosewood Logo"
-              class="w-auto"
-            />
-            <p
-              class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs"
-            >
-              India’s premier decorative laminates group with 7 iconic brands .
-              Crafting premium surfaces with high quality .
-            </p>
-            <!-- <div class="flex flex-wrap gap-2 pt-2">
+  <!-- start footer seciton  -->
+  <footer class="bg-white text-gray-700 pt-16 pb-10 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+        <div class="space-y-4">
+          <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="w-auto" />
+          <p class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs">
+            India’s premier decorative laminates group with 7 iconic brands .
+            Crafting premium surfaces with high quality .
+          </p>
+          <!-- <div class="flex flex-wrap gap-2 pt-2">
                         <span
                             class="inline-flex items-center px-3 py-1.5 rounded-md bg-[#5DC94E14] border border-[#5DC94E40] text-xs font-regular text-[#2E8B2E]">
                            <img src="assets/image/icon/footericon-iso.svg" class="mr-1 "alt="icon">
@@ -1012,212 +690,149 @@
                             ISO 9001:2008
                         </span>
                     </div> -->
-          </div>
+        </div>
 
-          <div class="lg:pl-8">
-            <h4
-              class="font-playfair text-sm text-[#1A1A1A] font-semibold mb-4 tracking-wide uppercase"
-            >
-              Quick Links
-            </h4>
-            <ul class="font-inter space-y-2 text-sm font-normal text-[#383838]">
-              <li>
-                <a
-                  href="index.html"
-                  class="hover:text-green-600 transition-colors"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  class="hover:text-green-600 transition-colors"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="brands.html"
-                  class="hover:text-green-600 transition-colors"
-                  >Our Brands</a
-                >
-              </li>
-              <li>
-                <a
-                  href="products.html"
-                  class="hover:text-green-600 transition-colors"
-                  >Products</a
-                >
-              </li>
-              <!-- <li><a href="blogs.html" class="hover:text-green-600 transition-colors">Our Blogs</a></li> -->
-              <li>
-                <a
-                  href="contact.html"
-                  class="hover:text-green-600 transition-colors"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="lg:pl-8">
+          <h4 class="font-playfair text-sm text-[#1A1A1A] font-semibold mb-4 tracking-wide uppercase">
+            Quick Links
+          </h4>
+          <ul class="font-inter space-y-2 text-sm font-normal text-[#383838]">
+            <li>
+              <a href="index.html" class="hover:text-green-600 transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-green-600 transition-colors">About Us</a>
+            </li>
+            <li>
+              <a href="brands.html" class="hover:text-green-600 transition-colors">Our Brands</a>
+            </li>
+            <li>
+              <a href="products.html" class="hover:text-green-600 transition-colors">Products</a>
+            </li>
+            <!-- <li><a href="blogs.html" class="hover:text-green-600 transition-colors">Our Blogs</a></li> -->
+            <li>
+              <a href="contact.html" class="hover:text-green-600 transition-colors">Contact Us</a>
+            </li>
+          </ul>
+        </div>
 
-          <div>
-            <h4
-              class="font-playfair text-sm text-[#1A1A1A] font-semibold mb-4 tracking-wide uppercase"
-            >
-              OUR BRANDS
-            </h4>
-            <ul class="font-inter space-y-2 text-sm font-normal text-[#383838]">
-              <li>
-                <a href="#" class="hover:text-green-600 transition-colors"
-                  >Arica</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-600 transition-colors"
-                  >Atina</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-600 transition-colors"
-                  >RANBerry</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-600 transition-colors"
-                  >Ranwood</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-600 transition-colors"
-                  >Ranwood Rega</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-green-600 transition-colors"
-                  >Dazzleberry Pastel</a
-                >
-              </li>
-              <!-- <li><a href="#" class="hover:text-green-600 transition-colors">Rang-in Mica</a></li> -->
-            </ul>
-          </div>
+        <div>
+          <h4 class="font-playfair text-sm text-[#1A1A1A] font-semibold mb-4 tracking-wide uppercase">
+            OUR BRANDS
+          </h4>
+          <ul class="font-inter space-y-2 text-sm font-normal text-[#383838]">
+            <li>
+              <a href="#" class="hover:text-green-600 transition-colors">Arica</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-green-600 transition-colors">Atina</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-green-600 transition-colors">RANBerry</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-green-600 transition-colors">Ranwood</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-green-600 transition-colors">Ranwood Rega</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-green-600 transition-colors">Dazzleberry Pastel</a>
+            </li>
+            <!-- <li><a href="#" class="hover:text-green-600 transition-colors">Rang-in Mica</a></li> -->
+          </ul>
+        </div>
 
-          <div class="space-y-6">
-            <h4
-              class="font-playfair text-sm text-[#1A1A1A] font-semibold mb-4 tracking-wide uppercase"
-            >
-              Contact Us
-            </h4>
-            <ul class="space-y-5 text-sm font-normal font-inter text-[#383838]">
-              <li class="flex items-start gap-3">
-                <img src="./assets/image/icon/social/phone.svg" alt="phone" />
-                <a
-                  href="tel:+918758644044"
-                  class="font-inter space-y-2 text-sm font-regular text-[#383838]"
-                  >+91 8758644044</a
-                >
-              </li>
-              <li class="flex items-start gap-3">
-                <img src="./assets/image/icon/social/email.svg" alt="email" />
-                <a
-                  href="mailto:Rosewood.lam@gmail.com"
-                  class="font-inter space-y-2 text-sm font-regular text-[#383838] break-all"
-                  >Rosewood.lam@gmail.com</a
-                >
-              </li>
-              <li class="flex items-start gap-3 text-gray-600">
-                <img src="./assets/image/icon/social/map.svg" alt="map" />
-                <p
-                  class="font-inter space-y-2 text-sm font-regular text-[#383838]"
-                >
-                  8-A, National Highway, Matel Road, Nr. Amardham Temple, Matel
-                  - 363622.
-                </p>
-              </li>
-            </ul>
+        <div class="space-y-6">
+          <h4 class="font-playfair text-sm text-[#1A1A1A] font-semibold mb-4 tracking-wide uppercase">
+            Contact Us
+          </h4>
+          <ul class="space-y-5 text-sm font-normal font-inter text-[#383838]">
+            <li class="flex items-start gap-3">
+              <img src="./assets/image/icon/social/phone.svg" alt="phone" />
+              <a href="tel:+918758644044" class="font-inter space-y-2 text-sm font-regular text-[#383838]">+91
+                8758644044</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <img src="./assets/image/icon/social/email.svg" alt="email" />
+              <a href="mailto:Rosewood.lam@gmail.com"
+                class="font-inter space-y-2 text-sm font-regular text-[#383838] break-all">Rosewood.lam@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-3 text-gray-600">
+              <img src="./assets/image/icon/social/map.svg" alt="map" />
+              <p class="font-inter space-y-2 text-sm font-regular text-[#383838]">
+                8-A, National Highway, Matel Road, Nr. Amardham Temple, Matel
+                - 363622.
+              </p>
+            </li>
+          </ul>
 
-            <div class="flex gap-3 pt-4">
-              <a
-                href="https://www.instagram.com/rosewoodlaminates"
-                class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1"
-              >
-                <img
-                  src="./assets/image/icon/social/instagram.svg"
-                  alt="instagram"
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/rosewoodlaminates"
-                class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1"
-              >
-                <img
-                  src="./assets/image/icon/social/facebook.svg"
-                  alt="facebook"
-                />
-              </a>
-              <!-- <a href="https://www.linkedin.com/company/rosewoodlaminates/?originalSubdomain=in"
+          <div class="flex gap-3 pt-4">
+            <a href="https://www.instagram.com/rosewoodlaminates"
+              class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+              <img src="./assets/image/icon/social/instagram.svg" alt="instagram" />
+            </a>
+            <a href="https://www.facebook.com/rosewoodlaminates"
+              class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+              <img src="./assets/image/icon/social/facebook.svg" alt="facebook" />
+            </a>
+            <!-- <a href="https://www.linkedin.com/company/rosewoodlaminates/?originalSubdomain=in"
                             class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
                             <img src="./assets/image/icon/social/linkedin.svg" alt="linkedin">
                         </a> -->
-              <a
-                href="https://www.youtube.com/channel/UCOY24GRtotJY52tLawK-tRQ"
-                class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1"
-              >
-                <img
-                  src="./assets/image/icon/social/youtube.svg"
-                  alt="youtube"
-                />
-              </a>
-              <!-- <a href="https://www.twitter.com"
+            <a href="https://www.youtube.com/channel/UCOY24GRtotJY52tLawK-tRQ"
+              class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
+              <img src="./assets/image/icon/social/youtube.svg" alt="youtube" />
+            </a>
+            <!-- <a href="https://www.twitter.com"
                             class="w-10 h-10 rounded-full bg-[#5DC94E] text-white flex items-center justify-center hover:bg-green-600 transition-transform hover:-translate-y-1">
                             <img src="./assets/image/icon/social/twitter.svg" alt="youtube">
                         </a> -->
-            </div>
           </div>
         </div>
-
-        <div class="pt-8 border-t border-[#00000029] text-center">
-          <p class="text-sm font-regular text-[#383838] tracking-wide">
-            © 2026 Rosewood Laminates. All rights reserved. Crafted with
-            precision for premium spaces.
-          </p>
-        </div>
       </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <div class="pt-8 border-t border-[#00000029] text-center">
+        <p class="text-sm font-regular text-[#383838] tracking-wide">
+          © 2026 Rosewood Laminates. All rights reserved. Crafted with
+          precision for premium spaces.
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-      const swiper = new Swiper(".ProductDetails-slider", {
-        // TELL SWIPER TO USE YOUR CUSTOM CLASSES
-        wrapperClass: "ProductDetails-slider-wrapper",
-        slideClass: "ProductDetails-slider-slide",
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        slidesPerView: 1,
-        spaceBetween: 10,
-        loop: true,
+  <script>
+    const swiper = new Swiper(".ProductDetails-slider", {
+      // TELL SWIPER TO USE YOUR CUSTOM CLASSES
+      wrapperClass: "ProductDetails-slider-wrapper",
+      slideClass: "ProductDetails-slider-slide",
 
-        // Fix for the "Loop Warning"
-        loopedSlides: 4.5,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
 
-        pagination: {
-          el: ".ProductDetails-slider-pagination",
-          clickable: true,
-          // Optional: custom bullet classes
-          bulletClass: "ProductDetails-bullet",
-          bulletActiveClass: "ProductDetails-bullet-active",
-        },
+      // Fix for the "Loop Warning"
+      loopedSlides: 4.5,
 
-        breakpoints: {
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4.5 },
-        },
-      });
-    </script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <script src="./assets/js/dev-script.js"></script>
-  </body>
+      pagination: {
+        el: ".ProductDetails-slider-pagination",
+        clickable: true,
+        // Optional: custom bullet classes
+        bulletClass: "ProductDetails-bullet",
+        bulletActiveClass: "ProductDetails-bullet-active",
+      },
+
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 4.5 },
+      },
+    });
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="./assets/js/dev-script.js"></script>
+</body>
+
 </html>

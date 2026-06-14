@@ -30,39 +30,22 @@
                 <li><a href="index.html" class="text-[#4AA13E] border-b-2 border-[#4AA13E] pb-1">Home</a></li>
                 <li><a href="about.html" class="hover:text-[#4AA13E] transition-colors">About Us</a></li>
                 <li><a href="brands.html" class="hover:text-[#4AA13E] transition-colors">Our Brands</a></li>
-                <li class="relative group">
-                    <button class="flex items-center gap-1 hover:text-[#4AA13E] transition-colors focus:outline-none">
+                <li>
+                    <a href="products.html" class="hover:text-[#4AA13E] transition-colors">
                         Collections
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-
-                    <ul
-                        class="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
-                        <li><a href="wooden.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Wooden
-                                Collections</a></li>
-                        <li><a href="pastel.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Pastel
-                                Collections</a></li>
-                        <li><a href="marble.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Marble
-                                Collections</a></li>
-                        <li><a href="digital.html"
-                                class="block px-6 py-3 text-sm text-[#383838] hover:bg-gray-50 hover:text-[#4AA13E]">Digital
-                                Collections</a></li>
-                    </ul>
+                    </a>
                 </li>
                 <!-- <li><a href="blogs.html" class="hover:text-[#4AA13E] transition-colors">Blogs</a></li> -->
                 <li><a href="contact.html" class="hover:text-[#4AA13E] transition-colors">Contact Us</a></li>
             </ul>
 
             <a href="#"
-                class="hidden lg:flex items-center gap-[10px] text-white px-6 py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
-                <span class="font-medium">Download Catalog</span>
+                class="hidden md:flex items-center text-white px-2 py-2 lg:px-4 lg:py-3 rounded-full font-bold text-base leading-tight transition-all duration-300 ease-in-out bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)] shadow-[0px_0px_20px_0px_rgba(93,201,78,0.3)] hover:shadow-[0px_0px_25px_0px_rgba(46,139,46,0.6)] hover:scale-[1.02] active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="lg:hidden w-5 h-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v10m0 0l-4-4m4 4l4-4M5 20h14" />
+                </svg>
+                <span class="hidden lg:flex font-medium">Download Catalog</span>
             </a>
 
             <button onclick="toggleMenu()" class="md:hidden text-[#383838] p-2">
@@ -88,14 +71,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="brands.html">Our Brands</a></li>
-            <li class="flex flex-col">
-                <span class="text-gray-400 text-sm uppercase tracking-widest mb-2">Collections</span>
-                <div class="flex flex-col space-y-4 pl-4 border-l-2 border-[#4AA13E]/20">
-                    <a href="wooden.html" class="text-xl">Wooden Collections</a>
-                    <a href="pastel.html" class="text-xl">Pastel Collections</a>
-                    <a href="marble.html" class="text-xl">Marble Collections</a>
-                    <a href="digital.html" class="text-xl">Digital Collections</a>
-                </div>
+            <li>
+                <a href="products.html">Collections</a>
             </li>
             <!-- <li><a href="blogs.html">Blogs</a></li> -->
             <li><a href="contact.html">Contact Us</a></li>
@@ -115,7 +92,8 @@
                 • India's Premium Laminate Specialists</div>
             <h1 class="font-playfair font-semibold text-[48px] md:text-[64px] leading-tight text-white drop-shadow-2xl">
                 Surfaces That <br><span class="text-[#56cf5a] italic">Tell a Story</span></h1>
-            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">7 iconic brands. 1200+ premium laminate designs. Transforming Indian interiors since two decades.</p>
+            <p class="font-normal text-lg leading-tight text-gray-200 max-w-xl mx-auto py-6">7 iconic brands. 1200+
+                premium laminate designs. Transforming Indian interiors since two decades.</p>
             <div class="flex flex-col sm:flex-row gap-5 items-center">
                 <a href="#"
                     class="flex items-center gap-[10px] text-white px-6 py-4 rounded-full font-bold bg-[#4CAF50] shadow-lg hover:bg-[#45a049] transition-all">
@@ -452,8 +430,7 @@
                                 <img src="./assets/image/icon/whyChoose/bold/2-icon.svg" alt="icon"
                                     class="w-full h-full object-contain">
                             </div>
-                            <span
-                                class="text-normal text-[#383838] font-playfair">Lightfastness</span>
+                            <span class="text-normal text-[#383838] font-playfair">Lightfastness</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <div class="w-6 h-6 flex-shrink-0 flex items-center justify-center">
@@ -561,78 +538,59 @@
             </div>
         </div>
     </section>
- 
+
     <!-- Where Quality Takes Shape -->
-   <section class="py-10 md:py-16 px-4 sm:px-6 md:px-8 lg:px-10">
-  <div
-    class="grid grid-cols-1 lg:grid-cols-3 rounded-xl overflow-hidden"
-  >
-    <!-- Left Content -->
-    <div
-      class="bg-[#f0f9f1] p-8 md:p-10 lg:p-16 flex flex-col items-center justify-center text-center"
-    >
-      <img
-        src="./assets/image/logo/logo.svg"
-        alt="Logo"
-        class="w-[140px] sm:w-[180px]"
-      />
+    <section class="py-10 md:py-16 px-4 sm:px-6 md:px-8 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl overflow-hidden">
+            <!-- Left Content -->
+            <div class="bg-[#f0f9f1] p-8 md:p-10 lg:p-16 flex flex-col items-center justify-center text-center">
+                <img src="./assets/image/logo/logo.svg" alt="Logo" class="w-[140px] sm:w-[180px]" />
 
-      <span
-        class="font-inter text-[#5DC94E] font-semibold text-sm sm:text-base tracking-widest uppercase mt-5 mb-3"
-      >
-        Our Manufacturing
-      </span>
+                <span
+                    class="font-inter text-[#5DC94E] font-semibold text-sm sm:text-base tracking-widest uppercase mt-5 mb-3">
+                    Our Manufacturing
+                </span>
 
-      <h2
-        class="font-playfair text-3xl sm:text-4xl lg:text-[40px] font-medium leading-tight text-[#1A1A1A] mb-5"
-      >
-        Where Quality <br />
-        Takes Shape
-      </h2>
+                <h2
+                    class="font-playfair text-3xl sm:text-4xl lg:text-[40px] font-medium leading-tight text-[#1A1A1A] mb-5">
+                    Where Quality <br />
+                    Takes Shape
+                </h2>
 
-      <p
-        class="font-inter text-base sm:text-lg leading-relaxed text-[#383838] max-w-md"
-      >
-        Precision-engineered at every step, our state-of-the-art facility is
-        where raw material meets craftsmanship — producing laminates that define
-        industry standards.
-      </p>
-    </div>
+                <p class="font-inter text-base sm:text-lg leading-relaxed text-[#383838] max-w-md">
+                    Precision-engineered at every step, our state-of-the-art facility is
+                    where raw material meets craftsmanship — producing laminates that define
+                    industry standards.
+                </p>
+            </div>
 
-    <!-- Video -->
-    <div class="h-[250px] sm:h-[350px] lg:h-auto">
-      <iframe
-        class="w-full h-full min-h-[250px] lg:min-h-full"
-        src="https://www.youtube.com/embed/TmfHkvqlZ8U?autoplay=1&mute=1&loop=1&playlist=TmfHkvqlZ8U&rel=0"
-        title="Rosewood Manufacturing Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      >
-      </iframe>
-    </div>
+            <!-- Video -->
+            <div class="h-[250px] sm:h-[350px] lg:h-auto">
+                <iframe class="w-full h-full min-h-[250px] lg:min-h-full"
+                    src="https://www.youtube.com/embed/TmfHkvqlZ8U?autoplay=1&mute=1&loop=1&playlist=TmfHkvqlZ8U&rel=0"
+                    title="Rosewood Manufacturing Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
 
-    <!-- Right Content -->
-    <div
-      class="bg-[#f0f9f1] p-8 md:p-10 lg:p-16 flex items-center justify-center"
-    >
-      <p
-        class="font-inter text-base sm:text-lg leading-relaxed text-[#383838] text-center max-w-md"
-      >
-        At Rosewood Laminates, every sheet that leaves our facility carries the
-        promise of perfection. Our manufacturing plant is equipped with advanced
-        high-pressure lamination technology, operating under strict quality
-        control protocols at every stage — from raw material selection to final
-        finish. With full compliance to IS 2046:1995 standards and ISO
-        9001:2008 certification, we ensure that each laminate delivers on
-        strength, durability, and visual excellence. Built on decades of
-        industry expertise, our production facility is designed to serve the
-        evolving demands of architects, interior designers, and homeowners
-        across India.
-      </p>
-    </div>
-  </div>
-</section>
+            <!-- Right Content -->
+            <div class="bg-[#f0f9f1] p-8 md:p-10 lg:p-16 flex items-center justify-center">
+                <p class="font-inter text-base sm:text-lg leading-relaxed text-[#383838] text-center max-w-md">
+                    At Rosewood Laminates, every sheet that leaves our facility carries the
+                    promise of perfection. Our manufacturing plant is equipped with advanced
+                    high-pressure lamination technology, operating under strict quality
+                    control protocols at every stage — from raw material selection to final
+                    finish. With full compliance to IS 2046:1995 standards and ISO
+                    9001:2008 certification, we ensure that each laminate delivers on
+                    strength, durability, and visual excellence. Built on decades of
+                    industry expertise, our production facility is designed to serve the
+                    evolving demands of architects, interior designers, and homeowners
+                    across India.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- start PORTFOLIO section -->
     <section class="md:hidden block relative py-20 px-4 overflow-hidden"
@@ -839,9 +797,7 @@
     </section>
 
     <!-- start Find Rosewood Laminates Near section -->
-    <section
-      class="bg-[#1A1A1A] py-14 px-4 relative overflow-hidden"
-      x-data="{ 
+    <section class="bg-[#1A1A1A] py-14 px-4 relative overflow-hidden" x-data="{ 
     search: '',
     locations: [
         { city: 'Ahmedabad', state: 'Gujarat', dealers: '45' },
@@ -856,136 +812,95 @@
     get filteredLocations() {
         return this.locations.filter(i => i.city.toLowerCase().includes(this.search.toLowerCase()) || i.state.toLowerCase().includes(this.search.toLowerCase()))
     }
-}"
-      style="
+}" style="
         background-image: url(./assets/image/bg/FindRosewoodLaminates.png);
         background-repeat: no-repeat;
         background-size: cover;
-      "
-    >
-      <div
-        class="absolute inset-0 opacity-10 pointer-events-none"
-        style="
+      ">
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="
           background-image: url(&quot;./assets/image/bg/map-dots.png&quot;);
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
-        "
-      ></div>
+        "></div>
 
-      <!-- <div class="absolute inset-0 bg-black/40 z-[1]"></div> -->
+        <!-- <div class="absolute inset-0 bg-black/40 z-[1]"></div> -->
 
-      <div class="relative z-10 max-w-7xl mx-auto text-center">
-        <span
-          class="font-inter text-[#5DC94E] font-semibold text-base tracking-widest uppercase mb-4 block"
-          >Our Network</span
-        >
-        <h2
-          class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-8"
-        >
-          Find Rosewood Laminates Near You
-        </h2>
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+            <span class="font-inter text-[#5DC94E] font-semibold text-base tracking-widest uppercase mb-4 block">Our
+                Network</span>
+            <h2 class="font-playfair text-3xl md:text-[42px] font-medium leading-tight text-white mb-8">
+                Find Rosewood Laminates Near You
+            </h2>
 
-        <div class="max-w-2xl mx-auto mb-10 relative">
-          <div
-            class="absolute inset-y-0 left-5 flex items-center pointer-events-none"
-          >
-            <img src="assets/image/icon/location-icon.svg" class="" alt="" />
-          </div>
-          <input
-            type="text"
-            x-model="search"
-            placeholder="Search by city or state..."
-            class="w-full bg-white text-gray-800 py-4 pl-14 pr-6 rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-[#5DC94E] transition-all font-inter"
-          />
-        </div>
+            <div class="max-w-2xl mx-auto mb-10 relative">
+                <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+                    <img src="assets/image/icon/location-icon.svg" class="" alt="" />
+                </div>
+                <input type="text" x-model="search" placeholder="Search by city or state..."
+                    class="w-full bg-white text-gray-800 py-4 pl-14 pr-6 rounded-xl shadow-lg focus:outline-none focus:ring-2 focus:ring-[#5DC94E] transition-all font-inter" />
+            </div>
 
-        <div class="hidden md:grid md:grid-cols-4 gap-4 justify-center">
-          <template x-for="(loc, index) in filteredLocations" :key="index">
-            <div
-              class="h-[128px] bg-[#121212]/80 backdrop-blur-md border border-[#5DC94ECC] hover:border-[#5DC94E] rounded-2xl p-4 transition-all duration-300 group flex flex-col items-center justify-center cursor-pointer shadow-lg"
-            >
-              <div
-                class="text-[#5DC94E] mb-2 opacity-60 group-hover:opacity-100 transition-opacity"
-              >
-                <img
-                  src="assets/image/icon/location-icon.svg"
-                  class="size-5"
-                  alt=""
-                />
-              </div>
-              <h4
-                class="font-playfair text-white text-base font-normal mb-0.5"
-                x-text="loc.city"
-              ></h4>
-              <p
-                class="font-inter text-gray-400 font-normal text-[12px] mb-2"
-                x-text="loc.state"
-              ></p>
-              <!-- <span
+            <div class="hidden md:grid md:grid-cols-4 gap-4 justify-center">
+                <template x-for="(loc, index) in filteredLocations" :key="index">
+                    <div
+                        class="h-[128px] bg-[#121212]/80 backdrop-blur-md border border-[#5DC94ECC] hover:border-[#5DC94E] rounded-2xl p-4 transition-all duration-300 group flex flex-col items-center justify-center cursor-pointer shadow-lg">
+                        <div class="text-[#5DC94E] mb-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                            <img src="assets/image/icon/location-icon.svg" class="size-5" alt="" />
+                        </div>
+                        <h4 class="font-playfair text-white text-base font-normal mb-0.5" x-text="loc.city"></h4>
+                        <p class="font-inter text-gray-400 font-normal text-[12px] mb-2" x-text="loc.state"></p>
+                        <!-- <span
                 class="inline-block bg-[#5DC94E1A] text-[#5DC94E] text-[9px] font-bold px-3 py-1 rounded-full border border-[#5DC94E33]"
                 x-text="loc.dealers + ' dealers'"
               ></span> -->
-            </div>
-          </template>
-        </div>
-
-        <div class="md:hidden">
-          <div class="swiper locSwiper">
-            <div class="swiper-wrapper">
-              <template x-for="(loc, index) in filteredLocations" :key="index">
-                <div class="swiper-slide px-2">
-                  <div
-                    class="bg-[#121212] border border-[#5DC94E33] rounded-2xl p-6 h-[180px] flex flex-col items-center justify-center"
-                  >
-                    <div class="text-[#5DC94E] mb-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
-                        />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
                     </div>
-                    <h4
-                      class="font-playfair text-white text-xl font-medium mb-1"
-                      x-text="loc.city"
-                    ></h4>
-                    <p
-                      class="font-inter text-gray-400 text-xs mb-4"
-                      x-text="loc.state"
-                    ></p>
-                    <!-- <span
+                </template>
+            </div>
+
+            <div class="md:hidden">
+                <div class="swiper locSwiper">
+                    <div class="swiper-wrapper">
+                        <template x-for="(loc, index) in filteredLocations" :key="index">
+                            <div class="swiper-slide px-2">
+                                <div
+                                    class="bg-[#121212] border border-[#5DC94E33] rounded-2xl p-6 h-[180px] flex flex-col items-center justify-center">
+                                    <div class="text-[#5DC94E] mb-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                            <circle cx="12" cy="10" r="3" />
+                                        </svg>
+                                    </div>
+                                    <h4 class="font-playfair text-white text-xl font-medium mb-1" x-text="loc.city">
+                                    </h4>
+                                    <p class="font-inter text-gray-400 text-xs mb-4" x-text="loc.state"></p>
+                                    <!-- <span
                       class="bg-[#5DC94E1A] text-[#5DC94E] text-xs font-bold px-5 py-1.5 rounded-full border border-[#5DC94E33]"
                       x-text="loc.dealers + ' dealers'"
                     ></span> -->
-                  </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="swiper-pagination !static mt-6"></div>
                 </div>
-              </template>
             </div>
-            <div class="swiper-pagination !static mt-6"></div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- start Let’s Help You Choose Right section -->
     <section class="max-w-full mx-auto overflow-hidden bg-[#1a1a1a] flex flex-col md:flex-row items-stretch">
 
         <div class="relative w-full md:w-[43%] h-64 md:h-auto bg-white curved-clip overflow-hidden">
-            <img src="./assets/image/bg/curved-footer-new.jpg" alt="Laminate Samples" class="w-full h-full object-cover">
+            <img src="./assets/image/bg/curved-footer-new.jpg" alt="Laminate Samples"
+                class="w-full h-full object-cover">
         </div>
 
         <div class="w-full md:w-[57%] p-8 md:p-16 lg:p-16 flex flex-col justify-center text-left">
 
-            <span class="font-inter text-[#5DC94E] font-semibold text-[14px] sm:text-base tracking-widest uppercase mb-4 block">
+            <span
+                class="font-inter text-[#5DC94E] font-semibold text-[14px] sm:text-base tracking-widest uppercase mb-4 block">
                 Find Your Nearest Dealer
             </span>
 
@@ -1000,15 +915,13 @@
             </p>
 
             <div class="flex flex-row gap-2">
-                <a href="contact.html" 
-                 class="  inline-flex text-center items-center justify-center gap-[10px] px-6 py-3 rounded-full
+                <a href="contact.html" class="  inline-flex text-center items-center justify-center gap-[10px] px-6 py-3 rounded-full
          text-white font-medium text-base leading-tight
          bg-[linear-gradient(135deg,#2E8B2E_0%,#5DC94E_100%)]
          shadow-[0px_0px_20px_rgba(93,201,78,0.3)]
          hover:shadow-[0px_0px_25px_rgba(46,139,46,0.6)]
          hover:scale-[1.02] active:scale-95
-         transition-all duration-300 ease-in-out"
-                 >
+         transition-all duration-300 ease-in-out">
                     Enquire Now
                 </a>
                 <a href="about.html"
@@ -1028,7 +941,8 @@
                 <div class="space-y-4">
                     <img src="./assets/image/logo/logo.svg" alt="Rosewood Logo" class="w-auto">
                     <p class="font-inter text-sm leading-relaxed text-[#383838] font-regular max-w-xs">
-                         India’s premier decorative laminates group with 7 iconic brands . Crafting premium surfaces with high quality .
+                        India’s premier decorative laminates group with 7 iconic brands . Crafting premium surfaces with
+                        high quality .
                     </p>
                     <!-- <div class="flex flex-wrap gap-2 pt-2">
                         <span
